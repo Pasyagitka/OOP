@@ -1,0 +1,13 @@
+G:\4 семестр\ООП\01. Создание приложений на основе Windows Forms\bin\Debug\_01.Создание_приложений_на_основе_Windows_Forms.exe.config
+G:\4 семестр\ООП\01. Создание приложений на основе Windows Forms\bin\Debug\_01.Создание_приложений_на_основе_Windows_Forms.exe
+G:\4 семестр\ООП\01. Создание приложений на основе Windows Forms\bin\Debug\_01.Создание_приложений_на_основе_Windows_Forms.pdb
+G:\4 семестр\ООП\01. Создание приложений на основе Windows Forms\bin\Debug\ru\_01.Создание_приложений_на_основе_Windows_Forms.resources.dll
+G:\4 семестр\ООП\01. Создание приложений на основе Windows Forms\obj\Debug\01. Создание приложений на основе Windows Forms.csprojAssemblyReference.cache
+G:\4 семестр\ООП\01. Создание приложений на основе Windows Forms\obj\Debug\_01.Создание_приложений_на_основе_Windows_Forms.Calculator.resources
+G:\4 семестр\ООП\01. Создание приложений на основе Windows Forms\obj\Debug\_01.Создание_приложений_на_основе_Windows_Forms.Properties.Resources.resources
+G:\4 семестр\ООП\01. Создание приложений на основе Windows Forms\obj\Debug\_01.Создание_приложений_на_основе_Windows_Forms.Calculator.ru.resources
+G:\4 семестр\ООП\01. Создание приложений на основе Windows Forms\obj\Debug\01. Создание приложений на основе Windows Forms.csproj.GenerateResource.cache
+G:\4 семестр\ООП\01. Создание приложений на основе Windows Forms\obj\Debug\01. Создание приложений на основе Windows Forms.csproj.CoreCompileInputs.cache
+G:\4 семестр\ООП\01. Создание приложений на основе Windows Forms\obj\Debug\ru\_01.Создание_приложений_на_основе_Windows_Forms.resources.dll
+G:\4 семестр\ООП\01. Создание приложений на основе Windows Forms\obj\Debug\_01.Создание_приложений_на_основе_Windows_Forms.exe
+G:\4 семестр\ООП\01. Создание приложений на основе Windows Forms\obj\Debug\_01.Создание_приложений_на_основе_Windows_Forms.pdb
