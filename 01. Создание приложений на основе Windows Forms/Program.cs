@@ -14,9 +14,16 @@ namespace _01.Создание_приложений_на_основе_Windows_Fo
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Calculator());
+           try 
+           {
+                Application.EnableVisualStyles();
+                Application.SetCompatibleTextRenderingDefault(false);
+                Application.Run(new Calculator());
+           }
+           catch (Exception e)
+           {
+                MessageBox.Show(e.Message);
+           }
         }
     }
 }

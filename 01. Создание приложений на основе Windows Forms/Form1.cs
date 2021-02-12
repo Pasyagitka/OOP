@@ -22,60 +22,6 @@ namespace _01.Создание_приложений_на_основе_Windows_Fo
 
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton6_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton19_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton17_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -84,10 +30,87 @@ namespace _01.Создание_приложений_на_основе_Windows_Fo
 
         private void FemaleSizeSM_SelectedIndexChanged(object sender, EventArgs e)
         {
-            FemaleEuropeanSize.Text = Convert.ToString(Convert.ToDouble(FemaleSizeSM.Text) + 13.5);
-            FemaleBelarussianSize.Text = Convert.ToString(Convert.ToDouble(FemaleSizeSM.Text) + 12.5);
-            FemaleBritishSize.Text = Convert.ToString(Convert.ToDouble(FemaleSizeSM.Text) - 19d);
-            FemaleAmericanSize.Text = Convert.ToString(Convert.ToDouble(FemaleSizeSM.Text) - 16.5);
+            EuropeanSizeSelect.Text = Convert.ToString(Convert.ToDouble(FemaleSizeSM.Text) + 13.5);
+            BelarussianSizeSelect.Text = Convert.ToString(Convert.ToDouble(FemaleSizeSM.Text) + 12.5);
+            AmericanSizeSelect.Text = Convert.ToString(Convert.ToDouble(FemaleSizeSM.Text) - 19d);
+            BritishSizeSelect.Text = Convert.ToString(Convert.ToDouble(FemaleSizeSM.Text) - 16.5);
+        }
+
+        private void MaleSizeSM_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            EuropeanSizeSelect.Text = Convert.ToString(Convert.ToDouble(MaleSizeSM.Text) + 13.5);
+            BelarussianSizeSelect.Text = Convert.ToString(Convert.ToDouble(MaleSizeSM.Text) + 12.5);
+            AmericanSizeSelect.Text = Convert.ToString(Convert.ToDouble(MaleSizeSM.Text) - 19d);
+            BritishSizeSelect.Text = Convert.ToString(Convert.ToDouble(MaleSizeSM.Text) - 16.5);
+        }
+
+
+        private void EuropeanSizeSelect_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string convertingsize = Convert.ToString(Convert.ToDouble(EuropeanSizeSelect.Text) - 13.5);
+            if (MaleSizeSM.Items.Contains(convertingsize))
+            {
+                MaleSizeSM.Text = convertingsize;
+            }
+            if (FemaleSizeSM.Items.Contains(convertingsize))
+            {
+                FemaleSizeSM.Text = convertingsize;
+            }
+        }
+
+        private void BelarussianSizeSelect_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string convertingsize = Convert.ToString(Convert.ToDouble(BelarussianSizeSelect.Text) - 12.5);
+            if (MaleSizeSM.Items.Contains(convertingsize))
+            {
+                MaleSizeSM.Text = convertingsize;
+            }
+            if (FemaleSizeSM.Items.Contains(convertingsize))
+            {
+                FemaleSizeSM.Text = convertingsize;
+            }
+        }
+
+        private void AmericanSizeSelect_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string convertingsize = Convert.ToString(Convert.ToDouble(AmericanSizeSelect.Text) + 19d);
+            if (MaleSizeSM.Items.Contains(convertingsize))
+            {
+                MaleSizeSM.Text = convertingsize;
+            }
+            if (FemaleSizeSM.Items.Contains(convertingsize))
+            {
+                FemaleSizeSM.Text = convertingsize;
+            }
+        }
+
+        private void BritishSizeSelect_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string convertingsize = Convert.ToString(Convert.ToDouble(BritishSizeSelect.Text) + 16.5);
+            if (MaleSizeSM.Items.Contains(convertingsize))
+            {
+                MaleSizeSM.Text = convertingsize;
+            }
+            if (FemaleSizeSM.Items.Contains(convertingsize))
+            {
+                FemaleSizeSM.Text = convertingsize;
+            }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FemaleSizeSM_TabIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            if (textBox1.Text != "")
+                throw new Exception("Поле должно быть пустым");
         }
     }
 }

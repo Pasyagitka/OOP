@@ -123,13 +123,13 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="label4.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Artifakt Element, 15pt, style=Bold</value>
+    <value>Microsoft Sans Serif, 15pt, style=Bold</value>
   </data>
   <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>310, 30</value>
+    <value>295, 30</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>226, 35</value>
+    <value>191, 25</value>
   </data>
   <data name="label4.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -147,19 +147,19 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>14</value>
   </data>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Artifakt Element, 10pt</value>
+    <value>Microsoft Sans Serif, 10pt</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
     <value>26, 78</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>162, 24</value>
+    <value>131, 17</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -177,23 +177,23 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>13</value>
   </data>
   <data name="label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Artifakt Element, 10pt</value>
+    <value>Microsoft Sans Serif, 10pt</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>312, 78</value>
+    <value>296, 78</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>162, 24</value>
+    <value>131, 17</value>
   </data>
   <data name="label2.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -211,19 +211,19 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>12</value>
   </data>
   <data name="label5.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="label5.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Artifakt Element, 10pt</value>
+    <value>Microsoft Sans Serif, 10pt</value>
   </data>
   <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>123, 130</value>
+    <value>130, 140</value>
   </data>
   <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>183, 24</value>
+    <value>146, 17</value>
   </data>
   <data name="label5.TabIndex" type="System.Int32, mscorlib">
     <value>29</value>
@@ -241,19 +241,19 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>11</value>
   </data>
   <data name="label6.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="label6.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Artifakt Element, 10pt</value>
+    <value>Microsoft Sans Serif, 10pt</value>
   </data>
   <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>123, 164</value>
+    <value>133, 182</value>
   </data>
   <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 24</value>
+    <value>145, 17</value>
   </data>
   <data name="label6.TabIndex" type="System.Int32, mscorlib">
     <value>30</value>
@@ -271,22 +271,22 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>10</value>
   </data>
   <data name="label7.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="label7.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Artifakt Element, 10pt</value>
+    <value>Microsoft Sans Serif, 10pt</value>
   </data>
   <data name="label7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>123, 232</value>
+    <value>133, 223</value>
   </data>
   <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>195, 24</value>
+    <value>155, 17</value>
   </data>
   <data name="label7.TabIndex" type="System.Int32, mscorlib">
     <value>31</value>
@@ -304,22 +304,22 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>9</value>
   </data>
   <data name="label8.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="label8.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Artifakt Element, 10pt</value>
+    <value>Microsoft Sans Serif, 10pt</value>
   </data>
   <data name="label8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>123, 198</value>
+    <value>140, 267</value>
   </data>
   <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>173, 24</value>
+    <value>138, 17</value>
   </data>
   <data name="label8.TabIndex" type="System.Int32, mscorlib">
     <value>32</value>
@@ -337,7 +337,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>8</value>
   </data>
   <data name="FemaleSizeSM.Items" xml:space="preserve">
     <value>21,5</value>
@@ -370,13 +370,13 @@
     <value>26</value>
   </data>
   <data name="FemaleSizeSM.Location" type="System.Drawing.Point, System.Drawing">
-    <value>226, 75</value>
+    <value>193, 78</value>
   </data>
   <data name="FemaleSizeSM.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
   </data>
   <data name="FemaleSizeSM.Size" type="System.Drawing.Size, System.Drawing">
-    <value>67, 27</value>
+    <value>67, 21</value>
   </data>
   <data name="FemaleSizeSM.TabIndex" type="System.Int32, mscorlib">
     <value>38</value>
@@ -391,7 +391,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;FemaleSizeSM.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="MaleSizeSM.Items" xml:space="preserve">
     <value>25</value>
@@ -433,13 +433,13 @@
     <value>32</value>
   </data>
   <data name="MaleSizeSM.Location" type="System.Drawing.Point, System.Drawing">
-    <value>480, 75</value>
+    <value>467, 78</value>
   </data>
   <data name="MaleSizeSM.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
   </data>
   <data name="MaleSizeSM.Size" type="System.Drawing.Size, System.Drawing">
-    <value>67, 27</value>
+    <value>67, 21</value>
   </data>
   <data name="MaleSizeSM.TabIndex" type="System.Int32, mscorlib">
     <value>39</value>
@@ -454,13 +454,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;MaleSizeSM.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="label3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="label3.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Artifakt Element, 15pt, style=Bold</value>
+    <value>Microsoft Sans Serif, 15pt, style=Bold</value>
   </data>
   <data name="label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -469,7 +469,7 @@
     <value>24, 30</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 35</value>
+    <value>189, 25</value>
   </data>
   <data name="label3.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -487,115 +487,539 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>15</value>
   </data>
-  <data name="FemaleEuropeanSize.Location" type="System.Drawing.Point, System.Drawing">
-    <value>328, 131</value>
-  </data>
-  <data name="FemaleEuropeanSize.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="FemaleEuropeanSize.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 26</value>
-  </data>
-  <data name="FemaleEuropeanSize.TabIndex" type="System.Int32, mscorlib">
-    <value>40</value>
-  </data>
-  <data name="&gt;&gt;FemaleEuropeanSize.Name" xml:space="preserve">
-    <value>FemaleEuropeanSize</value>
-  </data>
-  <data name="&gt;&gt;FemaleEuropeanSize.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;FemaleEuropeanSize.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;FemaleEuropeanSize.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="FemaleBelarussianSize.Location" type="System.Drawing.Point, System.Drawing">
-    <value>328, 165</value>
-  </data>
-  <data name="FemaleBelarussianSize.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="FemaleBelarussianSize.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 26</value>
-  </data>
-  <data name="FemaleBelarussianSize.TabIndex" type="System.Int32, mscorlib">
-    <value>41</value>
-  </data>
-  <data name="&gt;&gt;FemaleBelarussianSize.Name" xml:space="preserve">
-    <value>FemaleBelarussianSize</value>
-  </data>
-  <data name="&gt;&gt;FemaleBelarussianSize.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;FemaleBelarussianSize.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;FemaleBelarussianSize.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="FemaleAmericanSize.Location" type="System.Drawing.Point, System.Drawing">
-    <value>328, 199</value>
-  </data>
-  <data name="FemaleAmericanSize.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="FemaleAmericanSize.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 26</value>
-  </data>
-  <data name="FemaleAmericanSize.TabIndex" type="System.Int32, mscorlib">
-    <value>42</value>
-  </data>
-  <data name="&gt;&gt;FemaleAmericanSize.Name" xml:space="preserve">
-    <value>FemaleAmericanSize</value>
-  </data>
-  <data name="&gt;&gt;FemaleAmericanSize.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;FemaleAmericanSize.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;FemaleAmericanSize.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="FemaleBritishSize.Location" type="System.Drawing.Point, System.Drawing">
-    <value>328, 233</value>
-  </data>
-  <data name="FemaleBritishSize.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="FemaleBritishSize.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 26</value>
-  </data>
-  <data name="FemaleBritishSize.TabIndex" type="System.Int32, mscorlib">
-    <value>43</value>
-  </data>
-  <data name="&gt;&gt;FemaleBritishSize.Name" xml:space="preserve">
-    <value>FemaleBritishSize</value>
-  </data>
-  <data name="&gt;&gt;FemaleBritishSize.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;FemaleBritishSize.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;FemaleBritishSize.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
+  <metadata name="errorProvider1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>585, 309</value>
+    <value>587, 318</value>
+  </data>
+  <data name="textBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>547, 13</value>
+  </data>
+  <data name="textBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>28, 19</value>
+  </data>
+  <data name="textBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>49</value>
+  </data>
+  <data name="&gt;&gt;textBox1.Name" xml:space="preserve">
+    <value>textBox1</value>
+  </data>
+  <data name="&gt;&gt;textBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBox1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;textBox1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAIwAAACMCAYAAACuwEE+AAAABGdBTUEAALGeYUxB9wAAACBjSFJNAACH
+        EAAAjBIAAP1NAACBPgAAWesAARIPAAA85gAAGc66ySIyAAABJmlDQ1BBZG9iZSBSR0IgKDE5OTgpAAAo
+        z2NgYDJwdHFyZRJgYMjNKykKcndSiIiMUmA/z8DGwMwABonJxQWOAQE+IHZefl4qAwb4do2BEURf1gWZ
+        xUAa4EouKCoB0n+A2CgltTiZgYHRAMjOLi8pAIozzgGyRZKywewNIHZRSJAzkH0EyOZLh7CvgNhJEPYT
+        ELsI6Akg+wtIfTqYzcQBNgfClgGxS1IrQPYyOOcXVBZlpmeUKBhaWloqOKbkJ6UqBFcWl6TmFit45iXn
+        FxXkFyWWpKYA1ULcBwaCEIWgENMAarTQZKAyAMUDhPU5EBy+jGJnEGIIkFxaVAZlMjIZE+YjzJgjwcDg
+        v5SBgeUPQsykl4FhgQ4DA/9UhJiaIQODgD4Dw745AMDGT/0ZOjZcAAAACXBIWXMAAAsSAAALEgHS3X78
+        AAAhTElEQVR4Xu2deXxUVZbHTwhhVQIKsgQQAZHFsGatNfvCjoi7orbaLr1o22132wKOtBjAVgQFN5od
+        QpaqSmWVfVdEEFcUbKd15jM9YzvTPd0CqapXdeecepUilZxX9V4SnftHfp/P95NXJ6QCpy733nPvueeC
+        EKKTTnTDGjvpRAvW2EknWrDGTjrRgjV20okWrLGTTrRgjZ10ogVrlAlUBvITpAx5RYO1yBrk58g7yHmk
+        4bcLhn0wdmjP3fh8AlGQTcjjyGtIy/egn3+5he2H4s3Q13TOBzLBGmUC1QWJRxKQrhrEIaSmBjNnUN8E
+        EHvsf6x4atxMfH0Z8mvkGGJF9Ij7Pd83cZwPZII1yoQBLUT2Iz2oZX22Ph3EqcKZ4sPiiSsXjqTvk9KQ
+        w8hVSB/kfuRJZBGyGHkG+S1yDfL/Is4HMsEaZUKnrkaOIMGWMWV8HxBHC0BUWEDszoH/rMqGKxO70bdI
+        tyL/hjyP/BK5AclCpiApCDWiemQe8oOL84FMsEaZ0Cka/3+nPgLsXZYM4lgO+MoyJvjLzFPE57Ohbvnk
+        0HehL3IHcnnwFa+ByF7EHnz1A4rzgUywRpnQoeHITiSRXiRf0xvEATsItxk8DtPdXpd5hXjLCkq9FUYN
+        6Ul/RK/ykXL18YcT5wOZYI0yoUOPISXqI8ADM5JAnJ4OojYblBq7zeuyvOSrxKHpgyLY8KvxoT+lWxRN
+        3aM+/jDifCATrFEmdGgdkqc+Aiy5dxSIM7PA584Cr9s+2euyblZqskA0ZGNDKoaZGVeG/qQuzUYqERMy
+        gQzftzgfyARrlIkYGoO8ilDYHdSSu64B8dEM8Lns2GhsV/icWb/0VeT39pbngzg+F3YvTw/9Sd26HlmA
+        PIq8hNiQ702cD2SCNcpEDM1CXlAfVT08axiID2eBeCsPyYKAC7+WzgdRdgMOU7fAv2+eCZbkRBjSl4Jv
+        w6Kw/G2EFv++F3E+kAnWKBMx9CBC6yZhPVx8FYi3bSAcaRCoTAO/I2NYwJGZKBwZICrTQbgyQRzKAqXW
+        AgefmQD35NCSjCHRzPlL5IHgqw4W5wOZYI0yEUO/QWioCGvxnVfjXKUAIySMkpxBVvqcmfMQIBRqMC4T
+        iHqcCJ/C3udPxbDqR4bX6XKRM0iv4KsOFOcDmWCNMhFDS5CfqY+qjpRMAnE0DxuHpYmnPE7TQwg2nkga
+        KzPBX4MN59NCWHW/4UazB4n43R0hzgcywRplIoZoOT9iaNj68zEgjuWCv8IURKnMeMLnKHhWqZyDzzNb
+        Uz4DhHs2iM/ugsfnXht6F11ajbyuPnacOB/IBGuUiRj6F+RH6qOqJfdglPRhIXhxSPLikOR1mm7xOGxP
+        NTqyodGRxXKxAsPuY8XwyQbaGNctWi3+G1KMNG1+tlucD2SCNcpEDFGDuVd9VJUzsS+IvdnYa1ix0eCQ
+        5LLEK86MBF9ZBvjKtRG7rXB23dTQu+jSMIQ2LSll4gAS3ntojzgfyARrlIkYehqhzcKwJo3sHfzwaVLr
+        qzKBrxonuk5zgii1xYmdGD1pUWEH0ZALv51D7cCwbkIocpoUfNUOcT6QCdYoEzFEDebH6qOqJXdglPRB
+        PngxEgpxFQ5Py5UKSy8ENCkzg6jFRvN+EcxNM7Qa3CTa9aY1mu7BV20U5wOZYI0yEUM0JFA2XliL7x4F
+        4vMbwFObD546pL4wweO2v9boyBzdiHOaaFysxHD73Tx4ezVlOrRJy5E/qI9tE+cDmWCNMhFD1MNQTktY
+        vy7uB8I5EsQrQyGAiJcGgrJ14svealuez5EJsRBO5HgO3JQ9IPSOhkSZfTSnGRF81QZxPpAJ1igTMbQS
+        ma8+qpo0rBuIrdhg/jgClNevBmVdEvi2T/6DUmOd73dlQFSciCMdxJeF8PnOtEsbVMZE2wYRkZsRcT6Q
+        CdYoE1FEKXSUPE3ZdmGNHNwLvG8VgDhQBI31+dDYUAieavuwQE16/0B9BgTqtBH4fXHMCq7F18HIQYZy
+        Z5qL8mieUB+Ni/OBTLBGmYgiSquk0wIRio+Pgy9eT8EGkx1ahwmuxWAPgpGTKwvBia0Wu3Ph2zIL9L6M
+        8rHbLMrooxMINBmnIcqQOB/IBGuUiSiibp+2BiL0+NwkEO/lgYIRkg8bCoENpkhxWO8VjiwIOOw8ldhg
+        DhfCJ+szQ+/ULtFJhznILxBD2+KcD2SCNcpEFFFEErEGQ3p64QgQHxeBx2UBb1WYG7CnWR3ajGShlWHx
+        fgH8dF5S6J06RA8hj6iP+sT5QCZYo0xEEQ1HlNwUocU3YmRECeClGc2ZgA1iTbBx0C42Aw1h59anQgIO
+        aR0oyp2gw3HREs4jxPlAJlijTGhoEEKpma3mCEuwhxD7ssC/KU1lI7I5dYiv3LJNKc3tpezIgVZszgHx
+        ySxY+kCbo+FootD/ZvUxtjgfyARrlAkNUabdKvUxUotuHY5DUh54atKRDJUKW7x3/8Qc/8Vuvf3f9QD/
+        P3pGIERPuPCXK2H4VeGzSx0p2k3/lfoYW5wPZII1yoSGKJOfNh5bad0jI0EcXwCB8vkQqJirsh1f1xWC
+        +OpaEF9eB+JPYy/x53EgLkyAufN7hN4htuK7xEFC1zi9W9TUuHWv/nI+kAnWKBMaom6+VYrkPQWDsLHk
+        gnAUgr9iJjJdpRIpnzE7sKN4sijFhlNadInKGSCqZkLy1bqnGbDuJ9jwjuRB6mhdP0MnD+ignS5xPpAJ
+        1igTGnq6R0KXuRnX9oHkwYnwEMYhq0q6wtfbbSD244S3AocjVzqG00RaiPQ/eJ0Z96m2S4gjNji5qtXc
+        Oaq2/G48CM9N4Hw6OWSJqtuQ59TH2OJ8IBOsUSbef3FqmI9WT4UP1qTAbfaBdZW/Hb9AHMHeohp7iL9d
+        hn+2Jyg1heDdaQalUg2TacHuEuafYTT0S4/DhFFRExgdvZMLh1dODH1c+rThFzisncTffboItvx6bMiq
+        KUpSp6oSusT5QCZYo1TswWGD2F2M0Q9+SEdy9omjOUIcRNy2G0RpAYi/XwaBi93AgxEPnXIMNhhsJP5q
+        pA6joIZc8NXY7/e57C8HavLQngP+mlxQqijTLgcbjK6eIqymBhOg1eNzxfD7u4aGvsOK1ot0r8WwPpAI
+        1igTAYxqCBGIA//XA3I9pVkiUGUVPqdZNFbbTzZuz+sX+J/eIFo1GOxpqih5ygoBpw38Tlua32G6VWDP
+        IpwWnLeQzY5DWBZ8tTEFEntFbAeYEcpvYRVsMKeKwOfA96HTBwctcItVc3f7KeSn6mNscT6QCdYoE4GP
+        rlH5bBj4377uGp/T7hXHcoW/3ia826cd9+w0bVCOJE9Xjk4AT6UtDRvSY8pOW6a30tJPcWeAgh8qNSC/
+        w4pf8XV5KigVNBxRuG3Bn8Fh6VQuvFUSkQPze4TSLlmFGww2xsayDBCHbHBhfzaMGMDmTlE2Xqs9Ly1x
+        PpAJ1igVe+aq7JoH4uhcuHgoa+aRpZO8F3blrBUVSXFK2eQunu15V3i2ZOMHmDnVV2F52Vufus5bnVHm
+        c5if8GJv0ug0X45zlltxzjLd47J29zlswR7IW2kNbgsEqvFDf382zDYPCX1ssBSpVh9bq3mD8VAeTVkq
+        DlH5sOeFSZCK0VbPBNpKCosKF21Hoo5bTWJ9IBGsUSYeLBgc5vHZQ2G+uT8dHls9fthl/Xc9mIiNCOcR
+        u+zYU+AHV2kC3w47eN8dB9690wZ6KmzJ2ONAoMJ0GX59CRvJvyHbcChZjV8HBXsYpzml0ZE2VpyeA3tW
+        h8vB0BDyvwiFw7VIxI5kywajVKbBRRzq/Di8iY/nQMldrc440TqMrjNMnA9kgjXKhIboTFCwmsKT84eC
+        OIuT4hM4uS3HRnOpwdAQhfMMHHJ2ot2FjcNled5blXmDd2eqyVuZkeivtpP9J42OzMNif+6sL9zZAN2C
+        vQOdpryA3ILQAXwfEh6znIsmgHi3INxg/NRgqsxwvgrnMxXZwQlx2VPjIT4uvLRHdfZ0rcVwPpAJ1igT
+        GqJyY+ESH8VT+sKJNZNBHMZhaRsON9Rg9kzFDzMLo6Ns8LuywI+Nwee2r/K67LcoO2w4j7GBqMPvVeE8
+        pMLcS7yfn+h+dlzoHVsNSTuQBnoYdlUPOO/GXu0tGgKxweC8SG0wFrXBlOJEmurR/OtMcC2bAgMTu8KA
+        xATac1h+uy1p6Iv3jYZFN1+tCecDmWCNMqEhSs28S31U1TU+Dv60KQ3D73zwHh8Hnv2p4C3F4WLz9eDf
+        kgz+jeNB2T7x0UDFTfNE6d3Y69wBwl0YjKSEGz/gt/PAPplyn4KiSS/VuWsS5Q0fpIc7CgfhfIcOylmm
+        4zC3HnuYR3AyPRN7mKHnsZcRpVnY0+H8iBrPgXx83yz4j23pY1//8ah//5/6vOfEmZkg3sMeUQvGBzLB
+        GmVCQ1T5knJNIvTgnCHBUh9+7GEaj2B09OZ4EIsBAr9PgAB+FS8mYrQ0BxvOfFC2zYNA2XTAiArEl9gb
+        rIw4UtSyh3EhwfJlN1r6Bxf7vG7zaJ8j+2dep3UJTra3N7rMP2/EHidQbhuCPc8yT5X1fqXaPk5UWyaI
+        fVnfivfyha/WLDwVpsV0wE4LzgcywRplQkP3IbS+0UqHnk0B8fUUHJKmgbccPwQcLryV6Srlpss9DVMG
+        eI6MAc/BsaAcTsa5z1T48JXJcN2QiEwJWp39GqH6eTT8/QMJ5g4n9u4K35RiVLUX50eV+ThptuOQlw7Y
+        YOCiC4dDl/kK77bkR70VGSU4uX7OW2WtRQROsoN4XKY9CM6neDgfyARrlAkNUX7Ji+pjpHp0jYcvt00E
+        ccSKoTOili4L4inNv1E5Ou5F8U0fEF8NAPEN8perYNyoVlmU1yFUQfwoUoeE9w769IqHb3aEGowjFxuM
+        LaLB+FxW8P3xOmycaaDghFvZlnmFv8ryJc6RhDhGq9PWBwT+XQROuFkYH8gEa5QJDWE4E1l5qrmOlkwF
+        cQz/9+PcxINziTBus9XrsK72lmEjKrfjxBfD4MOF8OQC6kj0KWaDoUb65hhQgms7OCfZRVHauN4/nZV0
+        bMNjo5+kzVFBv5dyiDkYH8gEa5QJDVHiLaU+smdB3l6JPcwh/PDK01uS5HWYXvU4LL2CqZm0yrs3C/5a
+        aQoONXoUrcFcoAZDEVJ1MlxsMMGiG4fDk8UDYe74YK5NSY9uXVLHDOkJowf2gFEacD6QCdYoExqiT/cN
+        hO0alt7YF4QzCcQLOOSsukrlRXx+4coE385paz3V9qSmXWxfJUZJHxbAkrv1pWdyDUZxpgNOZsF/GKOi
+        cxgFVV0Psya3yh6l7YGYBWg4H8gEa5SJKKLVU4v6GKlr8H/qP3DCK3Znq3OKMPghV1n7eF2meJyc0gQ1
+        uEUgjuTAWQzJ9YhtMDixFkdz4cTaNFiEw9vk4a32lGiRsXPh7ocgiigpSbPo8pnHe4F4LRECKy4PI5Z2
+        BeWNkeCtz2t+BAUbETau43nwysOjQz+trYgGU5GLP4vzjnMF8E2tBfr11BzWihBaMY4pzgcywRplIopo
+        LYbdnxk1KA7Ec8gS/Pdh8B3mcQBlTdKvfHW5t/qDK7QhKrAB1GFPczwLZqSEF+9YhRsM1aCpLQhOro+t
+        TAbT2KiHHKlaORVwjCnOBzLBGmUiiqhkGJsIfs3A7hAsr1prxjlKRiQO0xKfM+MxxZGKYS+FviHKU0G8
+        a4d334heharPZV3hf2mT8V+LQXw6H565TVcxRVo51lWCnvOBTLBGmYiiGQhFSqz2r8TQ+mQReGqzLlGX
+        DZ5q2704b1nipZORLfAj4r18uDOfLjPh1at7F2j4/fWwC5mTRufUdJ0doDsLdFWn4nwgE6xRJqKIdgo1
+        5wV7SpJxnmEHBSezyuYQm7BX2Zo+D0PqtR4MpVvSiJGOeMsWZPKI3qF3arcoyYYmvLoO5nM+kAnWKBNR
+        RDNMKnvKxsO/o0P5u3BCio3AR+kNRGkmeHdmDsDo6HpfNU523QyUDvFpEThKjCWGR5Hu1AYS5wOZYI0y
+        EUNUViNVfYzUmKRuIKongGhIxqFmwiUqx6ENJ6xH80AcyubBMFt8XAiH1k2DOwoGQa8ebSwtpIpKquma
+        8JI4H8gEa5SJGKJd5dvVx0gttF6JPQxOfLfiXGZLMzZNifc7zY8otdYBfuxRWFyUtonzmdMYBX1WDP+9
+        NR1ef3AUdO3SpoP6dGqANkt1ifOBTLBGmYghKooYUeOuScOu7AG+HRjNVOWCQjkqYbLBW2HeqpRnTFDK
+        MiEqOIz5EXEQ3+eLYsid1i/07oZE2YG6CwBzPpAJ1igTMXQn0qqoEGnwld3gojMDhx8zePBrc7wO00qc
+        x+SFV3tjIPbY4e/YcAb1M3xYn87SUlk13RUWOR/IBGuUiRiiW0XYIxyDr+gG3hqMePZhD1OD0VITGF77
+        3NYVPqfpER82Bj2Ig9lw9nW6cNawqBY9W2VCS5wPZII1ykQM0R6N5loMnTUS7xeDjxpJE3U4JLltdk9F
+        ZoYXQ2k9iANZcOqFNlWG18zb0RLnA5lgjTIRQxS+UA8zKviqhW6zDsCoB3uYcuwpykLQ2Wt8fdFlgu+Q
+        8zoQx7Jh1zJjB/ZDouMqhm5v43wgE6xRJnSIKlGxlQz/ZcFwHE7oCj8cVprYgew0j2msMhdcwIiIsv1j
+        IQ7lwGdvstF7LFGyuqFbaTkfyARrlAkdegah80Ot9PRtw0C8Ywd/RVozUkFxZuRhFLQlsCEVApvSYiKq
+        zHAuMklcrygFg7IDdYvzgUywRpnQIUrYZhfGbsoeCOKUeneSx2lpziiPw/x0I85P9EBZeeew4RgUZQNS
+        khfV49MtzgcywRplQofuRtjQmiY4Z7djaH00N7hPFEzLRLyVZkqpjP9ntTnuO7cZovEPJzaYTwth6yLD
+        l6TTNjbNrwwtE3M+kAnWKBM6RPdIa25C3p5zFYiPikCcyA82HDqwJhrsEMBhJkDbACfw9Tto1+LjwmBY
+        PWGo4VLyhmrbNYnzgUywRpnQIQpf6LJzTa17aDScey0FDj03EfYuvR7+XkaRTy6ceTMF6pZOgAMrJ2ry
+        581p8MiscFUHI6LtgGXqo35xPpAJ1igTOkTVHGgTUvdVapRglTH2ct0nBdooOmhn+G5rzgcywRplQqco
+        tLaqj9KIhskb1Uf94nwgE6xRJnSKdoSpvKlMogZjOKmG84FMsEaZ0KlfI7rryKFoGCtAgjVmvgdRjidt
+        Ohq+OZ/zgUywRpnQKTo9wCaEM6JE3BqE6r38F0JFojta1LPQvMqwOB/IBGuUCZ2iELZEfYwpqjnXtJhG
+        h+6/QkYGX3WcaOVZ798nQpwPZII1yoRO0f9o3XmzKEqLoCGDfuZbpMMSeEOi4VFvjxchzgcywRplQqco
+        EZyOcuhZVaVCRH9B6EZ9Kut+Dmn3BeUttBihFWjD4nwgE6xRJnSKyiNQXoyeuh1u5I/qY7AU6t+QacFX
+        HSf6u9BpAcPifCATrFEmDIgy29LVx6ii+c4/EaqdS2XI/htpUzpdFFEer7F69CFxPpAJ1igTBkRRCR16
+        1yNKnaQTB5R41T9ER4lWnGl4bNNtXZwPZII1yoQBUbIS3eT6/y3K5TQyAY8Q5wOZYI0yYUCUSEUH9HWr
+        f58EKJ7WD/ImJULuRJ4Z+P30MbpOuTaJVpzp8H2bxPlAJlijTBgQbfbpOjDWPaELPDF3KHxLKZvH84IF
+        odkTkMTpAjjfYINBfXVfP00hNUVJbRLnA5lgjTJhQLQ9QMdSW6lHty6w+5mJ8OUbaXDkuUnw1caM4OVY
+        gX05EKAKVDWW6HxYAPfMHBx6t5iipO9WNYT1ivOBTLBGmTAgKtrDnoLMndwXP/SiYA5MMIlqT1bwShxP
+        pflyn9N8v7/K3BsBFjqX9HEhrHgkdnWqkGg4alNITeJ8IBOsUSYMiPaT2NxeOuJKB+yp/gvVtGvBDq/T
+        MpmuydGC8oJLFuoqHESiCS9lAbZJnA9kgjXKhAHRcERlzFrJNrEPiHewp6hNhUB1ShhRPQ2Uqoz7LjrN
+        yY0uE2gh3s+DZQuDhcBjiVaaKa2BPSelR5wPZII1yoQBPYxoTjaPLL8u2GgCbmwsIYR7GviqMhAafkws
+        wo2cyIGfzdI1h6GGQj2MocTv5uJ8IBOsUSYMSLPB9OweD2fWYQPZmwUXce7SxAU6PVBpHhFwW4cHaq0Q
+        qOGhJPJlC3XV8aWzKLRo12ZxPpAJ1igTBkQ3t1L5j1Yyjcch6SCGyNVq7ZfmKFWWR31lpsXK1kxQtvOI
+        I7mw4nZdQxLV3VuhPrZNnA9kgjXKhAFRg6G1GFafvzotuK7SsjKD122517cz8zllM9W/S2Oh+jDLb9WV
+        Y07rQG1egyFxPpAJ1igTBkQLZnQKktWZtVNB7LPjEJQZSUVmrsdtWeOps4EHhyUO8UkRlPxIV5SkeQpT
+        rzgfyARrlAkDonsa2XUY0tlNGSAO54FSbYukxnatr9L8jL8UJ7k7ecTxfFhxr64GQ73Lj9THtonzgUyw
+        RpkwIFphpcU7Vq8+ej2IswvUG/ab2IPsnQGB7aY43/op4NuU0gr/ZpwsN1jg0QLt2r3N1O7TC5wPZII1
+        yoQB0VDAbg2Q1j6UDOKDmyFQjQ2kGaJmNs5lsnt950qLP49hdEsuUFh9Mhd+tUDXtdOUYmFSH9smzgcy
+        wRplwoAoQuI3HxPi4FwV9hTHcIhpSIsgsCsNfDWZyxt3plk8pdPAszOlFeK4DVbcresSLjqy2678YM4H
+        MsEaZcKAKCFKM73B9ebl+H4DIfBV/wjEXxNBeXvCWv8fRt4qXkgE8RLaWlI+CFbOiVkZnAogUmqm7l1K
+        TpwPZII1yoQB0bEOzaOpJXePwCEpDzw4zLTCZV7ic5ge8DkygYOGpOWxtwZoZY9WeYPXr7VVnA9kgjXK
+        hAHRHZCUr8tq/WNjQLxXEHHlbxin+RGPy/IbD11cziBOYVgde/OxzYfXmovzgUywRpkwIPqwitXH1nr+
+        3iQQJzC0rp2KE91m1E6hjch+Xod5QNO1fi0Rp/KwwcTcGqDb4TQreuoV5wOZYI0yYUB0asCuPrbWjZYr
+        cdJLdXozodGdEcFFd2bo3mj62hpxOheHtJhDEtWyo9MC7RLnA5lgjTJhQNTDTFEfW2v5/TiHOZ0H552Z
+        HNdig3nCg70Jh84ephAxXHGqpTgfyARrlAmdospANBxo5qGsuHMsiHdvBn/59BbMIAb7nLYtitvUW6my
+        0IZkBOJkAWx4dEzonTRFJxbatfFI4nwgE6xRJnSKLmqkCEWzpv/yhddiTzEXFGceQ343n8v6qt9tGuZ3
+        m6EllCR+bkPMOr1U9ftZ9bHt4nwgE6xRJnSKtpKpYqXm4bEV91+jhtXMHIXASOkVj8OUhUBLaNPy8/Ux
+        G8xCpN2lQzgfyARrlAmdogvEoyYuLZ41BEQ1hsivpbTmlang35oxzeO2Dfc6rBhqRyKO5MP+Z2Oe138Q
+        +Z362HZxPpAJ1igTOkVFdNlbTZqUPrI3iHIMq7ekQmBDSgTizWmg7EgHbxVdXm5thXinAEp/SVdMRhXt
+        lj+hPrZdnA9kgjXKhE7Rf/+oayA/nzMYxAm6yQTD6qrW4LCU53NYihBsJJGIfdlwdn3MSuC0+am5W65X
+        nA9kgjXKhE7RKmvUBrPiwTEgPp6NUU8OKO6W0A332fd7naYVPpcJWiIOZcHnr8a8VI1yYdiL142I84FM
+        sEaZ0Ckq7hz1ALw9uR9GO0Ug6nPBX53TglxsNNk3+FyZq/xVaeCvSo9AHLbC2ddizmHobDfdENcucT6Q
+        CdYoEzoVc9KbPqEPiOPYYHblgwcbTSsa8lK8VfbXvRU40a20RSD25WEPE3NIojUYSgJvlzgfyARrlAmd
+        onQ46mEoxYDVhOHdQWweBuLVQeB/uQVrBkJgzYB+3tJpN18oz+56sdQKzRG7c+Hk8phhNf1+zZVmveJ8
+        IBOsUSZ0iu4Hpq0BqoqpqW2z8N+7GsHZRgSLkMe7gNd5LSiiO/gDAH5fXBgh4uDAvqhXENPBNerhdJ+n
+        1RLnA5lgjTJhQBRWRx0S6pdODh7Ib3F3UpDGnVngrU/LFH9NHCi+xeHrv/peQlwBX5ykaq2aopi73akN
+        JM4HMsEaZcKAaNGMziZpan/JJJzHFGJEZGuNO7jmssq7KXe2d2Mu4Ncwomo6fLYyaqou5eG0O7WBxPlA
+        JlijTBgQFVOmJCpNLboF5zCn8zHyMbeC7k/yOc3LfHW2B5VdWaC8ZQ8j3suHzzdGnfRqVo4wKs4HMsEa
+        ZcKA6Nr6LYjmBmTq9Ykg3sUew01X+qmpCy34jdeN1JjAW30JcdgOn2/FBhOnOY+hq4YNlUvTEucDmWCN
+        MmFQVGpDc/FsUJ8E+KbCjI2mADxlZjU9szlO80xfefZ9vh354CvNCyMOzgHHbzTXYWjDcyui6/B1LHE+
+        kAnWKBMGRRl3VHtXU4k94+HTV9NAHMgHpcIGSuUlfBVWCLhmgKifA6Julko98sGt8NhczVQbqjZFl4F2
+        iDgfyARrlIk2qAyheneaurNwCIhPsSE4cH7ibEaFvae/zjqEVnbFgWZ8XQQlP9bMuKPh6BfqY/vF+UAm
+        WKNMtEFUjO4dJGpO5UdvpuDcZDp4NuaBZ0uITXkjvZW2lz0NeQmeOhy26nCC3FAI4uQMmGthaz/TZZB1
+        CF2p0yHifCATrFEm2igqLnRAfeQ1qn8POH96HIi/j4LAh8MgcGY4BL4Y3s1XP/kN3+qRVytrk0B5ZSiI
+        0hHwH+tHQffu7P2QdAno8+pjx4jzgUywRploh+iDpIsoNJWEfdFXnyWB+OcY8H8yFPx/GgbUYAJrRk4N
+        YIMR64fjPGYULC1iryCmnuwYouvQtV5xPpAJ1igT7RQ1mj0I5fyymps8CBvFbBD754B3Yz54ym3Peupz
+        Cj2780H8eT40lGiuv+xFNA//t1WcD2SCNcpEB4hWf08hc4OvGI0e3APefXEKiL128Dtye4hye4LYlQXP
+        3625NeRCNC9Xb484H8gEa5SJDhIlWFUhOxA6ocjq422pdAYpXpTndVXKC2HwFd1D3wmLWtBBhOrAfC/i
+        fCATrFEmOlhmhHoGOri/AKHV4bBuxkhIvJM9T7xf8PCLCyPWXWgSQ0nedMdSDhm+L3E+kAnWKBMoKsxC
+        O3903R4dFmsL8xDaIKRdZUpsoY1Currvr8inCK3ULkFuX7ZwxBsnX55yCJ9pCKOadXT77HfIGYSqQ9Bk
+        t+k9W/6etjI/9HUY5wOZYI0ygaLb0h5ANiI0iW0PtDlJmXGU4U+16GhooSuJa5FKpOy6pJ5bbrL234bP
+        pYgD2YVQ6gLdEUlFi+gMN/fe7YHen76mcD6QCdbYSSdasMZOOtGCNXbSiRassZNOtGCNnXSiBWvspBMt
+        WGMnnfAI+D81FoKkPcLP7gAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-2, 140</value>
+  </data>
+  <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>112, 147</value>
+  </data>
+  <data name="pictureBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>48</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
+    <value>pictureBox1</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="BritishSizeSelect.Items" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="BritishSizeSelect.Items1" xml:space="preserve">
+    <value>5,5</value>
+  </data>
+  <data name="BritishSizeSelect.Items2" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="BritishSizeSelect.Items3" xml:space="preserve">
+    <value>6,5</value>
+  </data>
+  <data name="BritishSizeSelect.Items4" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="BritishSizeSelect.Items5" xml:space="preserve">
+    <value>7,5</value>
+  </data>
+  <data name="BritishSizeSelect.Items6" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="BritishSizeSelect.Items7" xml:space="preserve">
+    <value>8,5</value>
+  </data>
+  <data name="BritishSizeSelect.Items8" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="BritishSizeSelect.Items9" xml:space="preserve">
+    <value>9,5</value>
+  </data>
+  <data name="BritishSizeSelect.Items10" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="BritishSizeSelect.Items11" xml:space="preserve">
+    <value>10,5</value>
+  </data>
+  <data name="BritishSizeSelect.Items12" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="BritishSizeSelect.Items13" xml:space="preserve">
+    <value>11,5</value>
+  </data>
+  <data name="BritishSizeSelect.Items14" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="BritishSizeSelect.Items15" xml:space="preserve">
+    <value>12,5</value>
+  </data>
+  <data name="BritishSizeSelect.Items16" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="BritishSizeSelect.Items17" xml:space="preserve">
+    <value>13,5</value>
+  </data>
+  <data name="BritishSizeSelect.Items18" xml:space="preserve">
+    <value>14,5</value>
+  </data>
+  <data name="BritishSizeSelect.Items19" xml:space="preserve">
+    <value>15,5</value>
+  </data>
+  <data name="BritishSizeSelect.Location" type="System.Drawing.Point, System.Drawing">
+    <value>340, 263</value>
+  </data>
+  <data name="BritishSizeSelect.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 21</value>
+  </data>
+  <data name="BritishSizeSelect.TabIndex" type="System.Int32, mscorlib">
+    <value>47</value>
+  </data>
+  <data name="&gt;&gt;BritishSizeSelect.Name" xml:space="preserve">
+    <value>BritishSizeSelect</value>
+  </data>
+  <data name="&gt;&gt;BritishSizeSelect.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BritishSizeSelect.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;BritishSizeSelect.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="AmericanSizeSelect.Items" xml:space="preserve">
+    <value>2,5</value>
+  </data>
+  <data name="AmericanSizeSelect.Items1" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="AmericanSizeSelect.Items2" xml:space="preserve">
+    <value>3,5</value>
+  </data>
+  <data name="AmericanSizeSelect.Items3" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="AmericanSizeSelect.Items4" xml:space="preserve">
+    <value>4,5</value>
+  </data>
+  <data name="AmericanSizeSelect.Items5" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="AmericanSizeSelect.Items6" xml:space="preserve">
+    <value>5,5</value>
+  </data>
+  <data name="AmericanSizeSelect.Items7" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="AmericanSizeSelect.Items8" xml:space="preserve">
+    <value>6,5</value>
+  </data>
+  <data name="AmericanSizeSelect.Items9" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="AmericanSizeSelect.Items10" xml:space="preserve">
+    <value>7,5</value>
+  </data>
+  <data name="AmericanSizeSelect.Items11" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="AmericanSizeSelect.Items12" xml:space="preserve">
+    <value>8,5</value>
+  </data>
+  <data name="AmericanSizeSelect.Items13" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="AmericanSizeSelect.Items14" xml:space="preserve">
+    <value>9,5</value>
+  </data>
+  <data name="AmericanSizeSelect.Items15" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="AmericanSizeSelect.Items16" xml:space="preserve">
+    <value>10,5</value>
+  </data>
+  <data name="AmericanSizeSelect.Items17" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="AmericanSizeSelect.Items18" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="AmericanSizeSelect.Items19" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="AmericanSizeSelect.Location" type="System.Drawing.Point, System.Drawing">
+    <value>340, 223</value>
+  </data>
+  <data name="AmericanSizeSelect.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 21</value>
+  </data>
+  <data name="AmericanSizeSelect.TabIndex" type="System.Int32, mscorlib">
+    <value>46</value>
+  </data>
+  <data name="&gt;&gt;AmericanSizeSelect.Name" xml:space="preserve">
+    <value>AmericanSizeSelect</value>
+  </data>
+  <data name="&gt;&gt;AmericanSizeSelect.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AmericanSizeSelect.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;AmericanSizeSelect.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="BelarussianSizeSelect.Items" xml:space="preserve">
+    <value>34</value>
+  </data>
+  <data name="BelarussianSizeSelect.Items1" xml:space="preserve">
+    <value>34,5</value>
+  </data>
+  <data name="BelarussianSizeSelect.Items2" xml:space="preserve">
+    <value>35</value>
+  </data>
+  <data name="BelarussianSizeSelect.Items3" xml:space="preserve">
+    <value>35,5</value>
+  </data>
+  <data name="BelarussianSizeSelect.Items4" xml:space="preserve">
+    <value>36</value>
+  </data>
+  <data name="BelarussianSizeSelect.Items5" xml:space="preserve">
+    <value>36,5</value>
+  </data>
+  <data name="BelarussianSizeSelect.Items6" xml:space="preserve">
+    <value>37</value>
+  </data>
+  <data name="BelarussianSizeSelect.Items7" xml:space="preserve">
+    <value>37,5</value>
+  </data>
+  <data name="BelarussianSizeSelect.Items8" xml:space="preserve">
+    <value>38</value>
+  </data>
+  <data name="BelarussianSizeSelect.Items9" xml:space="preserve">
+    <value>38,5</value>
+  </data>
+  <data name="BelarussianSizeSelect.Items10" xml:space="preserve">
+    <value>39</value>
+  </data>
+  <data name="BelarussianSizeSelect.Items11" xml:space="preserve">
+    <value>39,5</value>
+  </data>
+  <data name="BelarussianSizeSelect.Items12" xml:space="preserve">
+    <value>40</value>
+  </data>
+  <data name="BelarussianSizeSelect.Items13" xml:space="preserve">
+    <value>40,5</value>
+  </data>
+  <data name="BelarussianSizeSelect.Items14" xml:space="preserve">
+    <value>41</value>
+  </data>
+  <data name="BelarussianSizeSelect.Items15" xml:space="preserve">
+    <value>41,5</value>
+  </data>
+  <data name="BelarussianSizeSelect.Items16" xml:space="preserve">
+    <value>42</value>
+  </data>
+  <data name="BelarussianSizeSelect.Items17" xml:space="preserve">
+    <value>42,5</value>
+  </data>
+  <data name="BelarussianSizeSelect.Items18" xml:space="preserve">
+    <value>43,5</value>
+  </data>
+  <data name="BelarussianSizeSelect.Items19" xml:space="preserve">
+    <value>44,5</value>
+  </data>
+  <data name="BelarussianSizeSelect.Location" type="System.Drawing.Point, System.Drawing">
+    <value>340, 178</value>
+  </data>
+  <data name="BelarussianSizeSelect.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 21</value>
+  </data>
+  <data name="BelarussianSizeSelect.TabIndex" type="System.Int32, mscorlib">
+    <value>45</value>
+  </data>
+  <data name="&gt;&gt;BelarussianSizeSelect.Name" xml:space="preserve">
+    <value>BelarussianSizeSelect</value>
+  </data>
+  <data name="&gt;&gt;BelarussianSizeSelect.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BelarussianSizeSelect.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;BelarussianSizeSelect.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="EuropeanSizeSelect.Items" xml:space="preserve">
+    <value>35</value>
+  </data>
+  <data name="EuropeanSizeSelect.Items1" xml:space="preserve">
+    <value>35,5</value>
+  </data>
+  <data name="EuropeanSizeSelect.Items2" xml:space="preserve">
+    <value>36</value>
+  </data>
+  <data name="EuropeanSizeSelect.Items3" xml:space="preserve">
+    <value>36,5</value>
+  </data>
+  <data name="EuropeanSizeSelect.Items4" xml:space="preserve">
+    <value>37</value>
+  </data>
+  <data name="EuropeanSizeSelect.Items5" xml:space="preserve">
+    <value>37,5</value>
+  </data>
+  <data name="EuropeanSizeSelect.Items6" xml:space="preserve">
+    <value>38</value>
+  </data>
+  <data name="EuropeanSizeSelect.Items7" xml:space="preserve">
+    <value>38,5</value>
+  </data>
+  <data name="EuropeanSizeSelect.Items8" xml:space="preserve">
+    <value>39</value>
+  </data>
+  <data name="EuropeanSizeSelect.Items9" xml:space="preserve">
+    <value>39,5</value>
+  </data>
+  <data name="EuropeanSizeSelect.Items10" xml:space="preserve">
+    <value>40</value>
+  </data>
+  <data name="EuropeanSizeSelect.Items11" xml:space="preserve">
+    <value>40,5</value>
+  </data>
+  <data name="EuropeanSizeSelect.Items12" xml:space="preserve">
+    <value>41</value>
+  </data>
+  <data name="EuropeanSizeSelect.Items13" xml:space="preserve">
+    <value>41,5</value>
+  </data>
+  <data name="EuropeanSizeSelect.Items14" xml:space="preserve">
+    <value>42</value>
+  </data>
+  <data name="EuropeanSizeSelect.Items15" xml:space="preserve">
+    <value>42,5</value>
+  </data>
+  <data name="EuropeanSizeSelect.Items16" xml:space="preserve">
+    <value>43</value>
+  </data>
+  <data name="EuropeanSizeSelect.Items17" xml:space="preserve">
+    <value>43,5</value>
+  </data>
+  <data name="EuropeanSizeSelect.Items18" xml:space="preserve">
+    <value>44,5</value>
+  </data>
+  <data name="EuropeanSizeSelect.Items19" xml:space="preserve">
+    <value>45,5</value>
+  </data>
+  <data name="EuropeanSizeSelect.Location" type="System.Drawing.Point, System.Drawing">
+    <value>340, 136</value>
+  </data>
+  <data name="EuropeanSizeSelect.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 21</value>
+  </data>
+  <data name="EuropeanSizeSelect.TabIndex" type="System.Int32, mscorlib">
+    <value>44</value>
+  </data>
+  <data name="&gt;&gt;EuropeanSizeSelect.Name" xml:space="preserve">
+    <value>EuropeanSizeSelect</value>
+  </data>
+  <data name="&gt;&gt;EuropeanSizeSelect.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EuropeanSizeSelect.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;EuropeanSizeSelect.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Artifakt Element, 7.79999971pt</value>
-  </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+    <value>Microsoft Sans Serif, 7.79999971pt</value>
   </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
@@ -608,6 +1032,12 @@
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Калькулятор размеров обуви</value>
+  </data>
+  <data name="&gt;&gt;errorProvider1.Name" xml:space="preserve">
+    <value>errorProvider1</value>
+  </data>
+  <data name="&gt;&gt;errorProvider1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ErrorProvider, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Calculator</value>
