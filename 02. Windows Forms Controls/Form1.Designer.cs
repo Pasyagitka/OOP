@@ -42,14 +42,9 @@ namespace Windows_Forms_Controls
             this.KitchenСheckBox = new System.Windows.Forms.CheckBox();
             this.yearLabel = new System.Windows.Forms.Label();
             this.yearTrackBar = new System.Windows.Forms.TrackBar();
-            this.toYearResultLabel = new System.Windows.Forms.Label();
+            this.yearResultLabel = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.FloorListBox = new System.Windows.Forms.ListBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.SquareLabel = new System.Windows.Forms.Label();
-            this.SqareTextBox = new System.Windows.Forms.TextBox();
-            this.phoneNumberMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.AdressGroupBox = new System.Windows.Forms.GroupBox();
             this.flatLabel = new System.Windows.Forms.Label();
             this.flatTextBox = new System.Windows.Forms.TextBox();
@@ -61,6 +56,11 @@ namespace Windows_Forms_Controls
             this.cityLabel = new System.Windows.Forms.Label();
             this.countryComboBox = new System.Windows.Forms.ComboBox();
             this.countryLabel = new System.Windows.Forms.Label();
+            this.FloorListBox = new System.Windows.Forms.ListBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.SquareLabel = new System.Windows.Forms.Label();
+            this.SqareTextBox = new System.Windows.Forms.TextBox();
+            this.phoneNumberMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.infoRichTextBox = new System.Windows.Forms.RichTextBox();
             this.saveButton = new System.Windows.Forms.Button();
             this.showButton = new System.Windows.Forms.Button();
@@ -73,7 +73,8 @@ namespace Windows_Forms_Controls
             this.flatPictureBox = new System.Windows.Forms.PictureBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.infoLabel = new System.Windows.Forms.Label();
-            this.splitter1 = new System.Windows.Forms.Splitter();
+            this.exportButton = new System.Windows.Forms.Button();
+            this.importButton = new System.Windows.Forms.Button();
             this.OptionsGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.yearTrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -98,9 +99,9 @@ namespace Windows_Forms_Controls
             this.roomCountLabel.AutoSize = true;
             this.roomCountLabel.Location = new System.Drawing.Point(90, 236);
             this.roomCountLabel.Name = "roomCountLabel";
-            this.roomCountLabel.Size = new System.Drawing.Size(106, 13);
+            this.roomCountLabel.Size = new System.Drawing.Size(110, 13);
             this.roomCountLabel.TabIndex = 1;
-            this.roomCountLabel.Text = "Количество комнат";
+            this.roomCountLabel.Text = "Количество комнат*";
             // 
             // roomsCountComboBox
             // 
@@ -112,11 +113,13 @@ namespace Windows_Forms_Controls
             "2",
             "3",
             "4",
-            "5 и более"});
+            "5",
+            "более"});
             this.roomsCountComboBox.Location = new System.Drawing.Point(212, 233);
             this.roomsCountComboBox.Name = "roomsCountComboBox";
             this.roomsCountComboBox.Size = new System.Drawing.Size(80, 21);
             this.roomsCountComboBox.TabIndex = 2;
+            this.roomsCountComboBox.Validating += new System.ComponentModel.CancelEventHandler(this.roomsCountComboBox_Validating);
             // 
             // OptionsGroupBox
             // 
@@ -155,6 +158,8 @@ namespace Windows_Forms_Controls
             // WCCheckBox
             // 
             this.WCCheckBox.AutoSize = true;
+            this.WCCheckBox.Checked = true;
+            this.WCCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.WCCheckBox.Location = new System.Drawing.Point(17, 76);
             this.WCCheckBox.Name = "WCCheckBox";
             this.WCCheckBox.Size = new System.Drawing.Size(61, 17);
@@ -165,6 +170,8 @@ namespace Windows_Forms_Controls
             // BathroomCheckBox
             // 
             this.BathroomCheckBox.AutoSize = true;
+            this.BathroomCheckBox.Checked = true;
+            this.BathroomCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.BathroomCheckBox.Location = new System.Drawing.Point(17, 52);
             this.BathroomCheckBox.Name = "BathroomCheckBox";
             this.BathroomCheckBox.Size = new System.Drawing.Size(63, 17);
@@ -175,6 +182,8 @@ namespace Windows_Forms_Controls
             // KitchenСheckBox
             // 
             this.KitchenСheckBox.AutoSize = true;
+            this.KitchenСheckBox.Checked = true;
+            this.KitchenСheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.KitchenСheckBox.Location = new System.Drawing.Point(17, 28);
             this.KitchenСheckBox.Name = "KitchenСheckBox";
             this.KitchenСheckBox.Size = new System.Drawing.Size(55, 17);
@@ -201,28 +210,146 @@ namespace Windows_Forms_Controls
             this.yearTrackBar.TabIndex = 6;
             this.yearTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
             this.yearTrackBar.Value = 2021;
-            this.yearTrackBar.Scroll += new System.EventHandler(this.toYearTrackBar_Scroll);
+            this.yearTrackBar.Scroll += new System.EventHandler(this.yearTrackBar_Scroll);
             // 
-            // toYearResultLabel
+            // yearResultLabel
             // 
-            this.toYearResultLabel.AutoSize = true;
-            this.toYearResultLabel.Location = new System.Drawing.Point(242, 307);
-            this.toYearResultLabel.Name = "toYearResultLabel";
-            this.toYearResultLabel.Size = new System.Drawing.Size(31, 13);
-            this.toYearResultLabel.TabIndex = 10;
-            this.toYearResultLabel.Text = "2021";
+            this.yearResultLabel.AutoSize = true;
+            this.yearResultLabel.Location = new System.Drawing.Point(242, 307);
+            this.yearResultLabel.Name = "yearResultLabel";
+            this.yearResultLabel.Size = new System.Drawing.Size(31, 13);
+            this.yearResultLabel.TabIndex = 10;
+            this.yearResultLabel.Text = "2021";
             // 
             // errorProvider1
             // 
+            this.errorProvider1.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorProvider1.ContainerControl = this;
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.OptionsGroupBox);
+            this.panel1.Controls.Add(this.AdressGroupBox);
             this.panel1.Location = new System.Drawing.Point(335, 88);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(353, 189);
             this.panel1.TabIndex = 11;
+            // 
+            // AdressGroupBox
+            // 
+            this.AdressGroupBox.Controls.Add(this.flatLabel);
+            this.AdressGroupBox.Controls.Add(this.flatTextBox);
+            this.AdressGroupBox.Controls.Add(this.houseTextBox);
+            this.AdressGroupBox.Controls.Add(this.houseLabel);
+            this.AdressGroupBox.Controls.Add(this.streetTextBox);
+            this.AdressGroupBox.Controls.Add(this.streetLabel);
+            this.AdressGroupBox.Controls.Add(this.cityComboBox);
+            this.AdressGroupBox.Controls.Add(this.cityLabel);
+            this.AdressGroupBox.Controls.Add(this.countryComboBox);
+            this.AdressGroupBox.Controls.Add(this.countryLabel);
+            this.AdressGroupBox.Location = new System.Drawing.Point(155, 19);
+            this.AdressGroupBox.Name = "AdressGroupBox";
+            this.AdressGroupBox.Size = new System.Drawing.Size(178, 157);
+            this.AdressGroupBox.TabIndex = 20;
+            this.AdressGroupBox.TabStop = false;
+            this.AdressGroupBox.Text = "Адрес";
+            // 
+            // flatLabel
+            // 
+            this.flatLabel.AutoSize = true;
+            this.flatLabel.Location = new System.Drawing.Point(5, 138);
+            this.flatLabel.Name = "flatLabel";
+            this.flatLabel.Size = new System.Drawing.Size(59, 13);
+            this.flatLabel.TabIndex = 27;
+            this.flatLabel.Text = "Квартира*";
+            // 
+            // flatTextBox
+            // 
+            this.flatTextBox.Location = new System.Drawing.Point(66, 131);
+            this.flatTextBox.Name = "flatTextBox";
+            this.flatTextBox.Size = new System.Drawing.Size(92, 20);
+            this.flatTextBox.TabIndex = 26;
+            this.flatTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.flatTextBox_Validating);
+            // 
+            // houseTextBox
+            // 
+            this.houseTextBox.Location = new System.Drawing.Point(66, 105);
+            this.houseTextBox.Name = "houseTextBox";
+            this.houseTextBox.Size = new System.Drawing.Size(92, 20);
+            this.houseTextBox.TabIndex = 25;
+            this.houseTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.houseTextBox_Validating);
+            // 
+            // houseLabel
+            // 
+            this.houseLabel.AutoSize = true;
+            this.houseLabel.Location = new System.Drawing.Point(17, 108);
+            this.houseLabel.Name = "houseLabel";
+            this.houseLabel.Size = new System.Drawing.Size(34, 13);
+            this.houseLabel.TabIndex = 24;
+            this.houseLabel.Text = "Дом*";
+            // 
+            // streetTextBox
+            // 
+            this.streetTextBox.Location = new System.Drawing.Point(66, 77);
+            this.streetTextBox.Name = "streetTextBox";
+            this.streetTextBox.Size = new System.Drawing.Size(92, 20);
+            this.streetTextBox.TabIndex = 23;
+            this.streetTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.streetTextBox_Validating);
+            // 
+            // streetLabel
+            // 
+            this.streetLabel.AutoSize = true;
+            this.streetLabel.Location = new System.Drawing.Point(17, 80);
+            this.streetLabel.Name = "streetLabel";
+            this.streetLabel.Size = new System.Drawing.Size(43, 13);
+            this.streetLabel.TabIndex = 21;
+            this.streetLabel.Text = "Улица*";
+            // 
+            // cityComboBox
+            // 
+            this.cityComboBox.FormattingEnabled = true;
+            this.cityComboBox.Items.AddRange(new object[] {
+            "Минск",
+            "Витебск",
+            "Гомель",
+            "Брест",
+            "Гродно",
+            "Могилёв"});
+            this.cityComboBox.Location = new System.Drawing.Point(66, 50);
+            this.cityComboBox.Name = "cityComboBox";
+            this.cityComboBox.Size = new System.Drawing.Size(92, 21);
+            this.cityComboBox.TabIndex = 21;
+            this.cityComboBox.Validating += new System.ComponentModel.CancelEventHandler(this.cityComboBox_Validating);
+            // 
+            // cityLabel
+            // 
+            this.cityLabel.AutoSize = true;
+            this.cityLabel.Location = new System.Drawing.Point(17, 55);
+            this.cityLabel.Name = "cityLabel";
+            this.cityLabel.Size = new System.Drawing.Size(41, 13);
+            this.cityLabel.TabIndex = 21;
+            this.cityLabel.Text = "Город*";
+            // 
+            // countryComboBox
+            // 
+            this.countryComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.countryComboBox.FormattingEnabled = true;
+            this.countryComboBox.Items.AddRange(new object[] {
+            "Беларусь"});
+            this.countryComboBox.Location = new System.Drawing.Point(66, 23);
+            this.countryComboBox.Name = "countryComboBox";
+            this.countryComboBox.Size = new System.Drawing.Size(92, 21);
+            this.countryComboBox.TabIndex = 22;
+            this.countryComboBox.Validating += new System.ComponentModel.CancelEventHandler(this.countryComboBox_Validating);
+            // 
+            // countryLabel
+            // 
+            this.countryLabel.AutoSize = true;
+            this.countryLabel.Location = new System.Drawing.Point(13, 31);
+            this.countryLabel.Name = "countryLabel";
+            this.countryLabel.Size = new System.Drawing.Size(47, 13);
+            this.countryLabel.TabIndex = 21;
+            this.countryLabel.Text = "Страна*";
             // 
             // FloorListBox
             // 
@@ -276,9 +403,9 @@ namespace Windows_Forms_Controls
             this.SquareLabel.AutoSize = true;
             this.SquareLabel.Location = new System.Drawing.Point(93, 341);
             this.SquareLabel.Name = "SquareLabel";
-            this.SquareLabel.Size = new System.Drawing.Size(54, 13);
+            this.SquareLabel.Size = new System.Drawing.Size(58, 13);
             this.SquareLabel.TabIndex = 14;
-            this.SquareLabel.Text = "Площадь";
+            this.SquareLabel.Text = "Площадь*";
             // 
             // SqareTextBox
             // 
@@ -287,145 +414,39 @@ namespace Windows_Forms_Controls
             this.SqareTextBox.Name = "SqareTextBox";
             this.SqareTextBox.Size = new System.Drawing.Size(80, 20);
             this.SqareTextBox.TabIndex = 15;
+            this.SqareTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.SqareTextBox_Validating);
             // 
             // phoneNumberMaskedTextBox
             // 
             this.phoneNumberMaskedTextBox.Location = new System.Drawing.Point(212, 383);
-            this.phoneNumberMaskedTextBox.Mask = "+375 (99) 000-00-00";
+            this.phoneNumberMaskedTextBox.Mask = "+375 (00) 000-00-00";
             this.phoneNumberMaskedTextBox.Name = "phoneNumberMaskedTextBox";
-            this.phoneNumberMaskedTextBox.Size = new System.Drawing.Size(100, 20);
+            this.phoneNumberMaskedTextBox.Size = new System.Drawing.Size(104, 20);
+            this.phoneNumberMaskedTextBox.SkipLiterals = false;
             this.phoneNumberMaskedTextBox.TabIndex = 16;
-            // 
-            // AdressGroupBox
-            // 
-            this.AdressGroupBox.Controls.Add(this.flatLabel);
-            this.AdressGroupBox.Controls.Add(this.flatTextBox);
-            this.AdressGroupBox.Controls.Add(this.houseTextBox);
-            this.AdressGroupBox.Controls.Add(this.houseLabel);
-            this.AdressGroupBox.Controls.Add(this.streetTextBox);
-            this.AdressGroupBox.Controls.Add(this.streetLabel);
-            this.AdressGroupBox.Controls.Add(this.cityComboBox);
-            this.AdressGroupBox.Controls.Add(this.cityLabel);
-            this.AdressGroupBox.Controls.Add(this.countryComboBox);
-            this.AdressGroupBox.Controls.Add(this.countryLabel);
-            this.AdressGroupBox.Location = new System.Drawing.Point(490, 114);
-            this.AdressGroupBox.Name = "AdressGroupBox";
-            this.AdressGroupBox.Size = new System.Drawing.Size(178, 157);
-            this.AdressGroupBox.TabIndex = 20;
-            this.AdressGroupBox.TabStop = false;
-            this.AdressGroupBox.Text = "Адрес";
-            // 
-            // flatLabel
-            // 
-            this.flatLabel.AutoSize = true;
-            this.flatLabel.Location = new System.Drawing.Point(6, 138);
-            this.flatLabel.Name = "flatLabel";
-            this.flatLabel.Size = new System.Drawing.Size(55, 13);
-            this.flatLabel.TabIndex = 27;
-            this.flatLabel.Text = "Квартира";
-            // 
-            // flatTextBox
-            // 
-            this.flatTextBox.Location = new System.Drawing.Point(66, 131);
-            this.flatTextBox.Name = "flatTextBox";
-            this.flatTextBox.Size = new System.Drawing.Size(92, 20);
-            this.flatTextBox.TabIndex = 26;
-            // 
-            // houseTextBox
-            // 
-            this.houseTextBox.Location = new System.Drawing.Point(66, 105);
-            this.houseTextBox.Name = "houseTextBox";
-            this.houseTextBox.Size = new System.Drawing.Size(92, 20);
-            this.houseTextBox.TabIndex = 25;
-            // 
-            // houseLabel
-            // 
-            this.houseLabel.AutoSize = true;
-            this.houseLabel.Location = new System.Drawing.Point(17, 108);
-            this.houseLabel.Name = "houseLabel";
-            this.houseLabel.Size = new System.Drawing.Size(30, 13);
-            this.houseLabel.TabIndex = 24;
-            this.houseLabel.Text = "Дом";
-            // 
-            // streetTextBox
-            // 
-            this.streetTextBox.Location = new System.Drawing.Point(66, 77);
-            this.streetTextBox.Name = "streetTextBox";
-            this.streetTextBox.Size = new System.Drawing.Size(92, 20);
-            this.streetTextBox.TabIndex = 23;
-            // 
-            // streetLabel
-            // 
-            this.streetLabel.AutoSize = true;
-            this.streetLabel.Location = new System.Drawing.Point(17, 80);
-            this.streetLabel.Name = "streetLabel";
-            this.streetLabel.Size = new System.Drawing.Size(39, 13);
-            this.streetLabel.TabIndex = 21;
-            this.streetLabel.Text = "Улица";
-            // 
-            // cityComboBox
-            // 
-            this.cityComboBox.FormattingEnabled = true;
-            this.cityComboBox.Items.AddRange(new object[] {
-            "Минск",
-            "Витебск",
-            "Гомель",
-            "Брест",
-            "Гродно",
-            "Могилёв"});
-            this.cityComboBox.Location = new System.Drawing.Point(66, 50);
-            this.cityComboBox.Name = "cityComboBox";
-            this.cityComboBox.Size = new System.Drawing.Size(92, 21);
-            this.cityComboBox.TabIndex = 21;
-            // 
-            // cityLabel
-            // 
-            this.cityLabel.AutoSize = true;
-            this.cityLabel.Location = new System.Drawing.Point(17, 55);
-            this.cityLabel.Name = "cityLabel";
-            this.cityLabel.Size = new System.Drawing.Size(37, 13);
-            this.cityLabel.TabIndex = 21;
-            this.cityLabel.Text = "Город";
-            // 
-            // countryComboBox
-            // 
-            this.countryComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.countryComboBox.FormattingEnabled = true;
-            this.countryComboBox.Items.AddRange(new object[] {
-            "Беларусь"});
-            this.countryComboBox.Location = new System.Drawing.Point(66, 23);
-            this.countryComboBox.Name = "countryComboBox";
-            this.countryComboBox.Size = new System.Drawing.Size(92, 21);
-            this.countryComboBox.TabIndex = 22;
-            // 
-            // countryLabel
-            // 
-            this.countryLabel.AutoSize = true;
-            this.countryLabel.Location = new System.Drawing.Point(13, 31);
-            this.countryLabel.Name = "countryLabel";
-            this.countryLabel.Size = new System.Drawing.Size(43, 13);
-            this.countryLabel.TabIndex = 21;
-            this.countryLabel.Text = "Страна";
+            this.phoneNumberMaskedTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.phoneNumberMaskedTextBox_Validating);
             // 
             // infoRichTextBox
             // 
             this.infoRichTextBox.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.infoRichTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.infoRichTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.infoRichTextBox.Location = new System.Drawing.Point(726, 75);
+            this.infoRichTextBox.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.infoRichTextBox.Location = new System.Drawing.Point(709, 75);
             this.infoRichTextBox.Name = "infoRichTextBox";
             this.infoRichTextBox.ReadOnly = true;
-            this.infoRichTextBox.Size = new System.Drawing.Size(197, 266);
+            this.infoRichTextBox.Size = new System.Drawing.Size(214, 266);
             this.infoRichTextBox.TabIndex = 21;
             this.infoRichTextBox.Text = "";
             // 
             // saveButton
             // 
             this.saveButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.saveButton.Enabled = false;
             this.saveButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.saveButton.FlatAppearance.BorderSize = 2;
             this.saveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.saveButton.Location = new System.Drawing.Point(613, 379);
+            this.saveButton.Location = new System.Drawing.Point(573, 375);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(75, 24);
             this.saveButton.TabIndex = 23;
@@ -439,23 +460,23 @@ namespace Windows_Forms_Controls
             this.showButton.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
             this.showButton.FlatAppearance.BorderSize = 2;
             this.showButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.showButton.Location = new System.Drawing.Point(833, 375);
+            this.showButton.Location = new System.Drawing.Point(848, 379);
             this.showButton.Name = "showButton";
             this.showButton.Size = new System.Drawing.Size(75, 23);
             this.showButton.TabIndex = 24;
             this.showButton.Text = "Вывод";
             this.showButton.UseVisualStyleBackColor = false;
+            this.showButton.Click += new System.EventHandler(this.showButton_Click);
             // 
             // priceTextBox
             // 
-            this.priceTextBox.Location = new System.Drawing.Point(23, 21);
+            this.priceTextBox.Location = new System.Drawing.Point(6, 21);
             this.priceTextBox.Name = "priceTextBox";
             this.priceTextBox.ReadOnly = true;
-            this.priceTextBox.Size = new System.Drawing.Size(61, 20);
+            this.priceTextBox.Size = new System.Drawing.Size(78, 20);
             this.priceTextBox.TabIndex = 26;
             this.priceTextBox.Text = "0";
             this.priceTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.priceTextBox.TextChanged += new System.EventHandler(this.costTextBox_TextChanged);
             // 
             // priceButton
             // 
@@ -495,11 +516,11 @@ namespace Windows_Forms_Controls
             // m2Label
             // 
             this.m2Label.AutoSize = true;
-            this.m2Label.Location = new System.Drawing.Point(298, 343);
+            this.m2Label.Location = new System.Drawing.Point(157, 341);
             this.m2Label.Name = "m2Label";
-            this.m2Label.Size = new System.Drawing.Size(18, 13);
+            this.m2Label.Size = new System.Drawing.Size(24, 13);
             this.m2Label.TabIndex = 29;
-            this.m2Label.Text = "m²";
+            this.m2Label.Text = "(m²)";
             // 
             // phoneNumberLabel
             // 
@@ -533,20 +554,33 @@ namespace Windows_Forms_Controls
             this.infoLabel.TabIndex = 32;
             this.infoLabel.Text = "Информация";
             // 
-            // splitter1
+            // exportButton
             // 
-            this.splitter1.Location = new System.Drawing.Point(0, 0);
-            this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(3, 450);
-            this.splitter1.TabIndex = 33;
-            this.splitter1.TabStop = false;
+            this.exportButton.Location = new System.Drawing.Point(709, 363);
+            this.exportButton.Name = "exportButton";
+            this.exportButton.Size = new System.Drawing.Size(75, 23);
+            this.exportButton.TabIndex = 33;
+            this.exportButton.Text = "Экспорт";
+            this.exportButton.UseVisualStyleBackColor = true;
+            this.exportButton.Click += new System.EventHandler(this.exportButton_Click);
+            // 
+            // importButton
+            // 
+            this.importButton.Location = new System.Drawing.Point(709, 392);
+            this.importButton.Name = "importButton";
+            this.importButton.Size = new System.Drawing.Size(75, 23);
+            this.importButton.TabIndex = 34;
+            this.importButton.Text = "Импорт";
+            this.importButton.UseVisualStyleBackColor = true;
+            this.importButton.Click += new System.EventHandler(this.importButton_Click);
             // 
             // FlatForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(935, 450);
-            this.Controls.Add(this.splitter1);
+            this.ClientSize = new System.Drawing.Size(976, 450);
+            this.Controls.Add(this.importButton);
+            this.Controls.Add(this.exportButton);
             this.Controls.Add(this.infoLabel);
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.flatPictureBox);
@@ -555,14 +589,13 @@ namespace Windows_Forms_Controls
             this.Controls.Add(this.priceGroupBox);
             this.Controls.Add(this.showButton);
             this.Controls.Add(this.infoRichTextBox);
-            this.Controls.Add(this.AdressGroupBox);
             this.Controls.Add(this.phoneNumberMaskedTextBox);
             this.Controls.Add(this.SqareTextBox);
             this.Controls.Add(this.SquareLabel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.FloorListBox);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.toYearResultLabel);
+            this.Controls.Add(this.yearResultLabel);
             this.Controls.Add(this.yearTrackBar);
             this.Controls.Add(this.yearLabel);
             this.Controls.Add(this.roomsCountComboBox);
@@ -570,7 +603,6 @@ namespace Windows_Forms_Controls
             this.Controls.Add(this.headingLabel);
             this.Name = "FlatForm";
             this.Text = "Квартира";
-            this.Load += new System.EventHandler(this.FlatForm_Load);
             this.OptionsGroupBox.ResumeLayout(false);
             this.OptionsGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.yearTrackBar)).EndInit();
@@ -599,7 +631,7 @@ namespace Windows_Forms_Controls
         private System.Windows.Forms.CheckBox KitchenСheckBox;
         private System.Windows.Forms.Label yearLabel;
         private System.Windows.Forms.TrackBar yearTrackBar;
-        private System.Windows.Forms.Label toYearResultLabel;
+        private System.Windows.Forms.Label yearResultLabel;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ListBox FloorListBox;
@@ -630,7 +662,8 @@ namespace Windows_Forms_Controls
         private System.Windows.Forms.PictureBox flatPictureBox;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Label infoLabel;
-        private System.Windows.Forms.Splitter splitter1;
+        private System.Windows.Forms.Button exportButton;
+        private System.Windows.Forms.Button importButton;
     }
 }
 
