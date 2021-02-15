@@ -246,7 +246,7 @@ namespace Windows_Forms_Controls
             this.panel1.Controls.Add(this.AdressGroupBox);
             this.panel1.Location = new System.Drawing.Point(514, 77);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(369, 195);
+            this.panel1.Size = new System.Drawing.Size(381, 195);
             this.panel1.TabIndex = 11;
             // 
             // AdressGroupBox
@@ -284,7 +284,7 @@ namespace Windows_Forms_Controls
             // flatTextBox
             // 
             this.flatTextBox.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.flatTextBox.Location = new System.Drawing.Point(131, 134);
+            this.flatTextBox.Location = new System.Drawing.Point(120, 133);
             this.flatTextBox.Name = "flatTextBox";
             this.flatTextBox.Size = new System.Drawing.Size(92, 23);
             this.flatTextBox.TabIndex = 26;
@@ -293,7 +293,7 @@ namespace Windows_Forms_Controls
             // houseTextBox
             // 
             this.houseTextBox.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.houseTextBox.Location = new System.Drawing.Point(131, 108);
+            this.houseTextBox.Location = new System.Drawing.Point(120, 107);
             this.houseTextBox.Name = "houseTextBox";
             this.houseTextBox.Size = new System.Drawing.Size(92, 23);
             this.houseTextBox.TabIndex = 25;
@@ -312,7 +312,7 @@ namespace Windows_Forms_Controls
             // streetTextBox
             // 
             this.streetTextBox.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.streetTextBox.Location = new System.Drawing.Point(131, 79);
+            this.streetTextBox.Location = new System.Drawing.Point(120, 78);
             this.streetTextBox.Name = "streetTextBox";
             this.streetTextBox.Size = new System.Drawing.Size(92, 23);
             this.streetTextBox.TabIndex = 23;
@@ -339,7 +339,7 @@ namespace Windows_Forms_Controls
             "Брест",
             "Гродно",
             "Могилёв"});
-            this.cityComboBox.Location = new System.Drawing.Point(131, 49);
+            this.cityComboBox.Location = new System.Drawing.Point(120, 48);
             this.cityComboBox.Name = "cityComboBox";
             this.cityComboBox.Size = new System.Drawing.Size(92, 24);
             this.cityComboBox.TabIndex = 21;
@@ -363,7 +363,7 @@ namespace Windows_Forms_Controls
             this.countryComboBox.FormattingEnabled = true;
             this.countryComboBox.Items.AddRange(new object[] {
             "Беларусь"});
-            this.countryComboBox.Location = new System.Drawing.Point(131, 18);
+            this.countryComboBox.Location = new System.Drawing.Point(120, 17);
             this.countryComboBox.Name = "countryComboBox";
             this.countryComboBox.Size = new System.Drawing.Size(92, 24);
             this.countryComboBox.TabIndex = 22;
@@ -670,6 +670,8 @@ namespace Windows_Forms_Controls
             this.Controls.Add(this.roomCountLabel);
             this.Controls.Add(this.headingLabel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(1243, 488);
+            this.MinimumSize = new System.Drawing.Size(1243, 488);
             this.Name = "FlatForm";
             this.Text = "Квартира";
             this.OptionsGroupBox.ResumeLayout(false);

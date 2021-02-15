@@ -1,13 +1,3 @@
-E:\4 семестр\ООП\02. Windows Forms Controls\bin\Debug\_02.Windows_Forms_Controls.exe.config
-E:\4 семестр\ООП\02. Windows Forms Controls\bin\Debug\_02.Windows_Forms_Controls.exe
-E:\4 семестр\ООП\02. Windows Forms Controls\bin\Debug\_02.Windows_Forms_Controls.pdb
-E:\4 семестр\ООП\02. Windows Forms Controls\obj\Debug\02. Windows Forms Controls.csprojAssemblyReference.cache
-E:\4 семестр\ООП\02. Windows Forms Controls\obj\Debug\_02.Windows_Forms_Controls.Properties.Resources.resources
-E:\4 семестр\ООП\02. Windows Forms Controls\obj\Debug\02. Windows Forms Controls.csproj.GenerateResource.cache
-E:\4 семестр\ООП\02. Windows Forms Controls\obj\Debug\02. Windows Forms Controls.csproj.CoreCompileInputs.cache
-E:\4 семестр\ООП\02. Windows Forms Controls\obj\Debug\_02.Windows_Forms_Controls.exe
-E:\4 семестр\ООП\02. Windows Forms Controls\obj\Debug\_02.Windows_Forms_Controls.pdb
-E:\4 семестр\ООП\02. Windows Forms Controls\obj\Debug\Windows_Forms_Controls.FlatForm.resources
 G:\4 семестр\ООП\02. Windows Forms Controls\bin\Debug\_02.Windows_Forms_Controls.exe.config
 G:\4 семестр\ООП\02. Windows Forms Controls\bin\Debug\_02.Windows_Forms_Controls.exe
 G:\4 семестр\ООП\02. Windows Forms Controls\bin\Debug\_02.Windows_Forms_Controls.pdb
@@ -18,5 +8,14 @@ G:\4 семестр\ООП\02. Windows Forms Controls\obj\Debug\02. Windows Form
 G:\4 семестр\ООП\02. Windows Forms Controls\obj\Debug\02. Windows Forms Controls.csproj.CoreCompileInputs.cache
 G:\4 семестр\ООП\02. Windows Forms Controls\obj\Debug\_02.Windows_Forms_Controls.exe
 G:\4 семестр\ООП\02. Windows Forms Controls\obj\Debug\_02.Windows_Forms_Controls.pdb
+E:\4 семестр\ООП\02. Windows Forms Controls\bin\Debug\_02.Windows_Forms_Controls.exe.config
+E:\4 семестр\ООП\02. Windows Forms Controls\bin\Debug\_02.Windows_Forms_Controls.exe
+E:\4 семестр\ООП\02. Windows Forms Controls\bin\Debug\_02.Windows_Forms_Controls.pdb
 E:\4 семестр\ООП\02. Windows Forms Controls\bin\Debug\System.Reflection.TypeExtensions.dll
+E:\4 семестр\ООП\02. Windows Forms Controls\obj\Debug\Windows_Forms_Controls.FlatForm.resources
+E:\4 семестр\ООП\02. Windows Forms Controls\obj\Debug\_02.Windows_Forms_Controls.Properties.Resources.resources
+E:\4 семестр\ООП\02. Windows Forms Controls\obj\Debug\02. Windows Forms Controls.csproj.GenerateResource.cache
+E:\4 семестр\ООП\02. Windows Forms Controls\obj\Debug\02. Windows Forms Controls.csproj.CoreCompileInputs.cache
 E:\4 семестр\ООП\02. Windows Forms Controls\obj\Debug\02. Windows Forms Controls.csproj.CopyComplete
+E:\4 семестр\ООП\02. Windows Forms Controls\obj\Debug\_02.Windows_Forms_Controls.exe
+E:\4 семестр\ООП\02. Windows Forms Controls\obj\Debug\_02.Windows_Forms_Controls.pdb

@@ -30,12 +30,27 @@ namespace Windows_Forms_Controls
 
         private void exportButton_Click(object sender, EventArgs e)
         {
-            Flats.ExportFlats();
+            try
+            {
+                MessageBox.Show("Файл экспорта будет перезаписан", "Предупреждение!");
+                Flats.ExportFlats();
+            }
+            catch
+            {
+                MessageBox.Show("Ошибка экспорта", "Ошибка!");
+            }
         }
 
         private void importButton_Click(object sender, EventArgs e)
         {
-            Flats.ImportFlats();
+            try
+            {
+                Flats.ImportFlats();
+            }
+            catch
+            {
+                MessageBox.Show("Ошибка импорта", "Ошибка!");
+            }
         }
 
         private void showButton_Click(object sender, EventArgs e)
@@ -141,10 +156,11 @@ namespace Windows_Forms_Controls
 
         public void ShowFlats()
         {
-            infoRichTextBox.Text = "";
+            const string header = "----------------------------------------------------";
+            infoRichTextBox.ResetText();
             foreach (Flat f in Flats.flats)
             {
-                infoRichTextBox.Text += "-------------------------------------------------";
+                infoRichTextBox.Text += header;
                 infoRichTextBox.Text += f.ToString();
             }
         }

@@ -6,21 +6,21 @@ using System.Runtime.Serialization.Json;
 
 namespace Windows_Forms_Controls
 {
-
     public class Flats
     {
+        const string filepath = "..//..//..//Flats.json";
         public static List<Flat> flats = new List<Flat>();
         static DataContractJsonSerializer jsonFormatter = new DataContractJsonSerializer(typeof(List<Flat>));
         public static void ExportFlats()
         { 
-            using (var fs = new FileStream("..//..//..//..//Flats.json", FileMode.Append))
+            using (var fs = new FileStream(filepath, FileMode.Create))
             {
                 jsonFormatter.WriteObject(fs, flats);
             }
         }
         public static void ImportFlats()
         {
-            using (var file = new FileStream("..//..//..//..//Flats.json", FileMode.OpenOrCreate))
+            using (var file = new FileStream(filepath, FileMode.OpenOrCreate))
             {
                 var flatlist = jsonFormatter.ReadObject(file) as List<Flat>;
                 if (flatlist != null)
