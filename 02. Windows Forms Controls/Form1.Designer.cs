@@ -212,7 +212,7 @@ namespace Windows_Forms_Controls
             // 
             // yearTrackBar
             // 
-            this.yearTrackBar.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.yearTrackBar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.yearTrackBar.Location = new System.Drawing.Point(397, 281);
             this.yearTrackBar.Maximum = 2021;
             this.yearTrackBar.Minimum = 1950;
@@ -443,7 +443,7 @@ namespace Windows_Forms_Controls
             // 
             // SqareTextBox
             // 
-            this.SqareTextBox.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.SqareTextBox.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.SqareTextBox.Location = new System.Drawing.Point(397, 348);
             this.SqareTextBox.Name = "SqareTextBox";
             this.SqareTextBox.Size = new System.Drawing.Size(111, 20);
@@ -452,7 +452,7 @@ namespace Windows_Forms_Controls
             // 
             // phoneNumberMaskedTextBox
             // 
-            this.phoneNumberMaskedTextBox.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.phoneNumberMaskedTextBox.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.phoneNumberMaskedTextBox.Location = new System.Drawing.Point(397, 392);
             this.phoneNumberMaskedTextBox.Mask = "+375 (00) 000-00-00";
             this.phoneNumberMaskedTextBox.Name = "phoneNumberMaskedTextBox";
@@ -463,7 +463,7 @@ namespace Windows_Forms_Controls
             // 
             // infoRichTextBox
             // 
-            this.infoRichTextBox.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.infoRichTextBox.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.infoRichTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.infoRichTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.infoRichTextBox.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
@@ -509,11 +509,13 @@ namespace Windows_Forms_Controls
             // 
             // priceTextBox
             // 
-            this.priceTextBox.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.priceTextBox.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.priceTextBox.Location = new System.Drawing.Point(9, 34);
+            this.priceTextBox.MaxLength = 36;
+            this.priceTextBox.Multiline = true;
             this.priceTextBox.Name = "priceTextBox";
             this.priceTextBox.ReadOnly = true;
-            this.priceTextBox.Size = new System.Drawing.Size(78, 27);
+            this.priceTextBox.Size = new System.Drawing.Size(119, 27);
             this.priceTextBox.TabIndex = 26;
             this.priceTextBox.Text = "0";
             this.priceTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -526,7 +528,7 @@ namespace Windows_Forms_Controls
             this.priceButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.priceButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.priceButton.ForeColor = System.Drawing.Color.DimGray;
-            this.priceButton.Location = new System.Drawing.Point(149, 34);
+            this.priceButton.Location = new System.Drawing.Point(158, 31);
             this.priceButton.Name = "priceButton";
             this.priceButton.Size = new System.Drawing.Size(105, 32);
             this.priceButton.TabIndex = 27;
@@ -553,7 +555,7 @@ namespace Windows_Forms_Controls
             // currencyLabel
             // 
             this.currencyLabel.AutoSize = true;
-            this.currencyLabel.Location = new System.Drawing.Point(93, 37);
+            this.currencyLabel.Location = new System.Drawing.Point(134, 37);
             this.currencyLabel.Name = "currencyLabel";
             this.currencyLabel.Size = new System.Drawing.Size(18, 20);
             this.currencyLabel.TabIndex = 28;
