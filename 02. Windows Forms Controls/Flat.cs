@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.IO;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Json;
@@ -28,8 +29,18 @@ namespace Windows_Forms_Controls
                     foreach (var f in flatlist)
                         flats.Add(f);
                 }
+
             }
         }
+        //public override string ToString()
+        //{
+        //    string result = "";
+        //    foreach (Flat f in flats)
+        //    {
+        //        result += f.ToString() + "\n";
+        //    }
+        //    return result;
+        //}
     }
 
     [DataContract]
@@ -75,6 +86,7 @@ namespace Windows_Forms_Controls
         public string city;
         public string street;
         public int housenumber;
+        [Range(0, 100, ErrorMessage = "Диапазон номера квартиры от 0 до 100")]
         public int flatnumber; 
         
         public Address(string country, string city, string street, int housenumber, int flatnumber)

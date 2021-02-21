@@ -1,1 +1,59 @@
-[{"WC":true,"address":{"city":"Минск","country":"Беларусь","flatnumber":8,"housenumber":8,"street":"шшш"},"balcony":true,"bathroom":true,"footer":false,"kitchen":true,"phonenumber":"+375 (55) 555-55-55","price":71012.4007936508,"roomscount":2,"square":44,"year":2016}]
+[
+  {
+    "WC": true,
+    "address": {
+      "city": "к",
+      "country": "Беларусь",
+      "flatnumber": 4,
+      "housenumber": 56,
+      "street": "укаку"
+    },
+    "balcony": true,
+    "bathroom": true,
+    "footer": false,
+    "kitchen": true,
+    "phonenumber": "+375 (44) 588-56-67",
+    "price": 77049.975012493756,
+    "roomscount": 4,
+    "square": 48,
+    "year": 2001
+  },
+  {
+    "WC": true,
+    "address": {
+      "city": "Минск",
+      "country": "Беларусь",
+      "flatnumber": 8,
+      "housenumber": 8,
+      "street": "шшш"
+    },
+    "balcony": true,
+    "bathroom": true,
+    "footer": false,
+    "kitchen": true,
+    "phonenumber": "+375 (55) 555-55-55",
+    "price": 71012.4007936508,
+    "roomscount": 2,
+    "square": 44,
+    "year": 2016
+  },
+  {
+    "WC": true,
+    "address": {
+      "city": "Гродно",
+      "country": "Беларусь",
+      "flatnumber": 6,
+      "housenumber": 5,
+      "street": "Свердлова"
+    },
+    "balcony": true,
+    "bathroom": true,
+    "footer": false,
+    "kitchen": true,
+    "phonenumber": "+375 (  )    -  -",
+    "price": 152037.38783649053,
+    "roomscount": 4,
+    "square": 123,
+    "year": 2006
+  }
+]

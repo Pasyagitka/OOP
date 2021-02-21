@@ -2,9 +2,12 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Globalization;
+using System.IO;
 using System.Linq;
+using System.Runtime.Serialization.Json;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -20,11 +23,13 @@ namespace Windows_Forms_Controls
 
         private void yearTrackBar_Scroll(object sender, EventArgs e)
         {
+            ActionToolStripStatusLabel.Text = "Последнее выполненное действие: " + "Изменён год";
             yearResultLabel.Text = String.Format("{0}", yearTrackBar.Value); 
         }
 
         private void priceButton_Click(object sender, EventArgs e)
         {
+            ActionToolStripStatusLabel.Text = "Последнее выполненное действие: " + "Рассчитана цена";
             priceTextBox.Text = Convert.ToString(CountPrice());
         }
 
@@ -34,6 +39,7 @@ namespace Windows_Forms_Controls
             {
                 MessageBox.Show("Файл экспорта будет перезаписан", "Предупреждение!");
                 Flats.ExportFlats();
+                ActionToolStripStatusLabel.Text = "Последнее выполненное действие: " + "Экспортированы квартиры";
             }
             catch
             {
@@ -46,6 +52,8 @@ namespace Windows_Forms_Controls
             try
             {
                 Flats.ImportFlats();
+                BaseInfoToolStripStatusLabel.Text = "Квартир в базе " + Flats.flats.Count().ToString();
+                ActionToolStripStatusLabel.Text = "Последнее выполненное действие: " + "Импортированы квартиры";
             }
             catch
             {
@@ -56,6 +64,7 @@ namespace Windows_Forms_Controls
         private void showButton_Click(object sender, EventArgs e)
         {
             ShowFlats();
+            ActionToolStripStatusLabel.Text = "Последнее выполненное действие: " + "Выведены квартиры";
         }
 
         private void saveButton_Click(object sender, EventArgs e)
@@ -66,6 +75,8 @@ namespace Windows_Forms_Controls
                 Flats.flats.Add(flat);
                 Reset();
                 saveButton.Enabled = false;
+                BaseInfoToolStripStatusLabel.Text = "Квартир в базе " + Flats.flats.Count().ToString();
+                ActionToolStripStatusLabel.Text = "Последнее выполненное действие: " + "Добавлена квартира";
             }
             catch
             {
@@ -322,6 +333,189 @@ namespace Windows_Forms_Controls
             {
                 errorProvider1.Clear();
             }
+        }
+
+        private void AboutProgramToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            const string developer = "Zinovich Lizaveta";
+            const string version = "v0.1";
+            MessageBox.Show(developer + "\n" + version, "О программе");
+        }
+
+        private void SearchToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void FullToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SearchWindow searchwindow = new SearchWindow();
+            searchwindow.Show();
+        }
+
+        private void RegExToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RegExSearchWindow regexsearchwindow = new RegExSearchWindow();
+            regexsearchwindow.Show();
+        }
+
+        private void SortByComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            infoRichTextBox.ResetText();
+            var sortedlist = Sort();
+            foreach(var f in sortedlist)
+            {
+                infoRichTextBox.Text += f;
+            }
+            if (SaveSortResCheckBox.Checked == true)
+            {
+                try
+                {
+                    Serialize(sortedlist);
+                }
+                catch
+                {
+                    MessageBox.Show("Ошибка сохранения результатов сортировки в файл");
+                }
+            }
+            ActionToolStripStatusLabel.Text = "Последнее выполненное действие: " + "Квартиры отсортированы";
+        }
+
+        IOrderedEnumerable<Flat> Sort()
+        {
+            if (SortByComboBox.SelectedIndex == 0)
+                return Flats.flats.OrderBy(t => t.square);
+            else if (SortByComboBox.SelectedIndex == 1)
+                return Flats.flats.OrderBy(t => t.roomscount);
+            else 
+                return Flats.flats.OrderBy(t => t.price);
+        }
+
+        void Serialize(IOrderedEnumerable<Flat>  sortedlist)
+        {
+            const string filepath = "..//..//..//SortedFlats.json";
+            DataContractJsonSerializer jsonFormatter = new DataContractJsonSerializer(typeof(List<Flat>));
+            using (var fs = new FileStream(filepath, FileMode.Create))
+            {
+                jsonFormatter.WriteObject(fs, sortedlist);
+            }
+        }
+
+        private void DateTimetimer_Tick(object sender, EventArgs e)
+        {
+            DateToolStripStatusLabel.Text = DateTime.Now.ToLongDateString();
+            TimeToolStripStatusLabel.Text = DateTime.Now.ToShortTimeString();
+        }
+
+        private void DateToolStripStatusLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+        private void regexToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            RegExSearchWindow regexsearchwindow = new RegExSearchWindow();
+            regexsearchwindow.Show();
+        }
+
+        private void наПолноеСоответствиеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SearchWindow searchwindow = new SearchWindow();
+            searchwindow.Show();
+        }
+
+        #region LastAction
+        private void FloorListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ActionToolStripStatusLabel.Text = "Последнее выполненное действие: " + "Выбран этаж";
+        }
+
+        private void roomsCountComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ActionToolStripStatusLabel.Text = "Последнее выполненное действие: " + "Выбрано количество комнат";
+        }
+
+        private void SqareTextBox_TextChanged(object sender, EventArgs e)
+        {
+            ActionToolStripStatusLabel.Text = "Последнее выполненное действие: " + "Указана площадь";
+        }
+
+        private void phoneNumberMaskedTextBox_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+            ActionToolStripStatusLabel.Text = "Последнее выполненное действие: " + "Указан телефон";
+        }
+
+        private void KitchenСheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (KitchenСheckBox.Checked == true)
+                ActionToolStripStatusLabel.Text = "Последнее выполненное действие: " + "Добавлена опция \"кухня\"";
+            else
+                ActionToolStripStatusLabel.Text = "Последнее выполненное действие: " + "Убрана опция \"кухня\"";
+        }
+
+        private void BathroomCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (BathroomCheckBox.Checked == true)
+                ActionToolStripStatusLabel.Text = "Последнее выполненное действие: " + "Добавлена опция \"ванная\"";
+            else
+                ActionToolStripStatusLabel.Text = "Последнее выполненное действие: " + "Убрана опция \"ванная\"";
+        }
+
+        private void WCCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (WCCheckBox.Checked == true)
+                ActionToolStripStatusLabel.Text = "Последнее выполненное действие: " + "Добавлена опция \"туалет\"";
+            else
+                ActionToolStripStatusLabel.Text = "Последнее выполненное действие: " + "Убрана опция \"туалет\"";
+        }
+
+        private void FooterCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (FooterCheckBox.Checked == true)
+                ActionToolStripStatusLabel.Text = "Последнее выполненное действие: " + "Добавлена опция \"подвал\"";
+            else
+                ActionToolStripStatusLabel.Text = "Последнее выполненное действие: " + "Убрана опция \"подвал\"";
+        }
+
+        private void BalconyCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (BalconyCheckBox.Checked == true)
+                ActionToolStripStatusLabel.Text = "Последнее выполненное действие: " + "Добавлена опция \"балкон\"";
+            else
+                ActionToolStripStatusLabel.Text = "Последнее выполненное действие: " + "Убрана опция \"балкон\"";
+        }
+
+        private void countryComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ActionToolStripStatusLabel.Text = "Последнее выполненное действие: " + "Добавлена страна в адрес";
+        }
+
+        private void cityComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ActionToolStripStatusLabel.Text = "Последнее выполненное действие: " + "Добавлен город в адрес";
+        }
+
+        private void streetTextBox_TextChanged(object sender, EventArgs e)
+        {
+            ActionToolStripStatusLabel.Text = "Последнее выполненное действие: " + "Добавлена улица в адрес";
+        }
+
+        private void houseTextBox_TextChanged(object sender, EventArgs e)
+        {
+            ActionToolStripStatusLabel.Text = "Последнее выполненное действие: " + "Добавлен дом в адрес";
+        }
+
+        private void flatTextBox_TextChanged(object sender, EventArgs e)
+        {
+            ActionToolStripStatusLabel.Text = "Последнее выполненное действие: " + "Добавлен номер квартиры в адрес";
+        }
+        #endregion
+
+        private void ResetToolStripButton_Click(object sender, EventArgs e)
+        {
+            Reset();
         }
     }
 }
