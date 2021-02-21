@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
@@ -72,6 +73,18 @@ namespace Windows_Forms_Controls
             try
             {
                 Flat flat = CreateNewFlat();
+                var results = new List<ValidationResult>();
+                var context = new ValidationContext(flat.address);
+                if (!Validator.TryValidateObject(flat.address, context, results, true))
+                {
+                    infoRichTextBox.ResetText();
+                    infoRichTextBox.ForeColor = Color.Red;
+                    foreach (var error in results)
+                    {
+                        infoRichTextBox.Text += "[!]" + error.ErrorMessage + "\n";
+                    }
+                    return;
+                }
                 Flats.flats.Add(flat);
                 Reset();
                 saveButton.Enabled = false;
@@ -101,7 +114,7 @@ namespace Windows_Forms_Controls
             flat.footer = FooterCheckBox.Checked ? true : false;
             flat.balcony = BalconyCheckBox.Checked ? true : false;
             flat.phonenumber = phoneNumberMaskedTextBox.Text;
-            flat.address = new Address(countryComboBox.Text, cityComboBox.Text, streetTextBox.Text, Convert.ToInt32(houseTextBox.Text), Convert.ToInt32(flatTextBox.Text));
+            flat.address = new Address(countryComboBox.Text, cityComboBox.Text, streetTextBox.Text, Convert.ToInt32(houseTextBox.Text), Convert.ToInt32(flatTextBox.Text), Convert.ToInt32(IndexTextBox.Text));
             flat.price = CountPrice();
             return flat;
         }
@@ -136,6 +149,7 @@ namespace Windows_Forms_Controls
             WCCheckBox.Checked = true;
             FooterCheckBox.Checked = false;
             BalconyCheckBox.Checked = false;
+            infoRichTextBox.ResetText();
         }
 
         bool IsFilled()
@@ -169,6 +183,7 @@ namespace Windows_Forms_Controls
         {
             const string header = "----------------------------------------------------";
             infoRichTextBox.ResetText();
+            infoRichTextBox.ForeColor = Color.DimGray;
             foreach (Flat f in Flats.flats)
             {
                 infoRichTextBox.Text += header;

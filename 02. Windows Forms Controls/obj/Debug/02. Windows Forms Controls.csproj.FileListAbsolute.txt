@@ -19,7 +19,6 @@ E:\4 семестр\ООП\02. Windows Forms Controls\obj\Debug\02. Windows Form
 E:\4 семестр\ООП\02. Windows Forms Controls\obj\Debug\02. Windows Forms Controls.csproj.CopyComplete
 E:\4 семестр\ООП\02. Windows Forms Controls\obj\Debug\_02.Windows_Forms_Controls.exe
 E:\4 семестр\ООП\02. Windows Forms Controls\obj\Debug\_02.Windows_Forms_Controls.pdb
-E:\4 семестр\ООП\02. Windows Forms Controls\obj\Debug\02. Windows Forms Controls.csprojAssemblyReference.cache
 E:\4 семестр\ООП\02. Windows Forms Controls\obj\Debug\Windows_Forms_Controls.SearchWindow.resources
 E:\4 семестр\ООП\02. Windows Forms Controls\obj\Debug\Windows_Forms_Controls.RegExSearchWindow.resources
 H:\4 семестр\ООП\02. Windows Forms Controls\bin\Debug\_02.Windows_Forms_Controls.exe.config
@@ -36,3 +35,4 @@ H:\4 семестр\ООП\02. Windows Forms Controls\obj\Debug\02. Windows Form
 H:\4 семестр\ООП\02. Windows Forms Controls\obj\Debug\02. Windows Forms Controls.csproj.CopyComplete
 H:\4 семестр\ООП\02. Windows Forms Controls\obj\Debug\_02.Windows_Forms_Controls.exe
 H:\4 семестр\ООП\02. Windows Forms Controls\obj\Debug\_02.Windows_Forms_Controls.pdb
+E:\4 семестр\ООП\02. Windows Forms Controls\obj\Debug\02. Windows Forms Controls.csprojAssemblyReference.cache

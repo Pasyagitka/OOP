@@ -80,27 +80,42 @@ namespace Windows_Forms_Controls
     [Serializable]
     public class Address
     {
-        //public enum countries { Belarus};
-        //public countries country;
-        public string country;
-        public string city;
-        public string street;
-        public int housenumber;
+
+        string country;
+        string city;
+        string street;
+        int housenumber;
+        int flatnumber;
+        int index;
+
+        [Required(ErrorMessage = "Отсутвует страна")]
+        public string Country { get; set; }
+        [Required(ErrorMessage = "Отсутвует город")]
+        public string City { get; set; }
+        [Required(ErrorMessage = "Отсутвует улица")]
+        public string Street { get; set; }
+        [Required(ErrorMessage = "Отсутвует номер дома")]
+        [Range(0, 200, ErrorMessage = "Диапазон номера дома от 0 до 200")]
+        public int HouseNumber { get; set; }
+        [Required(ErrorMessage = "Отсутвует номер квартиры")]
         [Range(0, 100, ErrorMessage = "Диапазон номера квартиры от 0 до 100")]
-        public int flatnumber; 
-        
-        public Address(string country, string city, string street, int housenumber, int flatnumber)
+        public int FlatNumber { get; set; }
+        [Index]
+        public int Index { get; set;  }
+            
+        public Address(string country, string city, string street, int housenumber, int flatnumber, int index)
         {
-            this.country = country;
-            this.city = city;
-            this.street = street;
-            this.housenumber = housenumber;
-            this.flatnumber = flatnumber;
+            this.Country = country;
+            this.City = city;
+            this.Street = street;
+            this.HouseNumber = housenumber;
+            this.FlatNumber = flatnumber;
+            this.Index = index;
         }
 
         public override string ToString()
         {
-            return "страна: " + this.country + ", город: " + this.city + ", улица: " + this.street + ", номер дома: " + this.housenumber + ", номер квартиры: " + this.flatnumber;
+            return "страна: " + this.Country + ", город: " + this.City + ", улица: " + this.Street + ", номер дома: " + this.HouseNumber + ", номер квартиры: " + this.FlatNumber + ", индекс: " + this.Index;
         }
     }
 }

@@ -322,7 +322,7 @@ namespace Windows_Forms_Controls
             this.Controls.Add(this.OKSearchButton);
             this.Location = new System.Drawing.Point(500, 500);
             this.Name = "SearchWindow";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SearchWindow";
             this.Load += new System.EventHandler(this.SearchWindow_Load);
             this.SearchGroupBox.ResumeLayout(false);

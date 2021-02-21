@@ -30,25 +30,16 @@ namespace Windows_Forms_Controls
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegExSearchWindow));
-            this.RegExInputTextBox = new System.Windows.Forms.TextBox();
             this.OKButton = new System.Windows.Forms.Button();
-            this.RegexHeadingLabel = new System.Windows.Forms.Label();
             this.RegexSearchRichTextBox = new System.Windows.Forms.RichTextBox();
             this.headingLabel = new System.Windows.Forms.Label();
             this.SaveSortResCheckBox = new System.Windows.Forms.CheckBox();
+            this.RegExComboBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
-            // 
-            // RegExInputTextBox
-            // 
-            this.RegExInputTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.RegExInputTextBox.Location = new System.Drawing.Point(191, 80);
-            this.RegExInputTextBox.Name = "RegExInputTextBox";
-            this.RegExInputTextBox.Size = new System.Drawing.Size(221, 26);
-            this.RegExInputTextBox.TabIndex = 0;
             // 
             // OKButton
             // 
-            this.OKButton.Location = new System.Drawing.Point(251, 387);
+            this.OKButton.Location = new System.Drawing.Point(265, 346);
             this.OKButton.Name = "OKButton";
             this.OKButton.Size = new System.Drawing.Size(75, 23);
             this.OKButton.TabIndex = 1;
@@ -56,27 +47,14 @@ namespace Windows_Forms_Controls
             this.OKButton.UseVisualStyleBackColor = true;
             this.OKButton.Click += new System.EventHandler(this.OKButton_Click);
             // 
-            // RegexHeadingLabel
-            // 
-            this.RegexHeadingLabel.AutoSize = true;
-            this.RegexHeadingLabel.BackColor = System.Drawing.Color.Black;
-            this.RegexHeadingLabel.Font = new System.Drawing.Font("Lucida Sans Unicode", 9.75F);
-            this.RegexHeadingLabel.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.RegexHeadingLabel.Location = new System.Drawing.Point(173, 45);
-            this.RegexHeadingLabel.Name = "RegexHeadingLabel";
-            this.RegexHeadingLabel.Size = new System.Drawing.Size(251, 16);
-            this.RegexHeadingLabel.TabIndex = 3;
-            this.RegexHeadingLabel.Text = "   Введите регулярное  выражение      ";
-            this.RegexHeadingLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // RegexSearchRichTextBox
             // 
             this.RegexSearchRichTextBox.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.RegexSearchRichTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.RegexSearchRichTextBox.Location = new System.Drawing.Point(191, 132);
+            this.RegexSearchRichTextBox.Location = new System.Drawing.Point(191, 92);
             this.RegexSearchRichTextBox.Name = "RegexSearchRichTextBox";
             this.RegexSearchRichTextBox.ReadOnly = true;
-            this.RegexSearchRichTextBox.Size = new System.Drawing.Size(221, 239);
+            this.RegexSearchRichTextBox.Size = new System.Drawing.Size(235, 239);
             this.RegexSearchRichTextBox.TabIndex = 4;
             this.RegexSearchRichTextBox.Text = "";
             // 
@@ -104,25 +82,37 @@ namespace Windows_Forms_Controls
             this.SaveSortResCheckBox.FlatAppearance.CheckedBackColor = System.Drawing.Color.Gainsboro;
             this.SaveSortResCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SaveSortResCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.SaveSortResCheckBox.Location = new System.Drawing.Point(332, 385);
+            this.SaveSortResCheckBox.Location = new System.Drawing.Point(346, 344);
             this.SaveSortResCheckBox.Name = "SaveSortResCheckBox";
             this.SaveSortResCheckBox.Size = new System.Drawing.Size(80, 25);
             this.SaveSortResCheckBox.TabIndex = 41;
             this.SaveSortResCheckBox.Text = "Сохранить";
             this.SaveSortResCheckBox.UseVisualStyleBackColor = false;
             // 
+            // RegExComboBox
+            // 
+            this.RegExComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.RegExComboBox.FormattingEnabled = true;
+            this.RegExComboBox.Items.AddRange(new object[] {
+            "\\w*усь",
+            "Свер\\w*"});
+            this.RegExComboBox.Location = new System.Drawing.Point(191, 40);
+            this.RegExComboBox.Name = "RegExComboBox";
+            this.RegExComboBox.Size = new System.Drawing.Size(238, 24);
+            this.RegExComboBox.TabIndex = 42;
+            this.RegExComboBox.Text = "Введите регулярное выражение";
+            // 
             // RegExSearchWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(424, 422);
+            this.ClientSize = new System.Drawing.Size(438, 387);
+            this.Controls.Add(this.RegExComboBox);
             this.Controls.Add(this.SaveSortResCheckBox);
             this.Controls.Add(this.headingLabel);
             this.Controls.Add(this.RegexSearchRichTextBox);
-            this.Controls.Add(this.RegexHeadingLabel);
             this.Controls.Add(this.OKButton);
-            this.Controls.Add(this.RegExInputTextBox);
             this.Name = "RegExSearchWindow";
             this.Text = "Поиск по регулярному выражению";
             this.ResumeLayout(false);
@@ -131,12 +121,10 @@ namespace Windows_Forms_Controls
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox RegExInputTextBox;
         private System.Windows.Forms.Button OKButton;
-        private System.Windows.Forms.Label RegexHeadingLabel;
         private System.Windows.Forms.RichTextBox RegexSearchRichTextBox;
         private System.Windows.Forms.Label headingLabel;
         private System.Windows.Forms.CheckBox SaveSortResCheckBox;
+        private System.Windows.Forms.ComboBox RegExComboBox;
     }
 }

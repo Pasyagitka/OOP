@@ -92,13 +92,13 @@ namespace Windows_Forms_Controls
         private IEnumerable<Flat> SearchByCity() 
         {
             foreach (Flat flat in Flats.flats)
-                if (cityComboBox.Text == flat.address.city)
+                if (cityComboBox.Text == flat.address.City)
                     yield return flat;
         }
         private IEnumerable<Flat> SearchByStreet() 
         {
             foreach (Flat flat in Flats.flats)
-                if (streetTextBox.Text == flat.address.street)
+                if (streetTextBox.Text == flat.address.Street)
                     yield return flat;
         }
 
@@ -125,6 +125,5 @@ namespace Windows_Forms_Controls
         {
             yearResultLabel.Text = String.Format("{0}", yearTrackBar.Value);
         }
-        //TODO валидация
     }
 }

@@ -22,46 +22,43 @@ namespace Windows_Forms_Controls
 
         private void OKButton_Click(object sender, EventArgs e)
         {
+            RegexSearchRichTextBox.ResetText();
             SearchWithRegex();
         } 
-        private void SearchWithRegex() //linq
+        private void SearchWithRegex()
         {
-            int mcount = 0;
-            Regex regex = new Regex(@RegExInputTextBox.Text, RegexOptions.IgnoreCase);
-            foreach (Flat flat in Flats.flats) 
+            Regex regex = new Regex(@RegExComboBox.Text, RegexOptions.IgnoreCase);
+            var regexSearchResult = Flats.flats.Where(f => regex.IsMatch(f.ToString()));
+            if (regexSearchResult.Count() == 0)
             {
-                MatchCollection matches = regex.Matches(flat.ToString());
-                mcount += matches.Count;
-                if (matches.Count > 0)
-                {
-                    foreach (Match match in matches)
-                        RegexSearchRichTextBox.Text += match.ToString() + "\n"; //TODO вывод всей записи и сериализация
-                }
-                //if (SaveSortResCheckBox.Checked == true)
-                //{
-                //    try
-                //    {
-                //        Serialize(matches);
-                //    }
-                //    catch
-                //    {
-                //        MessageBox.Show("Ошибка сохранения результатов поиска по регулярному выражению в файл");
-                //    }
-                //}
-                
-            }
-            if (mcount == 0)
                 MessageBox.Show("Ничего не найдено!");
+                return;
+            }
+            else
+            {
+                foreach (var f in regexSearchResult)
+                {
+                    RegexSearchRichTextBox.Text += f.ToString() + "\n";
+                }
+                try 
+                { 
+                Serialize(regexSearchResult);
+                }
+                catch
+                {
+                    MessageBox.Show("Ошибка сохранения результатов поиска по регулярному выражению в файл");
+                }
+            }
         }
 
-        //void Serialize(IEnumerable<Flat> searchres)
-        //{
-        //    const string filepath = "..//..//..//RegexSearchFlats.json";
-        //    DataContractJsonSerializer jsonFormatter = new DataContractJsonSerializer(typeof(List<Flat>));
-        //    using (var fs = new FileStream(filepath, FileMode.Create))
-        //    {
-        //        jsonFormatter.WriteObject(fs, searchres);
-        //    }
-        //}
+        void Serialize(IEnumerable<Flat> searchres)
+        {
+            const string filepath = "..//..//..//RegexSearchFlats.json";
+            DataContractJsonSerializer jsonFormatter = new DataContractJsonSerializer(typeof(List<Flat>));
+            using (var fs = new FileStream(filepath, FileMode.Create))
+            {
+                jsonFormatter.WriteObject(fs, searchres);
+            }
+        }
     }
 }
