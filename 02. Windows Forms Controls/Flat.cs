@@ -7,19 +7,19 @@ using System.Runtime.Serialization.Json;
 
 namespace Windows_Forms_Controls
 {
-    public class Flats //Singleton
+    public class Flats
     {
-        private static Flats flatsinstance; //1
+        private static Flats flatsinstance; 
         private static readonly object Locker = new object();
         const string filepath = "..//..//..//Flats.json";
         public static List<Flat> flats;
         static DataContractJsonSerializer jsonFormatter = new DataContractJsonSerializer(typeof(List<Flat>));
 
-        private Flats() //2
+        private Flats() 
         {
             flats = new List<Flat>();
         }
-        public static Flats GetInstance() //3
+        public static Flats GetInstance() 
         {
             if (flatsinstance == null)
             {
@@ -66,7 +66,7 @@ namespace Windows_Forms_Controls
     }
 
     [DataContract]
-    public class Flat
+    public class Flat : IPrototype
     {
         public enum rooms { one = 1, two, three, four, five, morethanfive };
         [DataMember]
@@ -98,11 +98,17 @@ namespace Windows_Forms_Controls
                 "\n\tванная комната: " + bathroom + "\n\tтуалет: " + WC.ToString() + "\n\tподвал: " + footer + "\n\tбалкон: " + balcony + "\n\tприблизительная стоимость: " + price +
                 "\nКонтактный телефон: " + phonenumber;
         }
+
+        public IPrototype Clone()
+        {
+            return new Flat {address=this.address, square  = this.square, roomscount = this.roomscount, year=this.year, kitchen=this.kitchen, bathroom=this.bathroom, WC=this.WC, 
+                footer = this.footer, balcony=this.balcony, phonenumber=this.phonenumber, price=this.price };
+            //return this.MemberwiseClone() as IPrototype;
+        }
     }
     [Serializable]
     public class Address
     {
-
         string country;
         string city;
         string street;
