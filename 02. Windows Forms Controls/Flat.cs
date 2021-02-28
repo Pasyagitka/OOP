@@ -7,11 +7,22 @@ using System.Runtime.Serialization.Json;
 
 namespace Windows_Forms_Controls
 {
-    public class Flats
+    public class Flats //Singleton
     {
+        private static Flats flatsinstance; //1
         const string filepath = "..//..//..//Flats.json";
-        public static List<Flat> flats = new List<Flat>();
+        public static List<Flat> flats;
         static DataContractJsonSerializer jsonFormatter = new DataContractJsonSerializer(typeof(List<Flat>));
+
+        private Flats() //2
+        {
+            flats = new List<Flat>();
+        }
+        public static Flats GetInstance() //3
+        {
+            return flatsinstance ?? (flatsinstance = new Flats());
+        }
+
         public static void ExportFlats()
         { 
             using (var fs = new FileStream(filepath, FileMode.Create))

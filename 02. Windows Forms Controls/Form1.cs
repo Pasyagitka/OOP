@@ -22,6 +22,11 @@ namespace Windows_Forms_Controls
             InitializeComponent();
         }
 
+        private void FlatForm_Load(object sender, EventArgs e)
+        {
+            Flats flats = Flats.GetInstance();
+        }
+
         private void yearTrackBar_Scroll(object sender, EventArgs e)
         {
             ActionToolStripStatusLabel.Text = "Последнее выполненное действие: " + "Изменён год";
