@@ -10,6 +10,7 @@ namespace Windows_Forms_Controls
     public class Flats //Singleton
     {
         private static Flats flatsinstance; //1
+        private static readonly object Locker = new object();
         const string filepath = "..//..//..//Flats.json";
         public static List<Flat> flats;
         static DataContractJsonSerializer jsonFormatter = new DataContractJsonSerializer(typeof(List<Flat>));
@@ -20,7 +21,17 @@ namespace Windows_Forms_Controls
         }
         public static Flats GetInstance() //3
         {
-            return flatsinstance ?? (flatsinstance = new Flats());
+            if (flatsinstance == null)
+            {
+                lock (Locker)
+                {
+                    if (flatsinstance == null)
+                    {
+                        flatsinstance = new Flats();
+                    }
+                }
+            }
+            return flatsinstance;
         }
 
         public static void ExportFlats()
