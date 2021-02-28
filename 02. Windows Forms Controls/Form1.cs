@@ -349,7 +349,7 @@ namespace Windows_Forms_Controls
                 errorProvider1.Clear();
             }
         }
-
+        // о программе
         private void AboutProgramToolStripMenuItem_Click(object sender, EventArgs e)
         {
             const string developer = "Zinovich Lizaveta";
@@ -362,18 +362,19 @@ namespace Windows_Forms_Controls
             
         }
 
+        // поиск вызов
         private void FullToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SearchWindow searchwindow = new SearchWindow();
             searchwindow.Show();
         }
-
+        // regex поиск вызов
         private void RegExToolStripMenuItem_Click(object sender, EventArgs e)
         {
             RegExSearchWindow regexsearchwindow = new RegExSearchWindow();
             regexsearchwindow.Show();
         }
-
+        // сортировка
         private void SortByComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             infoRichTextBox.ResetText();
@@ -400,7 +401,8 @@ namespace Windows_Forms_Controls
         {
             if (SortByComboBox.SelectedIndex == 0)
                 return Flats.flats.OrderBy(t => t.square);
-            else if (SortByComboBox.SelectedIndex == 1)
+            else 
+                if (SortByComboBox.SelectedIndex == 1)
                 return Flats.flats.OrderBy(t => t.roomscount);
             else 
                 return Flats.flats.OrderBy(t => t.price);
@@ -422,24 +424,35 @@ namespace Windows_Forms_Controls
             TimeToolStripStatusLabel.Text = DateTime.Now.ToShortTimeString();
         }
 
-        private void DateToolStripStatusLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-
         private void regexToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             RegExSearchWindow regexsearchwindow = new RegExSearchWindow();
             regexsearchwindow.Show();
         }
 
-        private void наПолноеСоответствиеToolStripMenuItem_Click(object sender, EventArgs e)
+        private void fullToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SearchWindow searchwindow = new SearchWindow();
             searchwindow.Show();
         }
+
+        private void ResetToolStripButton_Click(object sender, EventArgs e)
+        {
+            Reset();
+        }
+
+        private void FlatToolStrip_DoubleClick(object sender, EventArgs e)
+        {
+            if (FlatToolStrip.Dock == DockStyle.None)
+            {
+                FlatToolStrip.Dock = DockStyle.Bottom;
+            }
+            else if (FlatToolStrip.Dock == DockStyle.Bottom)
+            {
+                FlatToolStrip.Dock = DockStyle.None;
+            }
+        }
+
 
         #region LastAction
         private void FloorListBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -528,9 +541,5 @@ namespace Windows_Forms_Controls
         }
         #endregion
 
-        private void ResetToolStripButton_Click(object sender, EventArgs e)
-        {
-            Reset();
-        }
     }
 }

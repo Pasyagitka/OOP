@@ -51,7 +51,6 @@ namespace Windows_Forms_Controls
                     }
                 }
             }
-            //TODO если не выбрать никакой чекбокс выводит всё
         }
         void Serialize(IEnumerable<Flat> searchres)
         {

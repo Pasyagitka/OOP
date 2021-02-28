@@ -97,6 +97,7 @@ namespace Windows_Forms_Controls
             this.FlatToolStrip = new System.Windows.Forms.ToolStrip();
             this.IndexLabel = new System.Windows.Forms.Label();
             this.IndexTextBox = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.OptionsGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.yearTrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -317,7 +318,7 @@ namespace Windows_Forms_Controls
             // flatTextBox
             // 
             this.flatTextBox.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.flatTextBox.Location = new System.Drawing.Point(120, 133);
+            this.flatTextBox.Location = new System.Drawing.Point(120, 136);
             this.flatTextBox.Name = "flatTextBox";
             this.flatTextBox.Size = new System.Drawing.Size(92, 23);
             this.flatTextBox.TabIndex = 26;
@@ -326,6 +327,7 @@ namespace Windows_Forms_Controls
             // houseTextBox
             // 
             this.houseTextBox.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.houseTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.houseTextBox.Location = new System.Drawing.Point(120, 107);
             this.houseTextBox.Name = "houseTextBox";
             this.houseTextBox.Size = new System.Drawing.Size(92, 23);
@@ -760,7 +762,6 @@ namespace Windows_Forms_Controls
             this.DateToolStripStatusLabel.Name = "DateToolStripStatusLabel";
             this.DateToolStripStatusLabel.Size = new System.Drawing.Size(36, 17);
             this.DateToolStripStatusLabel.Text = "DATE";
-            this.DateToolStripStatusLabel.Click += new System.EventHandler(this.DateToolStripStatusLabel_Click);
             // 
             // TimeToolStripStatusLabel
             // 
@@ -828,8 +829,10 @@ namespace Windows_Forms_Controls
             this.SearchStripDropDownButton.Image = ((System.Drawing.Image)(resources.GetObject("SearchStripDropDownButton.Image")));
             this.SearchStripDropDownButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.SearchStripDropDownButton.Name = "SearchStripDropDownButton";
-            this.SearchStripDropDownButton.Size = new System.Drawing.Size(55, 22);
+            this.SearchStripDropDownButton.Overflow = System.Windows.Forms.ToolStripItemOverflow.Always;
+            this.SearchStripDropDownButton.Size = new System.Drawing.Size(19, 53);
             this.SearchStripDropDownButton.Text = "Поиск";
+            this.SearchStripDropDownButton.TextDirection = System.Windows.Forms.ToolStripTextDirection.Vertical90;
             // 
             // regexToolStripMenuItem1
             // 
@@ -843,7 +846,7 @@ namespace Windows_Forms_Controls
             this.наПолноеСоответствиеToolStripMenuItem.Name = "наПолноеСоответствиеToolStripMenuItem";
             this.наПолноеСоответствиеToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
             this.наПолноеСоответствиеToolStripMenuItem.Text = "на полное соответствие";
-            this.наПолноеСоответствиеToolStripMenuItem.Click += new System.EventHandler(this.наПолноеСоответствиеToolStripMenuItem_Click);
+            this.наПолноеСоответствиеToolStripMenuItem.Click += new System.EventHandler(this.fullToolStripMenuItem_Click);
             // 
             // ResetToolStripButton
             // 
@@ -852,23 +855,26 @@ namespace Windows_Forms_Controls
             this.ResetToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("ResetToolStripButton.Image")));
             this.ResetToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.ResetToolStripButton.Name = "ResetToolStripButton";
-            this.ResetToolStripButton.Size = new System.Drawing.Size(63, 22);
+            this.ResetToolStripButton.Overflow = System.Windows.Forms.ToolStripItemOverflow.Always;
+            this.ResetToolStripButton.Size = new System.Drawing.Size(63, 19);
             this.ResetToolStripButton.Text = "Очистить";
             this.ResetToolStripButton.Click += new System.EventHandler(this.ResetToolStripButton_Click);
             // 
             // FlatToolStrip
             // 
-            this.FlatToolStrip.BackColor = System.Drawing.Color.Transparent;
-            this.FlatToolStrip.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.FlatToolStrip.BackColor = System.Drawing.Color.White;
+            this.FlatToolStrip.Dock = System.Windows.Forms.DockStyle.None;
+            this.FlatToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.FlatToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.FlatToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.SearchStripDropDownButton,
             this.ResetToolStripButton});
             this.FlatToolStrip.Location = new System.Drawing.Point(0, 514);
             this.FlatToolStrip.Name = "FlatToolStrip";
-            this.FlatToolStrip.Size = new System.Drawing.Size(1203, 25);
+            this.FlatToolStrip.Size = new System.Drawing.Size(17, 25);
             this.FlatToolStrip.TabIndex = 41;
             this.FlatToolStrip.Text = "ToolStrip";
+            this.FlatToolStrip.DoubleClick += new System.EventHandler(this.FlatToolStrip_DoubleClick);
             // 
             // IndexLabel
             // 
@@ -886,6 +892,14 @@ namespace Windows_Forms_Controls
             this.IndexTextBox.Size = new System.Drawing.Size(92, 23);
             this.IndexTextBox.TabIndex = 29;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(638, 411);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 42;
+            // 
             // FlatForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -894,6 +908,7 @@ namespace Windows_Forms_Controls
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1203, 561);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.FlatToolStrip);
             this.Controls.Add(this.SaveSortResCheckBox);
             this.Controls.Add(this.SortByLabel);
@@ -1015,6 +1030,7 @@ namespace Windows_Forms_Controls
         private System.Windows.Forms.ToolStripButton ResetToolStripButton;
         private TextBox IndexTextBox;
         private Label IndexLabel;
+        private ComboBox comboBox1;
     }
 }
 
