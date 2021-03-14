@@ -1,0 +1,16 @@
+E:\4 семестр\ООП\04. Применение порождающих паттернов проектирования\Builder\obj\Debug\net5.0\Builder.csprojAssemblyReference.cache
+E:\4 семестр\ООП\04. Применение порождающих паттернов проектирования\Builder\obj\Debug\net5.0\Builder.GeneratedMSBuildEditorConfig.editorconfig
+E:\4 семестр\ООП\04. Применение порождающих паттернов проектирования\Builder\obj\Debug\net5.0\Builder.AssemblyInfoInputs.cache
+E:\4 семестр\ООП\04. Применение порождающих паттернов проектирования\Builder\obj\Debug\net5.0\Builder.AssemblyInfo.cs
+E:\4 семестр\ООП\04. Применение порождающих паттернов проектирования\Builder\obj\Debug\net5.0\Builder.csproj.CoreCompileInputs.cache
+E:\4 семестр\ООП\04. Применение порождающих паттернов проектирования\Builder\bin\Debug\net5.0\Builder.exe
+E:\4 семестр\ООП\04. Применение порождающих паттернов проектирования\Builder\bin\Debug\net5.0\Builder.deps.json
+E:\4 семестр\ООП\04. Применение порождающих паттернов проектирования\Builder\bin\Debug\net5.0\Builder.runtimeconfig.json
+E:\4 семестр\ООП\04. Применение порождающих паттернов проектирования\Builder\bin\Debug\net5.0\Builder.runtimeconfig.dev.json
+E:\4 семестр\ООП\04. Применение порождающих паттернов проектирования\Builder\bin\Debug\net5.0\Builder.dll
+E:\4 семестр\ООП\04. Применение порождающих паттернов проектирования\Builder\bin\Debug\net5.0\ref\Builder.dll
+E:\4 семестр\ООП\04. Применение порождающих паттернов проектирования\Builder\bin\Debug\net5.0\Builder.pdb
+E:\4 семестр\ООП\04. Применение порождающих паттернов проектирования\Builder\obj\Debug\net5.0\Builder.dll
+E:\4 семестр\ООП\04. Применение порождающих паттернов проектирования\Builder\obj\Debug\net5.0\ref\Builder.dll
+E:\4 семестр\ООП\04. Применение порождающих паттернов проектирования\Builder\obj\Debug\net5.0\Builder.pdb
+E:\4 семестр\ООП\04. Применение порождающих паттернов проектирования\Builder\obj\Debug\net5.0\Builder.genruntimeconfig.cache

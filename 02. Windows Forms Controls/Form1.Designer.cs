@@ -97,7 +97,7 @@ namespace Windows_Forms_Controls
             this.наПолноеСоответствиеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ResetToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.FlatToolStrip = new System.Windows.Forms.ToolStrip();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.CloneButton = new System.Windows.Forms.Button();
             this.OptionsGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.yearTrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -148,7 +148,7 @@ namespace Windows_Forms_Controls
             "5",
             "более"});
             this.roomsCountComboBox.Location = new System.Drawing.Point(573, 294);
-            this.roomsCountComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.roomsCountComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.roomsCountComboBox.Name = "roomsCountComboBox";
             this.roomsCountComboBox.Size = new System.Drawing.Size(103, 24);
             this.roomsCountComboBox.TabIndex = 2;
@@ -164,12 +164,12 @@ namespace Windows_Forms_Controls
             this.OptionsGroupBox.Controls.Add(this.BathroomCheckBox);
             this.OptionsGroupBox.Controls.Add(this.KitchenСheckBox);
             this.OptionsGroupBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.OptionsGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.OptionsGroupBox.Font = new System.Drawing.Font("Bahnschrift Condensed", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OptionsGroupBox.ForeColor = System.Drawing.SystemColors.Desktop;
             this.OptionsGroupBox.Location = new System.Drawing.Point(25, 23);
-            this.OptionsGroupBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.OptionsGroupBox.Margin = new System.Windows.Forms.Padding(4);
             this.OptionsGroupBox.Name = "OptionsGroupBox";
-            this.OptionsGroupBox.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.OptionsGroupBox.Padding = new System.Windows.Forms.Padding(4);
             this.OptionsGroupBox.Size = new System.Drawing.Size(125, 206);
             this.OptionsGroupBox.TabIndex = 3;
             this.OptionsGroupBox.TabStop = false;
@@ -179,9 +179,9 @@ namespace Windows_Forms_Controls
             // 
             this.BalconyCheckBox.AutoSize = true;
             this.BalconyCheckBox.Location = new System.Drawing.Point(20, 170);
-            this.BalconyCheckBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BalconyCheckBox.Margin = new System.Windows.Forms.Padding(4);
             this.BalconyCheckBox.Name = "BalconyCheckBox";
-            this.BalconyCheckBox.Size = new System.Drawing.Size(92, 24);
+            this.BalconyCheckBox.Size = new System.Drawing.Size(73, 25);
             this.BalconyCheckBox.TabIndex = 4;
             this.BalconyCheckBox.Text = "Балкон";
             this.BalconyCheckBox.UseVisualStyleBackColor = true;
@@ -191,9 +191,9 @@ namespace Windows_Forms_Controls
             // 
             this.FooterCheckBox.AutoSize = true;
             this.FooterCheckBox.Location = new System.Drawing.Point(21, 135);
-            this.FooterCheckBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FooterCheckBox.Margin = new System.Windows.Forms.Padding(4);
             this.FooterCheckBox.Name = "FooterCheckBox";
-            this.FooterCheckBox.Size = new System.Drawing.Size(96, 24);
+            this.FooterCheckBox.Size = new System.Drawing.Size(74, 25);
             this.FooterCheckBox.TabIndex = 3;
             this.FooterCheckBox.Text = "Подвал";
             this.FooterCheckBox.UseVisualStyleBackColor = true;
@@ -205,9 +205,9 @@ namespace Windows_Forms_Controls
             this.WCCheckBox.Checked = true;
             this.WCCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.WCCheckBox.Location = new System.Drawing.Point(21, 102);
-            this.WCCheckBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.WCCheckBox.Margin = new System.Windows.Forms.Padding(4);
             this.WCCheckBox.Name = "WCCheckBox";
-            this.WCCheckBox.Size = new System.Drawing.Size(89, 24);
+            this.WCCheckBox.Size = new System.Drawing.Size(68, 25);
             this.WCCheckBox.TabIndex = 2;
             this.WCCheckBox.Text = "Туалет";
             this.WCCheckBox.UseVisualStyleBackColor = true;
@@ -219,9 +219,9 @@ namespace Windows_Forms_Controls
             this.BathroomCheckBox.Checked = true;
             this.BathroomCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.BathroomCheckBox.Location = new System.Drawing.Point(20, 71);
-            this.BathroomCheckBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BathroomCheckBox.Margin = new System.Windows.Forms.Padding(4);
             this.BathroomCheckBox.Name = "BathroomCheckBox";
-            this.BathroomCheckBox.Size = new System.Drawing.Size(93, 24);
+            this.BathroomCheckBox.Size = new System.Drawing.Size(74, 25);
             this.BathroomCheckBox.TabIndex = 1;
             this.BathroomCheckBox.Text = "Ванная";
             this.BathroomCheckBox.UseVisualStyleBackColor = true;
@@ -233,9 +233,9 @@ namespace Windows_Forms_Controls
             this.KitchenСheckBox.Checked = true;
             this.KitchenСheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.KitchenСheckBox.Location = new System.Drawing.Point(20, 41);
-            this.KitchenСheckBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.KitchenСheckBox.Margin = new System.Windows.Forms.Padding(4);
             this.KitchenСheckBox.Name = "KitchenСheckBox";
-            this.KitchenСheckBox.Size = new System.Drawing.Size(78, 24);
+            this.KitchenСheckBox.Size = new System.Drawing.Size(65, 25);
             this.KitchenСheckBox.TabIndex = 0;
             this.KitchenСheckBox.Text = "Кухня";
             this.KitchenСheckBox.UseVisualStyleBackColor = true;
@@ -257,7 +257,7 @@ namespace Windows_Forms_Controls
             // 
             this.yearTrackBar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.yearTrackBar.Location = new System.Drawing.Point(529, 346);
-            this.yearTrackBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.yearTrackBar.Margin = new System.Windows.Forms.Padding(4);
             this.yearTrackBar.Maximum = 2021;
             this.yearTrackBar.Minimum = 1950;
             this.yearTrackBar.Name = "yearTrackBar";
@@ -290,7 +290,7 @@ namespace Windows_Forms_Controls
             this.panel1.Controls.Add(this.OptionsGroupBox);
             this.panel1.Controls.Add(this.AdressGroupBox);
             this.panel1.Location = new System.Drawing.Point(685, 95);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(508, 261);
             this.panel1.TabIndex = 11;
@@ -313,9 +313,9 @@ namespace Windows_Forms_Controls
             this.AdressGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.AdressGroupBox.ForeColor = System.Drawing.SystemColors.Desktop;
             this.AdressGroupBox.Location = new System.Drawing.Point(183, 23);
-            this.AdressGroupBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.AdressGroupBox.Margin = new System.Windows.Forms.Padding(4);
             this.AdressGroupBox.Name = "AdressGroupBox";
-            this.AdressGroupBox.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.AdressGroupBox.Padding = new System.Windows.Forms.Padding(4);
             this.AdressGroupBox.Size = new System.Drawing.Size(305, 234);
             this.AdressGroupBox.TabIndex = 20;
             this.AdressGroupBox.TabStop = false;
@@ -324,7 +324,7 @@ namespace Windows_Forms_Controls
             // IndexTextBox
             // 
             this.IndexTextBox.Location = new System.Drawing.Point(160, 202);
-            this.IndexTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.IndexTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.IndexTextBox.Name = "IndexTextBox";
             this.IndexTextBox.Size = new System.Drawing.Size(121, 26);
             this.IndexTextBox.TabIndex = 29;
@@ -354,7 +354,7 @@ namespace Windows_Forms_Controls
             // 
             this.flatTextBox.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.flatTextBox.Location = new System.Drawing.Point(160, 167);
-            this.flatTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flatTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.flatTextBox.Name = "flatTextBox";
             this.flatTextBox.Size = new System.Drawing.Size(121, 26);
             this.flatTextBox.TabIndex = 26;
@@ -365,7 +365,7 @@ namespace Windows_Forms_Controls
             this.houseTextBox.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.houseTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.houseTextBox.Location = new System.Drawing.Point(160, 132);
-            this.houseTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.houseTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.houseTextBox.Name = "houseTextBox";
             this.houseTextBox.Size = new System.Drawing.Size(121, 26);
             this.houseTextBox.TabIndex = 25;
@@ -387,7 +387,7 @@ namespace Windows_Forms_Controls
             // 
             this.streetTextBox.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.streetTextBox.Location = new System.Drawing.Point(160, 96);
-            this.streetTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.streetTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.streetTextBox.Name = "streetTextBox";
             this.streetTextBox.Size = new System.Drawing.Size(121, 26);
             this.streetTextBox.TabIndex = 23;
@@ -417,7 +417,7 @@ namespace Windows_Forms_Controls
             "Гродно",
             "Могилёв"});
             this.cityComboBox.Location = new System.Drawing.Point(160, 59);
-            this.cityComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cityComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.cityComboBox.Name = "cityComboBox";
             this.cityComboBox.Size = new System.Drawing.Size(121, 28);
             this.cityComboBox.TabIndex = 21;
@@ -444,7 +444,7 @@ namespace Windows_Forms_Controls
             this.countryComboBox.Items.AddRange(new object[] {
             "Беларусь"});
             this.countryComboBox.Location = new System.Drawing.Point(160, 21);
-            this.countryComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.countryComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.countryComboBox.Name = "countryComboBox";
             this.countryComboBox.Size = new System.Drawing.Size(121, 28);
             this.countryComboBox.TabIndex = 22;
@@ -497,7 +497,7 @@ namespace Windows_Forms_Controls
             "2",
             "1"});
             this.FloorListBox.Location = new System.Drawing.Point(291, 95);
-            this.FloorListBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FloorListBox.Margin = new System.Windows.Forms.Padding(4);
             this.FloorListBox.MultiColumn = true;
             this.FloorListBox.Name = "FloorListBox";
             this.FloorListBox.Size = new System.Drawing.Size(21, 400);
@@ -533,7 +533,7 @@ namespace Windows_Forms_Controls
             // 
             this.SqareTextBox.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.SqareTextBox.Location = new System.Drawing.Point(529, 428);
-            this.SqareTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SqareTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.SqareTextBox.Name = "SqareTextBox";
             this.SqareTextBox.Size = new System.Drawing.Size(147, 22);
             this.SqareTextBox.TabIndex = 15;
@@ -544,7 +544,7 @@ namespace Windows_Forms_Controls
             // 
             this.phoneNumberMaskedTextBox.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.phoneNumberMaskedTextBox.Location = new System.Drawing.Point(529, 482);
-            this.phoneNumberMaskedTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.phoneNumberMaskedTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.phoneNumberMaskedTextBox.Mask = "+375 (00) 000-00-00";
             this.phoneNumberMaskedTextBox.Name = "phoneNumberMaskedTextBox";
             this.phoneNumberMaskedTextBox.Size = new System.Drawing.Size(147, 22);
@@ -560,7 +560,7 @@ namespace Windows_Forms_Controls
             this.infoRichTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.infoRichTextBox.ForeColor = System.Drawing.Color.DimGray;
             this.infoRichTextBox.Location = new System.Drawing.Point(1201, 159);
-            this.infoRichTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.infoRichTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.infoRichTextBox.Name = "infoRichTextBox";
             this.infoRichTextBox.ReadOnly = true;
             this.infoRichTextBox.Size = new System.Drawing.Size(265, 327);
@@ -577,7 +577,7 @@ namespace Windows_Forms_Controls
             this.saveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.saveButton.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.saveButton.Location = new System.Drawing.Point(1028, 482);
-            this.saveButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.saveButton.Margin = new System.Windows.Forms.Padding(4);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(131, 49);
             this.saveButton.TabIndex = 23;
@@ -594,7 +594,7 @@ namespace Windows_Forms_Controls
             this.showButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.showButton.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.showButton.Location = new System.Drawing.Point(1339, 556);
-            this.showButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.showButton.Margin = new System.Windows.Forms.Padding(4);
             this.showButton.Name = "showButton";
             this.showButton.Size = new System.Drawing.Size(128, 49);
             this.showButton.TabIndex = 24;
@@ -606,7 +606,7 @@ namespace Windows_Forms_Controls
             // 
             this.priceTextBox.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.priceTextBox.Location = new System.Drawing.Point(12, 42);
-            this.priceTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.priceTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.priceTextBox.MaxLength = 36;
             this.priceTextBox.Multiline = true;
             this.priceTextBox.Name = "priceTextBox";
@@ -625,7 +625,7 @@ namespace Windows_Forms_Controls
             this.priceButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.priceButton.ForeColor = System.Drawing.Color.DimGray;
             this.priceButton.Location = new System.Drawing.Point(211, 38);
-            this.priceButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.priceButton.Margin = new System.Windows.Forms.Padding(4);
             this.priceButton.Name = "priceButton";
             this.priceButton.Size = new System.Drawing.Size(140, 39);
             this.priceButton.TabIndex = 27;
@@ -643,9 +643,9 @@ namespace Windows_Forms_Controls
             this.priceGroupBox.Font = new System.Drawing.Font("Malgun Gothic", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.priceGroupBox.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.priceGroupBox.Location = new System.Drawing.Point(699, 363);
-            this.priceGroupBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.priceGroupBox.Margin = new System.Windows.Forms.Padding(4);
             this.priceGroupBox.Name = "priceGroupBox";
-            this.priceGroupBox.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.priceGroupBox.Padding = new System.Windows.Forms.Padding(4);
             this.priceGroupBox.Size = new System.Drawing.Size(359, 90);
             this.priceGroupBox.TabIndex = 28;
             this.priceGroupBox.TabStop = false;
@@ -691,7 +691,7 @@ namespace Windows_Forms_Controls
             this.flatPictureBox.BackColor = System.Drawing.Color.Transparent;
             this.flatPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("flatPictureBox.Image")));
             this.flatPictureBox.Location = new System.Drawing.Point(431, 69);
-            this.flatPictureBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flatPictureBox.Margin = new System.Windows.Forms.Padding(4);
             this.flatPictureBox.Name = "flatPictureBox";
             this.flatPictureBox.Size = new System.Drawing.Size(181, 217);
             this.flatPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -719,7 +719,7 @@ namespace Windows_Forms_Controls
             this.exportButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.exportButton.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.exportButton.Location = new System.Drawing.Point(1339, 494);
-            this.exportButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.exportButton.Margin = new System.Windows.Forms.Padding(4);
             this.exportButton.Name = "exportButton";
             this.exportButton.Size = new System.Drawing.Size(128, 38);
             this.exportButton.TabIndex = 33;
@@ -735,7 +735,7 @@ namespace Windows_Forms_Controls
             this.importButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.importButton.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.importButton.Location = new System.Drawing.Point(1201, 494);
-            this.importButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.importButton.Margin = new System.Windows.Forms.Padding(4);
             this.importButton.Name = "importButton";
             this.importButton.Size = new System.Drawing.Size(128, 38);
             this.importButton.TabIndex = 34;
@@ -800,7 +800,7 @@ namespace Windows_Forms_Controls
             this.ActionToolStripStatusLabel,
             this.DateToolStripStatusLabel,
             this.TimeToolStripStatusLabel});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 653);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 651);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
             this.statusStrip1.Size = new System.Drawing.Size(1604, 26);
@@ -846,7 +846,7 @@ namespace Windows_Forms_Controls
             "по количеству комнат",
             "по цене"});
             this.SortByComboBox.Location = new System.Drawing.Point(1201, 118);
-            this.SortByComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SortByComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.SortByComboBox.Name = "SortByComboBox";
             this.SortByComboBox.Size = new System.Drawing.Size(119, 28);
             this.SortByComboBox.TabIndex = 38;
@@ -876,7 +876,7 @@ namespace Windows_Forms_Controls
             this.SaveSortResCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SaveSortResCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.SaveSortResCheckBox.Location = new System.Drawing.Point(1339, 116);
-            this.SaveSortResCheckBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SaveSortResCheckBox.Margin = new System.Windows.Forms.Padding(4);
             this.SaveSortResCheckBox.Name = "SaveSortResCheckBox";
             this.SaveSortResCheckBox.Size = new System.Drawing.Size(92, 28);
             this.SaveSortResCheckBox.TabIndex = 40;
@@ -898,9 +898,9 @@ namespace Windows_Forms_Controls
             this.SearchStripDropDownButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.SearchStripDropDownButton.Name = "SearchStripDropDownButton";
             this.SearchStripDropDownButton.Overflow = System.Windows.Forms.ToolStripItemOverflow.Always;
-            this.SearchStripDropDownButton.Size = new System.Drawing.Size(24, 64);
+            this.SearchStripDropDownButton.Size = new System.Drawing.Size(66, 24);
             this.SearchStripDropDownButton.Text = "Поиск";
-            this.SearchStripDropDownButton.TextDirection = System.Windows.Forms.ToolStripTextDirection.Vertical90;
+            this.SearchStripDropDownButton.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
             // 
             // regexToolStripMenuItem1
             // 
@@ -944,14 +944,15 @@ namespace Windows_Forms_Controls
             this.FlatToolStrip.Text = "ToolStrip";
             this.FlatToolStrip.DoubleClick += new System.EventHandler(this.FlatToolStrip_DoubleClick);
             // 
-            // comboBox1
+            // CloneButton
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(851, 506);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(160, 24);
-            this.comboBox1.TabIndex = 42;
+            this.CloneButton.Location = new System.Drawing.Point(1201, 556);
+            this.CloneButton.Name = "CloneButton";
+            this.CloneButton.Size = new System.Drawing.Size(131, 49);
+            this.CloneButton.TabIndex = 42;
+            this.CloneButton.Text = "Клонировать";
+            this.CloneButton.UseVisualStyleBackColor = true;
+            this.CloneButton.Click += new System.EventHandler(this.CloneButton_Click);
             // 
             // FlatForm
             // 
@@ -960,8 +961,8 @@ namespace Windows_Forms_Controls
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1604, 679);
-            this.Controls.Add(this.comboBox1);
+            this.ClientSize = new System.Drawing.Size(1604, 677);
+            this.Controls.Add(this.CloneButton);
             this.Controls.Add(this.FlatToolStrip);
             this.Controls.Add(this.SaveSortResCheckBox);
             this.Controls.Add(this.SortByLabel);
@@ -992,9 +993,9 @@ namespace Windows_Forms_Controls
             this.Controls.Add(this.MenuStrip);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.MenuStrip;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.MaximumSize = new System.Drawing.Size(1650, 726);
-            this.MinimumSize = new System.Drawing.Size(1597, 726);
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximumSize = new System.Drawing.Size(1650, 724);
+            this.MinimumSize = new System.Drawing.Size(1597, 724);
             this.Name = "FlatForm";
             this.Text = "Квартира";
             this.Load += new System.EventHandler(this.FlatForm_Load);
@@ -1085,7 +1086,7 @@ namespace Windows_Forms_Controls
         private System.Windows.Forms.ToolStripButton ResetToolStripButton;
         private TextBox IndexTextBox;
         private Label IndexLabel;
-        private ComboBox comboBox1;
+        private Button CloneButton;
     }
 }
 

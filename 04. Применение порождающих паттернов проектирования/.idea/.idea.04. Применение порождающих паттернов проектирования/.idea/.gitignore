@@ -1,0 +1,13 @@
+﻿# Default ignored files
+/shelf/
+/workspace.xml
+# Rider ignored files
+/modules.xml
+/contentModel.xml
+/projectSettingsUpdater.xml
+/.idea.04. Применение порождающих паттернов проектирования.iml
+# Datasource local storage ignored files
+/../../../../../../../:\4 семестр\ООП\04. Применение порождающих паттернов проектирования\.idea\.idea.04. Применение порождающих паттернов проектирования\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/

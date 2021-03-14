@@ -9,7 +9,8 @@ namespace Windows_Forms_Controls
 {
     public class Flats
     {
-        private static Flats flatsinstance; 
+        private static Flats flatsinstance = new Flats(); 
+
         private static readonly object Locker = new object();
         const string filepath = "..//..//..//Flats.json";
         public static List<Flat> flats;
@@ -66,7 +67,7 @@ namespace Windows_Forms_Controls
     }
 
     [DataContract]
-    public class Flat : IPrototype
+    public class Flat : IPrototype //Prototype
     {
         public enum rooms { one = 1, two, three, four, five, morethanfive };
         [DataMember]
@@ -101,8 +102,11 @@ namespace Windows_Forms_Controls
 
         public IPrototype Clone()
         {
-            return new Flat {address=this.address, square  = this.square, roomscount = this.roomscount, year=this.year, kitchen=this.kitchen, bathroom=this.bathroom, WC=this.WC, 
-                footer = this.footer, balcony=this.balcony, phonenumber=this.phonenumber, price=this.price };
+            return new Flat 
+            { 
+                address = new Address(this.address.Country, this.address.City, this.address.Street, this.address.HouseNumber, this.address.FlatNumber, this.address.Index), 
+                square  = this.square, roomscount = this.roomscount, year=this.year, kitchen=this.kitchen, bathroom=this.bathroom, WC=this.WC, footer = this.footer, balcony=this.balcony, phonenumber=this.phonenumber, price=this.price 
+            };
             //return this.MemberwiseClone() as IPrototype;
         }
     }

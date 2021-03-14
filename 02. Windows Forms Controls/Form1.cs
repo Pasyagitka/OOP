@@ -24,7 +24,7 @@ namespace Windows_Forms_Controls
 
         private void FlatForm_Load(object sender, EventArgs e)
         {
-            Flats flats = Flats.GetInstance();
+
         }
 
         private void yearTrackBar_Scroll(object sender, EventArgs e)
@@ -458,6 +458,20 @@ namespace Windows_Forms_Controls
             }
         }
 
+        private void CloneButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var clonedFlat = Flats.flats.Last().Clone();
+                Flats.flats.Add((Flat)clonedFlat);
+                BaseInfoToolStripStatusLabel.Text = "Квартир в базе " + Flats.flats.Count().ToString();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ошибка при клонировании квартиры");
+            }
+        }
+
 
         #region LastAction
         private void FloorListBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -545,6 +559,7 @@ namespace Windows_Forms_Controls
             ActionToolStripStatusLabel.Text = "Последнее выполненное действие: " + "Добавлен номер квартиры в адрес";
         }
         #endregion
+
 
     }
 }
