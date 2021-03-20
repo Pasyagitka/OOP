@@ -1,0 +1,16 @@
+H:\4 семестр\ООП\05. Применение структурных и паттернов поведения\Memento\bin\Debug\net5.0\Memento.exe
+H:\4 семестр\ООП\05. Применение структурных и паттернов поведения\Memento\bin\Debug\net5.0\Memento.deps.json
+H:\4 семестр\ООП\05. Применение структурных и паттернов поведения\Memento\bin\Debug\net5.0\Memento.runtimeconfig.json
+H:\4 семестр\ООП\05. Применение структурных и паттернов поведения\Memento\bin\Debug\net5.0\Memento.runtimeconfig.dev.json
+H:\4 семестр\ООП\05. Применение структурных и паттернов поведения\Memento\bin\Debug\net5.0\Memento.dll
+H:\4 семестр\ООП\05. Применение структурных и паттернов поведения\Memento\bin\Debug\net5.0\ref\Memento.dll
+H:\4 семестр\ООП\05. Применение структурных и паттернов поведения\Memento\bin\Debug\net5.0\Memento.pdb
+H:\4 семестр\ООП\05. Применение структурных и паттернов поведения\Memento\obj\Debug\net5.0\Memento.csprojAssemblyReference.cache
+H:\4 семестр\ООП\05. Применение структурных и паттернов поведения\Memento\obj\Debug\net5.0\Memento.GeneratedMSBuildEditorConfig.editorconfig
+H:\4 семестр\ООП\05. Применение структурных и паттернов поведения\Memento\obj\Debug\net5.0\Memento.AssemblyInfoInputs.cache
+H:\4 семестр\ООП\05. Применение структурных и паттернов поведения\Memento\obj\Debug\net5.0\Memento.AssemblyInfo.cs
+H:\4 семестр\ООП\05. Применение структурных и паттернов поведения\Memento\obj\Debug\net5.0\Memento.csproj.CoreCompileInputs.cache
+H:\4 семестр\ООП\05. Применение структурных и паттернов поведения\Memento\obj\Debug\net5.0\Memento.dll
+H:\4 семестр\ООП\05. Применение структурных и паттернов поведения\Memento\obj\Debug\net5.0\ref\Memento.dll
+H:\4 семестр\ООП\05. Применение структурных и паттернов поведения\Memento\obj\Debug\net5.0\Memento.pdb
+H:\4 семестр\ООП\05. Применение структурных и паттернов поведения\Memento\obj\Debug\net5.0\Memento.genruntimeconfig.cache
