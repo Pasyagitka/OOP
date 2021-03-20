@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "H:\\4 семестр\\ООП\\04. Применение порождающих паттернов проектирования\\04\\04.csproj": {}
+    "E:\\4 семестр\\ООП\\04. Применение порождающих паттернов проектирования\\04\\04.csproj": {}
   },
   "projects": {
-    "H:\\4 семестр\\ООП\\04. Применение порождающих паттернов проектирования\\04\\04.csproj": {
+    "E:\\4 семестр\\ООП\\04. Применение порождающих паттернов проектирования\\04\\04.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "H:\\4 семестр\\ООП\\04. Применение порождающих паттернов проектирования\\04\\04.csproj",
+        "projectUniqueName": "E:\\4 семестр\\ООП\\04. Применение порождающих паттернов проектирования\\04\\04.csproj",
         "projectName": "04",
-        "projectPath": "H:\\4 семестр\\ООП\\04. Применение порождающих паттернов проектирования\\04\\04.csproj",
-        "packagesPath": "C:\\Users\\lizav\\.nuget\\packages\\",
-        "outputPath": "H:\\4 семестр\\ООП\\04. Применение порождающих паттернов проектирования\\04\\obj\\",
+        "projectPath": "E:\\4 семестр\\ООП\\04. Применение порождающих паттернов проектирования\\04\\04.csproj",
+        "packagesPath": "C:\\Users\\pasyagitka\\.nuget\\packages\\",
+        "outputPath": "E:\\4 семестр\\ООП\\04. Применение порождающих паттернов проектирования\\04\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\lizav\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\pasyagitka\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -54,7 +54,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,17 +1,5 @@
 ﻿namespace Builder
 {
-    public abstract class FlatBuilder
-    {
-        public Flat Flat { get; private set; }
-        public void CreateFlat()
-        {
-            Flat = new Flat();
-        }
-        public abstract void SetFloor();
-        public abstract void SetWalls();
-        public abstract void SetCeiling();
-    }
-    
     class Master
     {
         public Flat Build(FlatBuilder flatBuilder)
@@ -22,6 +10,18 @@
             flatBuilder.SetCeiling();
             return flatBuilder.Flat;
         }
+    }
+
+    public abstract class FlatBuilder
+    {
+        public Flat Flat { get; private set; }
+        public void CreateFlat()
+        {
+            Flat = new Flat();
+        }
+        public abstract void SetFloor();
+        public abstract void SetWalls();
+        public abstract void SetCeiling();
     }
 
     class CheapFLatBuilder : FlatBuilder

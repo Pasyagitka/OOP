@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fA5PYF2HWxj5ucYlsq85SCIgzl9SxKCeA+8qWIscLrUjSzsxRg/imVxb7Z7mdp/baaICuXdrnGlRvbCkM4x6/Q==",
+  "dgSpecHash": "iQ2Fi/1IUSAnpkLSKw2EoGbGEm0OPx+NuyuRCIYfTvAkGlOwHDPEe3lCsMe1bv8yfS7HndJC7ZC8zV71zol2mg==",
   "success": true,
-  "projectFilePath": "H:\\4 семестр\\ООП\\04. Применение порождающих паттернов проектирования\\Builder\\Builder.csproj",
+  "projectFilePath": "E:\\4 семестр\\ООП\\04. Применение порождающих паттернов проектирования\\Builder\\Builder.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -9,11 +9,11 @@ namespace Windows_Forms_Controls
     public sealed class Settings  //Singleton
     {
         private static readonly Settings Instance = new Settings();
-        public string Font;
+        public float FontSize;
 
         static Settings() { }
         private Settings() {
-            Font = "Bahnschrift Condensed";
+            FontSize = 15.2F;
         }
         public static Settings GetInstance()
         {

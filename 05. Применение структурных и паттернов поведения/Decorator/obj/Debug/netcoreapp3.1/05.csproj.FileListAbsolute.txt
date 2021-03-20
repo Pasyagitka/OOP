@@ -1,0 +1,13 @@
+E:\4 семестр\ООП\05. Применение структурных и паттернов поведения\05\bin\Debug\netcoreapp3.1\05.exe
+E:\4 семестр\ООП\05. Применение структурных и паттернов поведения\05\bin\Debug\netcoreapp3.1\05.deps.json
+E:\4 семестр\ООП\05. Применение структурных и паттернов поведения\05\bin\Debug\netcoreapp3.1\05.runtimeconfig.json
+E:\4 семестр\ООП\05. Применение структурных и паттернов поведения\05\bin\Debug\netcoreapp3.1\05.runtimeconfig.dev.json
+E:\4 семестр\ООП\05. Применение структурных и паттернов поведения\05\bin\Debug\netcoreapp3.1\05.dll
+E:\4 семестр\ООП\05. Применение структурных и паттернов поведения\05\bin\Debug\netcoreapp3.1\05.pdb
+E:\4 семестр\ООП\05. Применение структурных и паттернов поведения\05\obj\Debug\netcoreapp3.1\05.csprojAssemblyReference.cache
+E:\4 семестр\ООП\05. Применение структурных и паттернов поведения\05\obj\Debug\netcoreapp3.1\05.AssemblyInfoInputs.cache
+E:\4 семестр\ООП\05. Применение структурных и паттернов поведения\05\obj\Debug\netcoreapp3.1\05.AssemblyInfo.cs
+E:\4 семестр\ООП\05. Применение структурных и паттернов поведения\05\obj\Debug\netcoreapp3.1\05.csproj.CoreCompileInputs.cache
+E:\4 семестр\ООП\05. Применение структурных и паттернов поведения\05\obj\Debug\netcoreapp3.1\05.dll
+E:\4 семестр\ООП\05. Применение структурных и паттернов поведения\05\obj\Debug\netcoreapp3.1\05.pdb
+E:\4 семестр\ООП\05. Применение структурных и паттернов поведения\05\obj\Debug\netcoreapp3.1\05.genruntimeconfig.cache

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "H:\\4 семестр\\ООП\\04. Применение порождающих паттернов проектирования\\Builder\\Builder.csproj": {}
+    "E:\\4 семестр\\ООП\\04. Применение порождающих паттернов проектирования\\Builder\\Builder.csproj": {}
   },
   "projects": {
-    "H:\\4 семестр\\ООП\\04. Применение порождающих паттернов проектирования\\Builder\\Builder.csproj": {
+    "E:\\4 семестр\\ООП\\04. Применение порождающих паттернов проектирования\\Builder\\Builder.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "H:\\4 семестр\\ООП\\04. Применение порождающих паттернов проектирования\\Builder\\Builder.csproj",
+        "projectUniqueName": "E:\\4 семестр\\ООП\\04. Применение порождающих паттернов проектирования\\Builder\\Builder.csproj",
         "projectName": "Builder",
-        "projectPath": "H:\\4 семестр\\ООП\\04. Применение порождающих паттернов проектирования\\Builder\\Builder.csproj",
-        "packagesPath": "C:\\Users\\lizav\\.nuget\\packages\\",
-        "outputPath": "H:\\4 семестр\\ООП\\04. Применение порождающих паттернов проектирования\\Builder\\obj\\",
+        "projectPath": "E:\\4 семестр\\ООП\\04. Применение порождающих паттернов проектирования\\Builder\\Builder.csproj",
+        "packagesPath": "C:\\Users\\pasyagitka\\.nuget\\packages\\",
+        "outputPath": "E:\\4 семестр\\ООП\\04. Применение порождающих паттернов проектирования\\Builder\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\lizav\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\pasyagitka\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -54,7 +54,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
         }
       }
     }

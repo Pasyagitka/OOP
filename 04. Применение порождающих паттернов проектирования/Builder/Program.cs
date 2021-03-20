@@ -13,8 +13,7 @@ namespace Builder
             Flat expensiveFlat = master.Build(builder);
             Console.WriteLine(expensiveFlat.ToString());
             
-            builder = new CheapFLatBuilder();
-            Flat cheapFlat = master.Build(builder);
+            Flat cheapFlat = master.Build(new CheapFLatBuilder());
             Console.WriteLine(cheapFlat.ToString());
         }
     }

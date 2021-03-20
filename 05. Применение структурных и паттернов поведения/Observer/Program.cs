@@ -6,7 +6,8 @@ namespace Observer
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Retailer r = new Retailer("Квартира1");
+            r.Sell();
         }
     }
 }

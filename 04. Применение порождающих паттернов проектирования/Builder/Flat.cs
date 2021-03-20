@@ -11,16 +11,12 @@ namespace Builder
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            if (Floor != null)
-                sb.Append("Пол: " + Floor.Material + "\n");
-            if (Walls != null)
-                sb.Append("Стены: " + Walls.Color + "\n");
-            if (Ceiling != null)
-                sb.Append("Потолок: " + Ceiling.Material + " \n");
+            if (Floor != null)  sb.Append("Пол: " + Floor.Material + "\n");
+            if (Walls != null)  sb.Append("Стены: " + Walls.Color + "\n");
+            if (Ceiling != null) sb.Append("Потолок: " + Ceiling.Material + " \n");
             return sb.ToString();
         }
     }
-
     public class Floor
     {
         public string Material { get; set; }
