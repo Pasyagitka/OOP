@@ -5,9 +5,8 @@ namespace Observer
     public class Observer
     {
         public string Title { get; set; }
-        
-        // Создать экземпляр наблюдателя.
-        public Observer(string title, Retailer retailer)
+           
+        public Observer(string title, Flat retailer) 
         {
             if(string.IsNullOrEmpty(title))
             {
@@ -18,31 +17,27 @@ namespace Observer
                 throw new ArgumentNullException(nameof(retailer));
             }
             Title = title;
-            retailer.OnSell += SaveSubject;
+            retailer.OnSell += SellFlat;
         }
-        // Обработчик события сохранения наблюдаемого объекта.
-        private void SaveSubject(object sender, EventArgs e)
+      
+        private void SellFlat(object sender, EventArgs e)  // Обработчик события сохранения наблюдаемого объекта.
         {
             string format = "dd.MM.yyyy hh:mm:ss";
-            Console.WriteLine($"[{DateTime.Now.ToString(format)}] Наблюдатель '{this}': Выполнено сохранение наблюдаемого объекта '{sender}'");
+            Console.WriteLine($"[{DateTime.Now.ToString(format)}] Наблюдатель '{this}': Квартира '{sender}' продана");
         }
-        // Приведение объекта к строке.
+      
         public override string ToString()
         {
             return Title;
         }
     }
 
-    public class Retailer
+    public class Flat
     {
-        /// Название наблюдаемого.
         public string Name { get; set; }
+        public event EventHandler OnSell;    //Событие, генерируемое при сохранении сущности.
         
-        /// Событие, генерируемое при сохранении сущности.
-        public event EventHandler OnSell;
-        
-        /// Создать экземпляр наблюдаемого класса.
-        public Retailer(string name)
+        public Flat(string name)  
         {
             if(string.IsNullOrEmpty(name))
             {
@@ -50,15 +45,14 @@ namespace Observer
             }
             Name = name;
         }
-        /// Сохранить наблюдаемый класс.
-        public void Sell()
+    
+        public void Sell()  
         {
             Console.WriteLine("Sold");
-            // Такая форма записи используется для того, чтобы избежать исключения NullReferenceException, если нет ни одного подписчика у события.
             OnSell?.Invoke(this, EventArgs.Empty);
         }
-        /// Приведение объекта к строке.
-        public override string ToString()
+      
+        public override string ToString() 
         {
             return Name;
         }

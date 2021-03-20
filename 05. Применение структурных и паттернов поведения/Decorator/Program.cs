@@ -13,7 +13,6 @@ namespace Lab05
             flat1 = new FurnitureFillFlat(flat1);
             Console.WriteLine(flat1.Name + " cost: " + flat1.GetCost());
             
-            
             Flat flat2 = new EmptyFlat();
             flat2 = new FurnitureFillFlat(flat2);
             Console.WriteLine(flat2.Name + " cost: " + flat2.GetCost());

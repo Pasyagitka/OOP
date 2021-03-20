@@ -2,15 +2,14 @@
 {
     abstract class Flat
     {
+        public string Name { get; protected set; }
         public Flat(string n)
         {
             this.Name = n;
         }
-        public string Name {get; protected set;}
         public abstract int GetCost();
     }
-    
-    
+      
     class EmptyFlat : Flat
     {
         public EmptyFlat()
@@ -31,7 +30,7 @@
         }
     }
     
-    class DecoratedFlat : FlatDecorator
+    class DecoratedFlat : FlatDecorator //с отделкой
     {
         public DecoratedFlat(Flat flat) 
             : base(flat.Name + " with decoration", flat)
@@ -42,7 +41,7 @@
             return flat.GetCost() + 50000;
         } 
     }
-    class FurnitureFillFlat : FlatDecorator
+    class FurnitureFillFlat : FlatDecorator //с мебелью
     {
         public FurnitureFillFlat(Flat flat) 
             : base(flat.Name + " with furniture", flat)
