@@ -1,0 +1,16 @@
+H:\4 семестр\ООП\05. Применение структурных и паттернов поведения\Observer\bin\Debug\net5.0\Observer.exe
+H:\4 семестр\ООП\05. Применение структурных и паттернов поведения\Observer\bin\Debug\net5.0\Observer.deps.json
+H:\4 семестр\ООП\05. Применение структурных и паттернов поведения\Observer\bin\Debug\net5.0\Observer.runtimeconfig.json
+H:\4 семестр\ООП\05. Применение структурных и паттернов поведения\Observer\bin\Debug\net5.0\Observer.runtimeconfig.dev.json
+H:\4 семестр\ООП\05. Применение структурных и паттернов поведения\Observer\bin\Debug\net5.0\Observer.dll
+H:\4 семестр\ООП\05. Применение структурных и паттернов поведения\Observer\bin\Debug\net5.0\ref\Observer.dll
+H:\4 семестр\ООП\05. Применение структурных и паттернов поведения\Observer\bin\Debug\net5.0\Observer.pdb
+H:\4 семестр\ООП\05. Применение структурных и паттернов поведения\Observer\obj\Debug\net5.0\Observer.csprojAssemblyReference.cache
+H:\4 семестр\ООП\05. Применение структурных и паттернов поведения\Observer\obj\Debug\net5.0\Observer.GeneratedMSBuildEditorConfig.editorconfig
+H:\4 семестр\ООП\05. Применение структурных и паттернов поведения\Observer\obj\Debug\net5.0\Observer.AssemblyInfoInputs.cache
+H:\4 семестр\ООП\05. Применение структурных и паттернов поведения\Observer\obj\Debug\net5.0\Observer.AssemblyInfo.cs
+H:\4 семестр\ООП\05. Применение структурных и паттернов поведения\Observer\obj\Debug\net5.0\Observer.csproj.CoreCompileInputs.cache
+H:\4 семестр\ООП\05. Применение структурных и паттернов поведения\Observer\obj\Debug\net5.0\Observer.dll
+H:\4 семестр\ООП\05. Применение структурных и паттернов поведения\Observer\obj\Debug\net5.0\ref\Observer.dll
+H:\4 семестр\ООП\05. Применение структурных и паттернов поведения\Observer\obj\Debug\net5.0\Observer.pdb
+H:\4 семестр\ООП\05. Применение структурных и паттернов поведения\Observer\obj\Debug\net5.0\Observer.genruntimeconfig.cache
