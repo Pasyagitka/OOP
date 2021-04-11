@@ -2,7 +2,7 @@
 {
     abstract class Flat
     {
-        public string Name { get; protected set; }
+        public string Name { get; set; }
         public Flat(string n)
         {
             this.Name = n;

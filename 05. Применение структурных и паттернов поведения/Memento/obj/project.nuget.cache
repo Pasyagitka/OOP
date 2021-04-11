@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "AfibGeJj2EB/YDg8bxPi81+djfnZTNHDomvIkibYDuBoCcupiHPzrdUpp8fD4Skxto+8zpzTW0INeA/mCzfoWg==",
+  "dgSpecHash": "2uZkx7K1uTLZp6b8PaKTO1/4w7AaMhX/112+LsAUQnxemwjTwusID6gEuIQg8QJDMQcx81Wgdl/WPuroLPR4yQ==",
   "success": true,
-  "projectFilePath": "H:\\4 семестр\\ООП\\05. Применение структурных и паттернов поведения\\Memento\\Memento.csproj",
+  "projectFilePath": "E:\\4 семестр\\ООП\\05. Применение структурных и паттернов поведения\\Memento\\Memento.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -5,8 +5,34 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:Shop.Controls"
              mc:Ignorable="d"
-             d:DesignHeight="300" d:DesignWidth="300">
-    <Grid>
+             MinHeight="100" MinWidth="500"
+             MaxHeight="100" 
+             HorizontalAlignment="Stretch"
+             MouseEnter="Item_MouseEnter"
+             MouseLeave="Item_MouseLeave"
+             Name="Item"
+             >
+    <Grid Name="MainGrid" Background="White">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="160"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Name="RightPartStackPanel" Grid.Column="1" Margin="0, 10, 10, 10">
+                <DockPanel Name="InfoDockPanel" LastChildFill="True">
+                    <!--TextTrimming="CharacterEllipsis"-->
+                    <TextBlock Name="PriceTextBlock" FontFamily="Open Sans" FontSize="17" FontWeight="Bold"  DockPanel.Dock="Right" TextAlignment="Right"  TextWrapping="NoWrap" Text="2$" Width="45"/>
+                    <TextBlock Name="TitleTextBlock" FontFamily="Open Sans" FontSize="17" FontWeight="Bold" DockPanel.Dock="Left" Text="Молочный Шоколад Milka Bubbly Сoconut 100г"/>
+                </DockPanel>
+
+                <DockPanel Name="DescriptionDockPanel" LastChildFill="True">
+                    <TextBlock Width="{Binding ElementName=PriceTextBlock, Path=ActualWidth}" DockPanel.Dock="Right"/>
+                    <TextBlock Name="ShortDescriptionTextBlock" TextTrimming="None"
+                               Margin="0" FontFamily="Open Sans" TextAlignment="Left" VerticalAlignment="Top" TextWrapping="WrapWithOverflow"
+                               Text="Пористый молочный шоколад Милка с начинкой из пористого белого шоколада 100г"/>
+                </DockPanel>
+            </StackPanel>
+            <Image Name="MainItemImage" Grid.Column="0" Margin="10" Source="H:\4 семестр\ООП\06-07. Программное средство продажи товаров или услуг на WPF\product_1724_0_image-1000x10001.jpg"/>
+
         
     </Grid>
 </UserControl>

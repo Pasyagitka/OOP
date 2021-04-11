@@ -8,19 +8,19 @@
     "net5.0": []
   },
   "packageFolders": {
-    "C:\\Users\\lizav\\.nuget\\packages\\": {}
+    "C:\\Users\\pasyagitka\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "H:\\4 семестр\\ООП\\05. Применение структурных и паттернов поведения\\Memento\\Memento.csproj",
+      "projectUniqueName": "E:\\4 семестр\\ООП\\05. Применение структурных и паттернов поведения\\Memento\\Memento.csproj",
       "projectName": "Memento",
-      "projectPath": "H:\\4 семестр\\ООП\\05. Применение структурных и паттернов поведения\\Memento\\Memento.csproj",
-      "packagesPath": "C:\\Users\\lizav\\.nuget\\packages\\",
-      "outputPath": "H:\\4 семестр\\ООП\\05. Применение структурных и паттернов поведения\\Memento\\obj\\",
+      "projectPath": "E:\\4 семестр\\ООП\\05. Применение структурных и паттернов поведения\\Memento\\Memento.csproj",
+      "packagesPath": "C:\\Users\\pasyagitka\\.nuget\\packages\\",
+      "outputPath": "E:\\4 семестр\\ООП\\05. Применение структурных и паттернов поведения\\Memento\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\lizav\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\pasyagitka\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

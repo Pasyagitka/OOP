@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0pQMgS+c3YB8Ao1e83QpIUEIE8E7ouinOt9MybkEGFQkUbiq0vSNlpH/i0VQXHb8J4+9DRt9UFdxLhWqBOHylQ==",
+  "dgSpecHash": "ssIvhZoUxHCNOXiPkGHBuo4GLL18HmTFPvGgWmOjrl7zWJZAMXo7ZdoDV/KU+nIw9u7UWB2SxjaeO7b4YdlaRw==",
   "success": true,
-  "projectFilePath": "H:\\4 семестр\\ООП\\05. Применение структурных и паттернов поведения\\Decorator\\Decorator.csproj",
+  "projectFilePath": "E:\\4 семестр\\ООП\\05. Применение структурных и паттернов поведения\\Decorator\\Decorator.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

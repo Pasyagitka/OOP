@@ -1,0 +1,17 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:v="clr-namespace:System;assembly=mscorlib"
+                    >
+    <!-- Auth -->
+    <v:String x:Key="SignInTB">Войти в магазин</v:String>
+    <v:String x:Key="LoginButton">ВОЙТИ</v:String>
+    <v:String x:Key="RegisterButton">СОЗДАТЬ</v:String>
+
+    <!-- Main window -->
+    <v:String x:Key="menuLanguage">Язык</v:String>
+    <v:String x:Key="MainWindowFrameText">МАГАЗИН СЛАДОСТЕЙ</v:String>
+    <v:String x:Key="CandyTB">Конфеты</v:String>
+    <v:String x:Key="ChocolateTB">Шоколад</v:String>
+    <v:String x:Key="MarmaladeTB">Мармелад</v:String>
+    <v:String x:Key="WaffleTB">Вафли</v:String>
+</ResourceDictionary>

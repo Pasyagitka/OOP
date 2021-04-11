@@ -3,10 +3,109 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Shop"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:Shop" xmlns:controls="clr-namespace:Shop.Controls"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="MainWindow" Height="500" Width="900"
+        MinHeight="450" MinWidth="800"
+        WindowStyle="None" 
+        WindowStartupLocation="CenterScreen"
+        AllowsTransparency="False"
+        ResizeMode="CanResizeWithGrip" 
+    >
+    <!--<Window.Resources>
+        <ResourceDictionary>
+            <DockPanel x:Key="CursorGrab" Cursor="E:\4 семестр\ООП\06-07. Программное средство продажи товаров или услуг на WPF\Shop\Cursors\Unavailable.cur"/>
+        </ResourceDictionary>
+    </Window.Resources>-->
+    <!--RESIZE https://stackoverflow.com/questions/27157390/wpf-custom-window-windows-edge-resize-feature-->
+    <!--<Window.Resources>
+        <ResourceDictionary>
+            <TextBlock x:Key="CursorGrab" Cursor="Cursors/Cursor.cur"/>
+            <TextBlock x:Key="CursorMagnify" Cursor="Cursors/Cursor.cur"/>
+        </ResourceDictionary>
+    </Window.Resources>-->
+    <Grid Name="MainWindowMainGrid" Background="White">
+        <DockPanel  Height="{Binding ElementName=MainWindowMainGrid, Path=ActualHeight}" LastChildFill="True">
+            <Grid Name="PaddingGrid" DockPanel.Dock="Bottom">
+                <Border Background="White" BorderBrush="LightGray" BorderThickness="0,2,0,0">
+                    <StackPanel Orientation="Horizontal" Height="50" Width="{Binding ElementName=MainWindowMainGrid, Path=ActualWidth}" VerticalAlignment="Bottom" Background="White"/>
+                </Border>
+            </Grid>
+            <Grid DockPanel.Dock="Top">
+                <StackPanel Orientation="Horizontal" Height="25" Width="{Binding ElementName=MainWindowMainGrid, Path=ActualWidth}" VerticalAlignment="Top">
+                    <StackPanel.Background>
+                        <LinearGradientBrush>
+                            <GradientStop Color="#FF9900" Offset="1"/>
+                            <GradientStop Color="#FF559A" Offset="0"/>
+                        </LinearGradientBrush>
+                    </StackPanel.Background>
+                    <TextBlock Name="MainWindowFrameText" Text="{DynamicResource MainWindowFrameText}" Width="{Binding ElementName=MainWindowMainGrid, Path=ActualWidth}" VerticalAlignment="Center" TextAlignment="Center" FontFamily="Fonts/Lato" FontSize="18" Foreground="White" FontWeight="Bold"/>
+                </StackPanel>
+                <StackPanel Orientation="Vertical">
+                    <DockPanel LastChildFill="False" Name="MainWindowTop" Height="25" Width="{Binding ElementName=MainWindowMainGrid, Path=ActualWidth}" Background="Transparent" VerticalAlignment="Top" MouseDown="MainWindowTop_MouseDown">
+                        <Menu DockPanel.Dock="left" Background="{x:Null}">
+                            <MenuItem x:Name="menuLanguage" Header="{DynamicResource menuLanguage}" FontWeight="Bold" />
+                        </Menu>
+                        <Button Name="MainWindowClose" Background="Transparent" BorderBrush="Transparent" Width="25" Click="MainWindowClose_Click" DockPanel.Dock="Right">
+                            <materialDesign:PackIcon Kind="Close" Foreground="White"/>
+                        </Button>
+                        <Button Name="MainWindowResize" Width="25" Background="Transparent" BorderBrush="Transparent" Click="MainWindowResize_Click" DockPanel.Dock="Right">
+                            <materialDesign:PackIcon Name="MainWindowResizeIcon"  Kind="Resize" Foreground="White"/>
+                        </Button>
+                        <Button Name="MainWindowMinimize"  Width="25" Background="Transparent" BorderBrush="Transparent" Click="MainWindowMinimize_Click" DockPanel.Dock="Right">
+                            <materialDesign:PackIcon Kind="WindowMinimize"  Foreground="White"/>
+                        </Button>
+                    </DockPanel>
+
+                    <!--<TextBlock Grid.Column="1" Text="Shop" Foreground="Black" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Fonts/Lato"/>-->
+
+
+                </StackPanel>
+            </Grid>
+            <StackPanel Name="MenuGrid" DockPanel.Dock="Top" Orientation="Horizontal">
+                <Border Background="White" BorderBrush="LightGray" BorderThickness="0,0,0,2">
+                    <UniformGrid Columns="4" Height="75" Width="{Binding ElementName=MainWindowMainGrid, Path=ActualWidth}" VerticalAlignment="Bottom">
+                        <DockPanel Name="CandyDockPanel" MouseEnter="MenuDockPanel_MouseEnter" MouseLeave="MenuDockPanel_MouseLeave">
+                            <TextBlock Name="CandyTB"  Text="{DynamicResource CandyTB}" DockPanel.Dock="Bottom" FontSize="16" TextAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                            <Image Source="Images\candy.png" DockPanel.Dock="Top" Margin="2"/>
+                        </DockPanel>
+                        <DockPanel Name="ChocolateDockPanel" MouseEnter="MenuDockPanel_MouseEnter" MouseLeave="MenuDockPanel_MouseLeave">
+                            <TextBlock Name="ChocolateTB" Text="{DynamicResource ChocolateTB}" FontSize="16" DockPanel.Dock="Bottom" TextAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                            <Image Source="Images\chocolate.png" DockPanel.Dock="Top" Margin="2"/>
+                        </DockPanel>
+                        <DockPanel Name="MarmaladeDockPanel" MouseEnter="MenuDockPanel_MouseEnter" MouseLeave="MenuDockPanel_MouseLeave">
+                            <TextBlock Name="MarmaladeTB" Text="{DynamicResource MarmaladeTB}" FontSize="16" DockPanel.Dock="Bottom" TextAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                            <Image Source="Images\gummy-bear.png" DockPanel.Dock="Top" Margin="2"/>
+                        </DockPanel>
+                        <DockPanel Name="WaffleDockPanel" MouseEnter="MenuDockPanel_MouseEnter" MouseLeave="MenuDockPanel_MouseLeave">
+                            <TextBlock Name="WaffleTB" Text="{DynamicResource WaffleTB}" FontSize="16" DockPanel.Dock="Bottom" TextAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                            <Image Source="Images\pancakes.png" DockPanel.Dock="Top" Margin="2"/>
+                        </DockPanel>
+                    </UniformGrid>
+                </Border>
+            </StackPanel>
+            <DockPanel LastChildFill="True">
+                <!--<Grid Name="LeftPanel" Width="200" Margin="7" DockPanel.Dock="Left">-->
+                <Border DockPanel.Dock="Left" Width="200" Margin="7" CornerRadius="3" Background="#FFF4F4F4" BorderThickness="1"/>
+                <!--<Border.Background>
+                            <LinearGradientBrush>
+                                <GradientStop Color="#FF9900" Offset="0.0"/>
+                                <GradientStop Color="#FF559A" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Border.Background>-->
+
+                <!--<Grid Background="White" Margin="3"></Grid>-->
+                <!--</Grid>-->
+
+              
+                <ScrollViewer>
+                    <DockPanel>
+                        <Border CornerRadius="3" BorderThickness="1" Background="#FFF4F4F4" Height="50" DockPanel.Dock="Top" Margin="10"/>
+                        <StackPanel Name = "Test" DockPanel.Dock="Left"/>
+                    </DockPanel>
+                </ScrollViewer>
+            </DockPanel>
+        </DockPanel>
     </Grid>
 </Window>

@@ -6,26 +6,25 @@ namespace Observer
     {
         public string Title { get; set; }
            
-        public Observer(string title, Flat retailer) 
+        public Observer(string title, Flat flat) 
         {
             if(string.IsNullOrEmpty(title))
             {
                 throw new ArgumentNullException(nameof(title));
             }
-            if(retailer == null)
+            if(flat == null)
             {
-                throw new ArgumentNullException(nameof(retailer));
+                throw new ArgumentNullException(nameof(flat));
             }
             Title = title;
-            retailer.OnSell += SellFlat;
+            flat.OnSell += SellFlat;
         }
       
-        private void SellFlat(object sender, EventArgs e)  // Обработчик события сохранения наблюдаемого объекта.
+        private void SellFlat(object sender, EventArgs e) 
         {
             string format = "dd.MM.yyyy hh:mm:ss";
             Console.WriteLine($"[{DateTime.Now.ToString(format)}] Наблюдатель '{this}': Квартира '{sender}' продана");
         }
-      
         public override string ToString()
         {
             return Title;
@@ -35,7 +34,7 @@ namespace Observer
     public class Flat
     {
         public string Name { get; set; }
-        public event EventHandler OnSell;    //Событие, генерируемое при сохранении сущности.
+        public event EventHandler OnSell;  
         
         public Flat(string name)  
         {

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "H:\\4 семестр\\ООП\\05. Применение структурных и паттернов поведения\\Decorator\\Decorator.csproj": {}
+    "E:\\4 семестр\\ООП\\05. Применение структурных и паттернов поведения\\Decorator\\Decorator.csproj": {}
   },
   "projects": {
-    "H:\\4 семестр\\ООП\\05. Применение структурных и паттернов поведения\\Decorator\\Decorator.csproj": {
+    "E:\\4 семестр\\ООП\\05. Применение структурных и паттернов поведения\\Decorator\\Decorator.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "H:\\4 семестр\\ООП\\05. Применение структурных и паттернов поведения\\Decorator\\Decorator.csproj",
+        "projectUniqueName": "E:\\4 семестр\\ООП\\05. Применение структурных и паттернов поведения\\Decorator\\Decorator.csproj",
         "projectName": "Decorator",
-        "projectPath": "H:\\4 семестр\\ООП\\05. Применение структурных и паттернов поведения\\Decorator\\Decorator.csproj",
-        "packagesPath": "C:\\Users\\lizav\\.nuget\\packages\\",
-        "outputPath": "H:\\4 семестр\\ООП\\05. Применение структурных и паттернов поведения\\Decorator\\obj\\",
+        "projectPath": "E:\\4 семестр\\ООП\\05. Применение структурных и паттернов поведения\\Decorator\\Decorator.csproj",
+        "packagesPath": "C:\\Users\\pasyagitka\\.nuget\\packages\\",
+        "outputPath": "E:\\4 семестр\\ООП\\05. Применение структурных и паттернов поведения\\Decorator\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\lizav\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\pasyagitka\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

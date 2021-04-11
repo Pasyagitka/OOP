@@ -1,7 +1,12 @@
-﻿namespace Shop.Roles
+﻿using System;
+
+namespace Shop.Roles
 {
-    public class Admin
+    [Serializable]
+    public class Admin : Role
     {
-        
+        protected Admin(string login, string password) : base(login, password)
+        {
+        }
     }
 }

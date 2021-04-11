@@ -3,27 +3,103 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:Shop"
         mc:Ignorable="d"
-        Title="Authorization" Height="450" Width="330"
+        Title="Authorization" Height="450" Width="380"
         WindowStyle="None" 
         WindowStartupLocation="CenterScreen"
+        AllowsTransparency="True" Background="Transparent"
         ResizeMode="NoResize">
+    <Window.Resources>
+        <Style TargetType="Button" x:Key="AuthButtons">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="Width" Value="100"/>
+            <Setter Property="Height" Value="40"/>
+        </Style>
+    </Window.Resources>
     <Grid>
-        <Grid.Background>
-            <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                <LinearGradientBrush.RelativeTransform>
-                    <TransformGroup>
-                        <ScaleTransform CenterY="0.5" CenterX="0.5"/>
-                        <SkewTransform AngleY="510" AngleX="400" CenterY="0.5" CenterX="0.5"/>
-                        <RotateTransform CenterY="0.5" CenterX="0.5"/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </LinearGradientBrush.RelativeTransform>
-                <GradientStop Color="#FFFCD29D"/>
-                <GradientStop Color="#FFF9832E" Offset="0.99"/>
-                <GradientStop Color="#F4A460" Offset="0.526"/>
-            </LinearGradientBrush>
-        </Grid.Background>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+ 
+ 
+            <Border CornerRadius="10" Grid.RowSpan="2">
+                <Border.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Color="#FF9900" Offset="0.0"/>
+                        <GradientStop Color="#FF559A" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+            </Border>
+ 
+ 
+            <StackPanel VerticalAlignment="Center">
+                <TextBlock Name="SignInTB"
+                    Text="{DynamicResource SignInTB}"
+                           FontWeight="Light"
+                           FontFamily="helvetica"
+                           FontSize="38"
+                           Foreground="White"
+                           HorizontalAlignment="Center"/>
+            </StackPanel>
+ 
+            <StackPanel Grid.Row="1" >
+                <StackPanel Orientation="Horizontal">
+                    <TextBox Name="LoginTextBox"
+                             FontFamily="Helvetica"
+                             FontWeight="Light"
+                             FontSize="20"
+                             HorizontalAlignment="Center"
+                             Foreground="White"
+                             Background="Transparent"
+                             BorderThickness="0"
+                             Width="235"
+                             HorizontalContentAlignment="Left"
+                             Opacity="0.5"
+                             Height="25"
+                             Margin="63,0,0,0"/>
+                    <materialDesign:PackIcon Kind="Account"
+                                             VerticalAlignment="Center"
+                                             HorizontalAlignment="Center"
+                                             Foreground="White"/>
+                </StackPanel>
+                <Border Width="250"  Height="2" Background="White" Opacity="0.5"/>
+ 
+                <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+                    <PasswordBox Name="PasswordBox"
+                                 FontFamily="Helvetica"
+                                 FontWeight="Light"
+                                 FontSize="20"
+                                 HorizontalAlignment="Center"
+                                 Foreground="White"
+                                 Background="Transparent"
+                                 BorderThickness="0"
+                                 Width="235"
+                                 HorizontalContentAlignment="Left"
+                                 Opacity="0.5"
+                                 Height="25"
+                                 Margin="63,0,0,0"/>
+                    <materialDesign:PackIcon Kind="Password"
+                                             VerticalAlignment="Center"
+                                             HorizontalAlignment="Center"
+                                             Foreground="White"/>
+                </StackPanel>
+                <Border Width="250"
+                        Height="2"
+                        Background="White"
+                        Opacity="0.5"/>
+ 
+ 
+                <StackPanel Orientation="Horizontal" Margin="0,50,0,0">
+                    <Button Name="LoginButton" Style="{StaticResource AuthButtons}" Content="{DynamicResource LoginButton}"  Margin="60,0,60,0" Click="LoginButton_OnClick"/>
+                    <Button Name="RegisterButton" Style="{StaticResource AuthButtons}" Content="{DynamicResource RegisterButton}" Click="RegisterButton_OnClick"/>
+                </StackPanel>
+ 
+            </StackPanel>
+            
+        </Grid>
     </Grid>
 </Window>
