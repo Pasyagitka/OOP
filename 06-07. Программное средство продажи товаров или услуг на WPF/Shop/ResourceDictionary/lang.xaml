@@ -8,10 +8,18 @@
     <v:String x:Key="RegisterButton">REGISTER</v:String>
 
     <!-- Main window -->
-    <v:String x:Key="menuLanguage">Language</v:String>
+    <v:String x:Key="menuLanguage">LANG</v:String>
     <v:String x:Key="MainWindowFrameText">SWEET SHOP</v:String>
     <v:String x:Key="CandyTB">Candy</v:String>
     <v:String x:Key="ChocolateTB">Chocolate</v:String>
     <v:String x:Key="MarmaladeTB">Marmalade</v:String>
     <v:String x:Key="WaffleTB">Waffle</v:String>
+    <v:String x:Key="AllTB">All</v:String>
+
+    <v:String x:Key="CategoryHint">Category</v:String>
+    <v:String x:Key="SortHint">Sort</v:String>
+
+    <v:String x:Key="PriceByDesc">Price by desc</v:String>
+    <v:String x:Key="PriceByAsc">Price by asc</v:String>
+    <v:String x:Key="Alphabet">By alphabet</v:String>
 </ResourceDictionary>

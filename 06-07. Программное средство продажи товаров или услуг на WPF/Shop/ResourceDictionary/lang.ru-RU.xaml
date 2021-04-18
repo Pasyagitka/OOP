@@ -8,10 +8,18 @@
     <v:String x:Key="RegisterButton">СОЗДАТЬ</v:String>
 
     <!-- Main window -->
-    <v:String x:Key="menuLanguage">Язык</v:String>
+    <v:String x:Key="menuLanguage">ЯЗЫК</v:String>
     <v:String x:Key="MainWindowFrameText">МАГАЗИН СЛАДОСТЕЙ</v:String>
     <v:String x:Key="CandyTB">Конфеты</v:String>
     <v:String x:Key="ChocolateTB">Шоколад</v:String>
     <v:String x:Key="MarmaladeTB">Мармелад</v:String>
     <v:String x:Key="WaffleTB">Вафли</v:String>
+    <v:String x:Key="AllTB">Все</v:String>
+
+    <v:String x:Key="CategoryHint">Категория</v:String>
+    <v:String x:Key="SortHint">Сортировка</v:String>
+
+    <v:String x:Key="PriceByDesc">Цена, по убыванию</v:String>
+    <v:String x:Key="PriceByAsc">Цена, по возрастанию</v:String>
+    <v:String x:Key="Alphabet">А-Я</v:String>
 </ResourceDictionary>

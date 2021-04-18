@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Globalization;
 using System.Linq;
 using System.Text;
@@ -14,18 +15,19 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Shop.Controls;
+using Shop.Product;
 
 namespace Shop
 {
-    /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
         {
             InitializeComponent();
             
+          //TODO вернуть курсор
+          this.Cursor = new Cursor("D:\\4 семестр\\ООП\\06-07. Программное средство продажи товаров или услуг на WPF\\Shop\\Cursors\\donut.ani");
+          
             App.LanguageChanged += LanguageChanged;
             CultureInfo currLang = App.Language;
             //Заполняем меню смены языка:
@@ -39,19 +41,34 @@ namespace Shop
                 menuLang.Click += ChangeLanguageClick;
                 menuLanguage.Items.Add(menuLang);
             }
+            //try
+            //{
+            //    Products.GetInstance().ImportProducts();
+            //    _listingDataView = (CollectionViewSource)Products.GetInstance().SweetnessesList;
+            //}
+            //catch (Exception e)
+            //{
+            //    MessageBox.Show("Ошибка импорта", "Ошибка!");
+            //    Console.WriteLine(e.Message);
+            //}
 
+            // try
+            // {
+            //     Products.GetInstance().ExportProducts();
+            // }
+            // catch
+            // {
+            //     MessageBox.Show("Ошибка экспорта", "Ошибка!");
+            // }
+            // foreach (var p in Products)
+            // {
+            //     
+            // }
+            //Test.Children.Add(new ProductItem()); 
 
-            Test.Children.Add(new ProductItem()); //TODO TEST ADD
-            Test.Children.Add(new ProductItem());
-            Test.Children.Add(new ProductItem());
-            Test.Children.Add(new ProductItem());
-            Test.Children.Add(new ProductItem());
-            Test.Children.Add(new ProductItem());
-            Test.Children.Add(new ProductItem());
-            Test.Children.Add(new ProductItem());
-            Test.Children.Add(new ProductItem());
-            Test.Children.Add(new ProductItem());
         }
+
+        #region Local
 
         private void LanguageChanged(Object sender, EventArgs e)
         {
@@ -76,8 +93,9 @@ namespace Shop
             }
 
         }
-        
-        
+        #endregion
+
+        #region WindowButtons
         private void MainWindowClose_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
@@ -107,15 +125,32 @@ namespace Shop
                 MainWindowResizeIcon.Kind = MaterialDesignThemes.Wpf.PackIconKind.Resize;
             }
         }
+        #endregion
 
-        private void MenuDockPanel_MouseEnter(object sender, MouseEventArgs e)
+        private void SelectCategory_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            WaffleDockPanel.Background = new SolidColorBrush(Colors.SeaShell);
+             Test.CategoryUpdate(SelectCategory.SelectedIndex);
         }
 
-        private void MenuDockPanel_MouseLeave(object sender, MouseEventArgs e)
+        private void Sort_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            WaffleDockPanel.Background = new SolidColorBrush(Colors.White);
+            Test.SortUpdate(Sort.SelectedIndex);
+        }
+        private void AddProductButton_Click(object sender, RoutedEventArgs e)
+        {
+            AddProduct addnewproductwindow = new AddProduct();
+            addnewproductwindow.Show();
+        }
+
+        private void SearchButton_Click(object sender, RoutedEventArgs e)
+        {
+            Test.SearchUpdate(SearchTextBox.Text, 0);
+        }
+
+        private void SearchDenyButton_Click(object sender, RoutedEventArgs e)
+        {
+            Test.SearchUpdate(SearchTextBox.Text, 1);
+            SearchTextBox.Clear();
         }
     }
 }

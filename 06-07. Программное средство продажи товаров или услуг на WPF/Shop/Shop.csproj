@@ -100,18 +100,38 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AddProduct.xaml.cs">
+      <DependentUpon>AddProduct.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Authentication.xaml.cs">
       <DependentUpon>Authentication.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Command\Commands.cs" />
+    <Compile Include="Controls\ProductContainer.xaml.cs">
+      <DependentUpon>ProductContainer.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\ProductItem.xaml.cs">
       <DependentUpon>ProductItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Converter\ImageToSourceConverter.cs" />
+    <Compile Include="EditProduct.xaml.cs">
+      <DependentUpon>EditProduct.xaml</DependentUpon>
     </Compile>
     <Compile Include="Roles\Admin.cs" />
     <Compile Include="Roles\Client.cs" />
     <Compile Include="Roles\Role.cs" />
     <Compile Include="Roles\RoleList.cs" />
+    <Page Include="AddProduct.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Authentication.xaml" />
+    <Page Include="Controls\ProductContainer.xaml" />
     <Page Include="Controls\ProductItem.xaml" />
+    <Page Include="EditProduct.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -139,7 +159,7 @@
     <Compile Include="Product\Marmalade.cs" />
     <Compile Include="Product\Products.cs" />
     <Compile Include="Product\Sweetness.cs" />
-    <Compile Include="Product\Sweets.cs" />
+    <Compile Include="Product\TypesOfSweets.cs" />
     <Compile Include="Product\SweetsFactory.cs" />
     <Compile Include="Product\Waffles.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -199,12 +219,26 @@
     <Resource Include="Cursors\Text.cur" />
     <Resource Include="Cursors\Unavailable.cur" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <Resource Include="gummy-bear.ico" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Files\Products.json" />
     <Content Include="Images\1888900.svg" />
+    <Content Include="ProductImages\milkabubbly.jpg" />
+    <Content Include="ProductImages\аленка.jpg" />
+    <Content Include="ProductImages\аэрофлоцкая.jpg" />
+    <Content Include="ProductImages\витоша.jpg" />
+    <Content Include="ProductImages\витьба.jpg" />
+    <Content Include="ProductImages\витьбабай.png" />
+    <Content Include="ProductImages\всахаре.png" />
+    <Content Include="ProductImages\генеральский.jpg" />
+    <Content Include="ProductImages\дольки.png" />
+    <Content Include="ProductImages\коровка.jpg" />
+    <Content Include="ProductImages\рошен.jpg" />
+    <Content Include="ProductImages\старый.png" />
+    <Content Include="ProductImages\червяк.png" />
+    <Content Include="ProductImages\яшкино.jpg" />
     <Resource Include="Images\27cb9308a4d50596abf0f184a210f1af.png" />
     <Resource Include="Images\candy.png" />
     <Resource Include="Images\chocolate.png" />

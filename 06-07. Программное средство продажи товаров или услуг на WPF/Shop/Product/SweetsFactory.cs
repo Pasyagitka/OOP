@@ -3,31 +3,32 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Media;
 
 namespace Shop.Product
 {
     public class SweetsFactory
     {
-        public Sweetness CreateSweet(Sweets sweets, string name, double weight, int calories, string description,
-            string trademark)
+        public static Sweetness CreateSweet(Sweets sweets, string name, string image, double weight, int calories, string description,
+            string trademark, int price)
         {
             switch (sweets)
             {
                 case Sweets.Chocolate:
                 {
-                    return new Chocolate(name, weight, calories, description, trademark);
+                    return new Chocolate(name, image, weight, calories, description, trademark, price);
                 }
                 case Sweets.Candy:
                 {
-                    return new Candy(name, weight, calories, description, trademark);
+                    return new Candy(name, image, weight, calories, description, trademark, price);
                 }
                 case Sweets.Marmelade:
                 {
-                    return new Marmalade(name, weight, calories, description, trademark);
+                    return new Marmalade(name,image, weight, calories, description, trademark, price);
                 }
                 case Sweets.Waffle:
                 {
-                    return new Waffles(name, weight, calories, description, trademark);
+                    return new Waffles(name, image, weight, calories, description, trademark, price);
                 }
                 default:
                 {

@@ -3,36 +3,44 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:Convertor="clr-namespace:Shop.Converter"
              xmlns:local="clr-namespace:Shop.Controls"
              mc:Ignorable="d"
              MinHeight="100" MinWidth="500"
              MaxHeight="100" 
              HorizontalAlignment="Stretch"
-             MouseEnter="Item_MouseEnter"
-             MouseLeave="Item_MouseLeave"
+             Padding="7"
              Name="Item"
              >
     <Grid Name="MainGrid" Background="White">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="160"/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
-            <StackPanel Name="RightPartStackPanel" Grid.Column="1" Margin="0, 10, 10, 10">
-                <DockPanel Name="InfoDockPanel" LastChildFill="True">
-                    <!--TextTrimming="CharacterEllipsis"-->
-                    <TextBlock Name="PriceTextBlock" FontFamily="Open Sans" FontSize="17" FontWeight="Bold"  DockPanel.Dock="Right" TextAlignment="Right"  TextWrapping="NoWrap" Text="2$" Width="45"/>
-                    <TextBlock Name="TitleTextBlock" FontFamily="Open Sans" FontSize="17" FontWeight="Bold" DockPanel.Dock="Left" Text="Молочный Шоколад Milka Bubbly Сoconut 100г"/>
-                </DockPanel>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="160"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Name="RightPartStackPanel" Grid.Column="1" Margin="0, 10, 10, 10">
+            <DockPanel Name="InfoDockPanel" LastChildFill="True">
+                <!--TextTrimming="CharacterEllipsis"-->
+                <TextBlock Name="PriceTextBlock" FontFamily="Open Sans" FontSize="17" FontWeight="Bold"  DockPanel.Dock="Right" TextAlignment="Right"  TextWrapping="NoWrap" Text="{Binding  Path=Price, StringFormat={}{0:C}}" Width="45"/>
+                <TextBlock Name="TitleTextBlock" FontFamily="Open Sans" FontSize="17" FontWeight="Bold" DockPanel.Dock="Left" Text="{Binding Path=Name}"/>
+            </DockPanel>
 
-                <DockPanel Name="DescriptionDockPanel" LastChildFill="True">
-                    <TextBlock Width="{Binding ElementName=PriceTextBlock, Path=ActualWidth}" DockPanel.Dock="Right"/>
-                    <TextBlock Name="ShortDescriptionTextBlock" TextTrimming="None"
+            <DockPanel Name="DescriptionDockPanel" LastChildFill="True">
+                <TextBlock Width="{Binding ElementName=PriceTextBlock, Path=ActualWidth}" DockPanel.Dock="Right"/>
+                <TextBlock Name="ShortDescriptionTextBlock" TextTrimming="None"
                                Margin="0" FontFamily="Open Sans" TextAlignment="Left" VerticalAlignment="Top" TextWrapping="WrapWithOverflow"
-                               Text="Пористый молочный шоколад Милка с начинкой из пористого белого шоколада 100г"/>
-                </DockPanel>
-            </StackPanel>
-            <Image Name="MainItemImage" Grid.Column="0" Margin="10" Source="H:\4 семестр\ООП\06-07. Программное средство продажи товаров или услуг на WPF\product_1724_0_image-1000x10001.jpg"/>
+                               Text="{Binding Path=Description}"/>
+            </DockPanel>
+            <DockPanel LastChildFill="False">
+                <Button Name="DeleteProductButton" Width="45"  DockPanel.Dock="Right" Background="Transparent" Foreground="OrangeRed"  Click="DeleteProductButton_Click" Height="27">
+                    <materialDesign:PackIcon Kind="Delete" Height="13" Width="13"/>
+                </Button>
+                <Button Name="EditProductButton" Width="45" DockPanel.Dock="Right"  Background="Transparent" Foreground="OrangeRed"  Click="EditProductButton_Click" Height="27">
+                    <materialDesign:PackIcon Kind="Edit" Height="13" Width="13"/>
+                </Button>
+            </DockPanel>
+        </StackPanel>
+        <Image Name="MainItemImage" Grid.Column="0" Margin="10" Source="{Binding Path=Image, Converter={StaticResource ImageSourceConverter}}"/>
 
-        
     </Grid>
 </UserControl>

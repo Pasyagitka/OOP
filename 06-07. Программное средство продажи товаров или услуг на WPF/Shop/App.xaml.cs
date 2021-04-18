@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Configuration;
 using System.Data;
 using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using Shop.Product;
 
 namespace Shop
 {
@@ -14,6 +16,8 @@ namespace Shop
     /// </summary>
     public partial class App : Application
     {
+        public ObservableCollection<Sweetness> AuctionItems { get; set; } = new ObservableCollection<Sweetness>();
+
         private static List<CultureInfo> m_Languages = new List<CultureInfo>();
 
         public static List<CultureInfo> Languages
@@ -23,17 +27,30 @@ namespace Shop
                 return m_Languages;
             }
         }
-
+        public void AppStartup(object sender, StartupEventArgs args)
+        {
+            try
+            {
+                Products.GetInstance().ImportProducts();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Ошибка импорта", "Ошибка!");
+                Console.WriteLine(e.Message);
+            }
+        }
         public App()
         {
             InitializeComponent();
-            App.LanguageChanged += App_LanguageChanged;
+
+           App.LanguageChanged += App_LanguageChanged;
 
             m_Languages.Clear();
             m_Languages.Add(new CultureInfo("en-US")); //Нейтральная культура для этого проекта
             m_Languages.Add(new CultureInfo("ru-RU"));
 
             Language = Shop.Properties.Settings.Default.DefaultLanguage;
+
         }
 
         //Евент для оповещения всех окон приложения

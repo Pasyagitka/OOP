@@ -45,6 +45,7 @@ namespace Shop.Roles
         {
             using var file = new FileStream(filepath, FileMode.OpenOrCreate);
             jsonFormatter.WriteObject(file, roles);
+            
         }
 
         private void Deserialize()

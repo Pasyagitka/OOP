@@ -12,6 +12,7 @@
         AllowsTransparency="True" Background="Transparent"
         ResizeMode="NoResize">
     <Window.Resources>
+        <!--TODO Style-->
         <Style TargetType="Button" x:Key="AuthButtons">
             <Setter Property="Background" Value="White"/>
             <Setter Property="Width" Value="100"/>
@@ -49,6 +50,7 @@
             <StackPanel Grid.Row="1" >
                 <StackPanel Orientation="Horizontal">
                     <TextBox Name="LoginTextBox"
+                          
                              FontFamily="Helvetica"
                              FontWeight="Light"
                              FontSize="20"
