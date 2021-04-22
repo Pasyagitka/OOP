@@ -99,3 +99,13 @@ D:\4 семестр\ООП\06-07. Программное средство про
 D:\4 семестр\ООП\06-07. Программное средство продажи товаров или услуг на WPF\Shop\obj\Debug\GeneratedInternalTypeHelper.g.cs
 D:\4 семестр\ООП\06-07. Программное средство продажи товаров или услуг на WPF\Shop\obj\Debug\EditProduct.g.cs
 D:\4 семестр\ООП\06-07. Программное средство продажи товаров или услуг на WPF\Shop\obj\Debug\EditProduct.baml
+E:\4 семестр\ООП\06-07. Программное средство продажи товаров или услуг на WPF\Shop\obj\Debug\Controls\ProductContainer.g.cs
+E:\4 семестр\ООП\06-07. Программное средство продажи товаров или услуг на WPF\Shop\obj\Debug\EditProduct.g.cs
+E:\4 семестр\ООП\06-07. Программное средство продажи товаров или услуг на WPF\Shop\obj\Debug\GeneratedInternalTypeHelper.g.cs
+E:\4 семестр\ООП\06-07. Программное средство продажи товаров или услуг на WPF\Shop\obj\Debug\Controls\ProductContainer.baml
+E:\4 семестр\ООП\06-07. Программное средство продажи товаров или услуг на WPF\Shop\obj\Debug\EditProduct.baml
+D:\4 семестр\ООП\06-07. Программное средство продажи товаров или услуг на WPF\Shop\obj\Debug\ResourceDictionary\Themes\Default.baml
+D:\4 семестр\ООП\06-07. Программное средство продажи товаров или услуг на WPF\Shop\obj\Debug\ResourceDictionary\Themes\Optimistic.baml
+D:\4 семестр\ООП\06-07. Программное средство продажи товаров или услуг на WPF\Shop\obj\Debug\Themes\Generic.baml
+D:\4 семестр\ООП\06-07. Программное средство продажи товаров или услуг на WPF\Shop\obj\Debug\Controls\AddProductControl.g.cs
+D:\4 семестр\ООП\06-07. Программное средство продажи товаров или услуг на WPF\Shop\obj\Debug\Controls\AddProductControl.baml

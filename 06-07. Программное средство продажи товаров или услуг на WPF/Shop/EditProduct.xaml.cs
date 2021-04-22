@@ -55,8 +55,7 @@ namespace Shop
             tsw.Calories = Convert.ToInt32(caloriesTB.Text);
             tsw.Description = descriptionTB.Text;
             tsw.Trademark = trademarkTB.Text;
-            tsw.Price = Convert.ToInt32(priceTB.Text);
-            
+            tsw.Price = Convert.ToInt32(priceTB.Text);     
         }
     }
 }

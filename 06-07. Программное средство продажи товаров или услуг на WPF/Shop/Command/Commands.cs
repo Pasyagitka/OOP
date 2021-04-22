@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Windows.Input;
 using Shop.Product;
 
@@ -34,6 +35,7 @@ namespace Shop.Command
         public override void Execute()
         {
             receiver.Add(product);
+            MainWindow.history.AddState(receiver.SweetnessesList);
         }
     }
 
@@ -50,6 +52,7 @@ namespace Shop.Command
         public override void Execute()
         {
             receiver.Remove(product);
+            MainWindow.history.AddState(receiver.SweetnessesList);
         }
     }
 }

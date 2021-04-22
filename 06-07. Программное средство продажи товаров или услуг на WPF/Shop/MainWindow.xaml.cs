@@ -1,33 +1,27 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Globalization;
+using System.IO;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using Shop.Controls;
 using Shop.Product;
+using Shop.UndoRedo;
 
 namespace Shop
 {
     public partial class MainWindow : Window
     {
+        public static AppHistory history = new AppHistory(Products.GetInstance().SweetnessesList);
         public MainWindow()
         {
             InitializeComponent();
+            //HACK Cursor
+            //this.Cursor = new Cursor("E:\\4 семестр\\ООП\\06-07. Программное средство продажи товаров или услуг на WPF\\Shop\\Resources\\Cursors\\donut.ani");
+
             
-          //TODO вернуть курсор
-          this.Cursor = new Cursor("D:\\4 семестр\\ООП\\06-07. Программное средство продажи товаров или услуг на WPF\\Shop\\Cursors\\donut.ani");
-          
             App.LanguageChanged += LanguageChanged;
             CultureInfo currLang = App.Language;
             //Заполняем меню смены языка:
@@ -41,35 +35,9 @@ namespace Shop
                 menuLang.Click += ChangeLanguageClick;
                 menuLanguage.Items.Add(menuLang);
             }
-            //try
-            //{
-            //    Products.GetInstance().ImportProducts();
-            //    _listingDataView = (CollectionViewSource)Products.GetInstance().SweetnessesList;
-            //}
-            //catch (Exception e)
-            //{
-            //    MessageBox.Show("Ошибка импорта", "Ошибка!");
-            //    Console.WriteLine(e.Message);
-            //}
-
-            // try
-            // {
-            //     Products.GetInstance().ExportProducts();
-            // }
-            // catch
-            // {
-            //     MessageBox.Show("Ошибка экспорта", "Ошибка!");
-            // }
-            // foreach (var p in Products)
-            // {
-            //     
-            // }
-            //Test.Children.Add(new ProductItem()); 
-
         }
 
         #region Local
-
         private void LanguageChanged(Object sender, EventArgs e)
         {
             CultureInfo currLang = App.Language;
@@ -96,6 +64,7 @@ namespace Shop
         #endregion
 
         #region WindowButtons
+        //HACK Кнопки окна (закрыть, свернуть, уменьшить...)
         private void MainWindowClose_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
@@ -127,6 +96,15 @@ namespace Shop
         }
         #endregion
 
+        //HACK Вызвать новое окно
+        private void AddProductButton_Click(object sender, RoutedEventArgs e)
+        {
+            AddProduct addnewproductwindow = new AddProduct();
+            addnewproductwindow.Show();
+        }
+
+        #region FilterSortSearch
+        //HACK Вызов поиска, сортировки, фильтра
         private void SelectCategory_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
              Test.CategoryUpdate(SelectCategory.SelectedIndex);
@@ -135,11 +113,6 @@ namespace Shop
         private void Sort_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             Test.SortUpdate(Sort.SelectedIndex);
-        }
-        private void AddProductButton_Click(object sender, RoutedEventArgs e)
-        {
-            AddProduct addnewproductwindow = new AddProduct();
-            addnewproductwindow.Show();
         }
 
         private void SearchButton_Click(object sender, RoutedEventArgs e)
@@ -151,6 +124,47 @@ namespace Shop
         {
             Test.SearchUpdate(SearchTextBox.Text, 1);
             SearchTextBox.Clear();
+        }
+        #endregion
+
+        #region UndoRedo
+        private void UndoButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            object nullCheck = history.Undo();
+            if (nullCheck != null)
+            {
+                Products.GetInstance().SweetnessesList = ((Memento) nullCheck).sweetnessState;
+                Test.Update();
+            }
+        }
+
+        private void RedoButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            object nullCheck = history.Redo();
+            if (nullCheck != null)
+            {
+                Products.GetInstance().SweetnessesList = ((Memento) nullCheck).sweetnessState;
+                Test.Update();
+            }
+        }
+        #endregion
+
+        private void MenuThemesDefault_OnClick(object sender, RoutedEventArgs e)
+        {
+            Resources.MergedDictionaries.Clear();
+            Resources.MergedDictionaries.Add(new ResourceDictionary()
+            {
+                Source = new Uri(Path.GetFullPath("../../ResourceDictionary/Themes/Default.xaml"))
+            });
+        }
+
+        private void MenuThemesOptimistic_OnClick(object sender, RoutedEventArgs e)
+        {
+            Resources.MergedDictionaries.Clear();
+            Resources.MergedDictionaries.Add(new ResourceDictionary()
+            {
+                Source = new Uri(Path.GetFullPath("../../ResourceDictionary/Themes/Optimistic.xaml"))
+            });
         }
     }
 }

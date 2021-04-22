@@ -107,6 +107,10 @@
       <DependentUpon>Authentication.xaml</DependentUpon>
     </Compile>
     <Compile Include="Command\Commands.cs" />
+    <Compile Include="Controls\AddProductControl.xaml.cs">
+      <DependentUpon>AddProductControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomButton.cs" />
     <Compile Include="Controls\ProductContainer.xaml.cs">
       <DependentUpon>ProductContainer.xaml</DependentUpon>
     </Compile>
@@ -121,13 +125,18 @@
     <Compile Include="Roles\Client.cs" />
     <Compile Include="Roles\Role.cs" />
     <Compile Include="Roles\RoleList.cs" />
+    <Compile Include="UndoRedo\Memento.cs" />
     <Page Include="AddProduct.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Authentication.xaml" />
+    <Page Include="Controls\AddProductControl.xaml" />
     <Page Include="Controls\ProductContainer.xaml" />
     <Page Include="Controls\ProductItem.xaml" />
+    <Page Include="Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="EditProduct.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -152,6 +161,8 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="ResourceDictionary\Themes\Default.xaml" />
+    <Page Include="ResourceDictionary\Themes\Optimistic.xaml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Product\Candy.cs" />
@@ -179,15 +190,15 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Resource Include="Fonts\Lato.ttf" />
-    <None Include="Cursors\Busy.ani" />
-    <None Include="Cursors\Wait.ani" />
     <None Include="Files\roles.json" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <None Include="Resources\Cursors\Busy.ani" />
+    <None Include="Resources\Cursors\donut.ani" />
+    <None Include="Resources\Cursors\Wait.ani" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -205,27 +216,34 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Cursors\Alternate.cur" />
-    <Resource Include="Cursors\Cursor.cur" />
-    <Resource Include="Cursors\Handwriting.cur" />
-    <Resource Include="Cursors\Help.cur" />
-    <Resource Include="Cursors\Link.cur" />
-    <Resource Include="Cursors\Move.cur" />
-    <Resource Include="Cursors\Precise.cur" />
-    <Resource Include="Cursors\Resize D1.cur" />
-    <Resource Include="Cursors\Resize D2.cur" />
-    <Resource Include="Cursors\Resize H.cur" />
-    <Resource Include="Cursors\Resize V.cur" />
-    <Resource Include="Cursors\Text.cur" />
-    <Resource Include="Cursors\Unavailable.cur" />
+    <Resource Include="Resources\Cursors\Alternate.cur" />
+    <Resource Include="Resources\Cursors\Cursor.cur" />
+    <Resource Include="Resources\Cursors\Handwriting.cur" />
+    <Resource Include="Resources\Cursors\Help.cur" />
+    <Resource Include="Resources\Cursors\Link.cur" />
+    <Resource Include="Resources\Cursors\Move.cur" />
+    <Resource Include="Resources\Cursors\Precise.cur" />
+    <Resource Include="Resources\Cursors\Resize D1.cur" />
+    <Resource Include="Resources\Cursors\Resize D2.cur" />
+    <Resource Include="Resources\Cursors\Resize H.cur" />
+    <Resource Include="Resources\Cursors\Resize V.cur" />
+    <Resource Include="Resources\Cursors\Text.cur" />
+    <Resource Include="Resources\Cursors\Unavailable.cur" />
+    <Resource Include="Resources\Fonts\Lato.ttf" />
+    <Resource Include="Resources\Images\27cb9308a4d50596abf0f184a210f1af.png" />
+    <Resource Include="Resources\Images\candy.png" />
+    <Resource Include="Resources\Images\chocolate.png" />
+    <Resource Include="Resources\Images\gummy-bear.ico" />
+    <Resource Include="Resources\Images\gummy-bear.png" />
+    <Resource Include="Resources\Images\pancakes.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="gummy-bear.ico" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Files\Products.json" />
-    <Content Include="Images\1888900.svg" />
     <Content Include="ProductImages\milkabubbly.jpg" />
+    <Content Include="ProductImages\nophoto.png" />
     <Content Include="ProductImages\аленка.jpg" />
     <Content Include="ProductImages\аэрофлоцкая.jpg" />
     <Content Include="ProductImages\витоша.jpg" />
@@ -239,13 +257,8 @@
     <Content Include="ProductImages\старый.png" />
     <Content Include="ProductImages\червяк.png" />
     <Content Include="ProductImages\яшкино.jpg" />
-    <Resource Include="Images\27cb9308a4d50596abf0f184a210f1af.png" />
-    <Resource Include="Images\candy.png" />
-    <Resource Include="Images\chocolate.png" />
-    <Resource Include="Images\gummy-bear.ico" />
-    <Resource Include="Images\gummy-bear.png" />
-    <Content Include="Images\insta candy final 5.mp4" />
-    <Resource Include="Images\pancakes.png" />
+    <Content Include="Resources\Images\1888900.svg" />
+    <Content Include="Resources\Images\insta candy final 5.mp4" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.4.0.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.4.0.0\build\MaterialDesignThemes.targets')" />

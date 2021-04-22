@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Windows.Controls;
 using Shop.Product;
+using Shop.UndoRedo;
 
 namespace Shop.Controls
 {
@@ -12,7 +13,7 @@ namespace Shop.Controls
             InitializeComponent();
             ShoppingCardsList.ItemsSource = Products.GetInstance().SweetnessesList;
         }
-
+        //HACK Updates
         public void CategoryUpdate(int filterIndex)
         {
             switch (filterIndex)
@@ -76,12 +77,16 @@ namespace Shop.Controls
         {
             if (i == 0)
             {
-                ShoppingCardsList.ItemsSource = new ObservableCollection<Sweetness>(Products.GetInstance().SweetnessesList.Where(x => x.ToString().Contains(search)).ToList());
+                ShoppingCardsList.ItemsSource = new ObservableCollection<Sweetness>(Products.GetInstance().SweetnessesList.Where(x => x.ToString().ToLower().Contains(search.ToLower())).ToList());
             }
             else
             {
                 ShoppingCardsList.ItemsSource = Products.GetInstance().SweetnessesList;
             }
+        }
+        public void Update()
+        {
+            ShoppingCardsList.ItemsSource = Products.GetInstance().SweetnessesList;
         }
     }
 }

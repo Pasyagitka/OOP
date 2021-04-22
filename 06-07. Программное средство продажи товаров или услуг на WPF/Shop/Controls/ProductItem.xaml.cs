@@ -14,7 +14,6 @@ namespace Shop.Controls
         public ProductItem()
         {
             InitializeComponent();
-            
         }
 
         // public ProductItem(Sweetness sw)

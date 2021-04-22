@@ -9,8 +9,8 @@
 //------------------------------------------------------------------------------
 
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("files/products.json")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/1888900.svg")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("productimages/milkabubbly.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("productimages/nophoto.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("productimages/%d0%b0%d0%bb%d0%b5%d0%bd%d0%ba%d0%b0.jpg")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("productimages/%d0%b0%d1%8d%d1%80%d0%be%d1%84%d0%bb%d0%be%d1%86%d0%ba%d0%b0%d1%8f." +
     "jpg")]
@@ -26,6 +26,7 @@
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("productimages/%d1%81%d1%82%d0%b0%d1%80%d1%8b%d0%b9.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("productimages/%d1%87%d0%b5%d1%80%d0%b2%d1%8f%d0%ba.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("productimages/%d1%8f%d1%88%d0%ba%d0%b8%d0%bd%d0%be.jpg")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/insta%20candy%20final%205.mp4")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/images/1888900.svg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/images/insta%20candy%20final%205.mp4")]
 
 

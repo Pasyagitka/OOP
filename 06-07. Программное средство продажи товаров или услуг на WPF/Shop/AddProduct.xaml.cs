@@ -29,9 +29,14 @@ namespace Shop
 
         private void OK_Click(object sender, RoutedEventArgs e)
         {
-            //
-            Sweetness sw = SweetsFactory.CreateSweet((Sweets)typeCB.SelectedIndex, nameTB.Text, imageTB.Text, Convert.ToDouble(weightTB.Text), 
-                Convert.ToInt32(caloriesTB.Text), descriptionTB.Text, trademarkTB.Text, Convert.ToInt32(priceTB.Text));
+            Sweetness sw = SweetsFactory.CreateSweet((Sweets)AddProductUserControl.typeCB.SelectedIndex, 
+                AddProductUserControl.NameTextBlockText, 
+                AddProductUserControl.ImageTextBlockText, 
+                Convert.ToDouble(AddProductUserControl.WeightTextBlockText), 
+                Convert.ToInt32(AddProductUserControl.CaloriesTextBlockText),
+                AddProductUserControl.DescriptionTextBlockText, 
+                AddProductUserControl.TrademarkTextBlockText, 
+                Convert.ToInt32(AddProductUserControl.PriceTextBlockText));
             
             invoker ??= new Invoker();
             var command = new AddCommand(sw);

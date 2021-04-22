@@ -6,6 +6,7 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:Shop" xmlns:controls="clr-namespace:Shop.Controls"
         xmlns:command="clr-namespace:Shop.Command"
+        xmlns:controls1="clr-namespace:Shop.Controls"
         mc:Ignorable="d"
         Title="MainWindow" Height="500" Width="900"
         MinHeight="450" MinWidth="800"
@@ -14,32 +15,90 @@
         AllowsTransparency="False"
         ResizeMode="CanResizeWithGrip" 
     >
-    
+    <Window.Resources>
+        <ControlTemplate TargetType="Button" x:Key="ButtonsTemplate">
+            <Border CornerRadius="5" BorderBrush="OrangeRed" BorderThickness="2"
+                    Background="Transparent" Height="{TemplateBinding Height}" Width="50" >
+                <ContentControl Margin="5" HorizontalAlignment="Center" VerticalAlignment="Center" Content="{TemplateBinding Content}"/>
+            </Border>
+        </ControlTemplate>
+        
+        <Style x:Key="CardStyle" TargetType="DockPanel">
+            <Style.Triggers>
+                <MultiTrigger>
+                    <MultiTrigger.Conditions>
+                        <Condition Property="IsMouseOver" Value="True"/>
+                        <Condition Property="IsEnabled" Value="True"/>
+                    </MultiTrigger.Conditions>
+                    <MultiTrigger.Setters>
+                        <Setter Property="Background" Value="#FFD5B9"/>
+                    </MultiTrigger.Setters>
+                </MultiTrigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="HeaderStyle" TargetType="TextBox">
+            <Style.Setters>
+                <Setter Property="FontSize" Value="32"></Setter>
+            </Style.Setters>
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding ElementName=SearchTextBox, Path=IsFocused}"
+                             Value="True">
+                    <Setter Property="Background" Value="#FFD5B9"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+        
+        <Style x:Key="Footer" TargetType="StackPanel">
+            <Style.Setters>
+                <Setter Property="Height" Value="60" />
+                <Setter Property="Width" Value="250" />
+                <Setter Property="HorizontalAlignment" Value="Left" />
+            </Style.Setters>
+            <Style.Triggers>
+                <EventTrigger RoutedEvent="MouseDown">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetProperty="Height" Duration="0:0:1" To="80" AutoReverse="True" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
     <Grid Name="MainWindowMainGrid" Background="White">
         <DockPanel  Height="{Binding ElementName=MainWindowMainGrid, Path=ActualHeight}" LastChildFill="True">
             <Grid Name="FooterGrid" DockPanel.Dock="Bottom">
                 <Border Background="White" BorderBrush="LightGray" BorderThickness="0,2,0,0">
-                    <StackPanel Orientation="Horizontal" Height="50" Width="{Binding ElementName=MainWindowMainGrid, Path=ActualWidth}" VerticalAlignment="Bottom" Background="White">
-                        <Button x:Name="AddProductButton" Width="50" Background="Transparent" Click="AddProductButton_Click" Margin="10,0,0,0">
+                    <StackPanel Style="{StaticResource Footer}" Orientation="Horizontal" Height="50" Width="{Binding ElementName=MainWindowMainGrid, Path=ActualWidth}" VerticalAlignment="Bottom" Background="White">
+                        <Button x:Name="AddProductButton" Width="50" Background="Transparent" Click="AddProductButton_Click" Margin="10,0,0,0" Template="{StaticResource ButtonsTemplate}">
                             <materialDesign:PackIcon Kind="AddBox" Foreground="OrangeRed"/>
                         </Button>
+                        <Button x:Name="UndoButton" Width="50" Background="Transparent" Click="UndoButton_OnClick" Margin="10,0,0,0">
+                            <materialDesign:PackIcon Kind="UndoVariant" Foreground="OrangeRed"/>
+                        </Button>
+                        <Button x:Name="RedoButton" Width="50" Background="Transparent" Click="RedoButton_OnClick" Margin="10,0,0,0">
+                            <materialDesign:PackIcon Kind="RedoVariant" Foreground="OrangeRed"/>
+                        </Button>
+                        <local:CustomButton>
+                            <materialDesign:PackIcon Kind="Candycane" Foreground="HotPink"/>
+                        </local:CustomButton>
                     </StackPanel>
                 </Border>
             </Grid>
             <Grid DockPanel.Dock="Top">
-                <StackPanel Orientation="Horizontal" Height="25" Width="{Binding ElementName=MainWindowMainGrid, Path=ActualWidth}" VerticalAlignment="Top">
-                    <StackPanel.Background>
-                        <LinearGradientBrush>
-                            <GradientStop Color="#FF9900" Offset="1"/>
-                            <GradientStop Color="#FF559A" Offset="0"/>
-                        </LinearGradientBrush>
-                    </StackPanel.Background>
-                    <TextBlock Name="MainWindowFrameText" Text="{DynamicResource MainWindowFrameText}" Width="{Binding ElementName=MainWindowMainGrid, Path=ActualWidth}" VerticalAlignment="Center" TextAlignment="Center" FontFamily="Fonts/Lato" FontSize="18" Foreground="White" FontWeight="Bold"/>
+                <StackPanel Width="{Binding ElementName=MainWindowMainGrid, Path=ActualWidth}" VerticalAlignment="Top" Style="{DynamicResource MainBorderStyle}">
+                    <TextBlock Name="MainWindowFrameText" TextAlignment="Center" FontWeight="Bold" VerticalAlignment="Center"  FontSize="18" Foreground="White" FontFamily="Resources/Fonts/Lato"  Text="{DynamicResource MainWindowFrameText}" Width="{Binding ElementName=MainWindowMainGrid, Path=ActualWidth}"/>
                 </StackPanel>
                 <StackPanel Orientation="Vertical">
                     <DockPanel LastChildFill="False" Name="MainWindowTop" Height="25" Width="{Binding ElementName=MainWindowMainGrid, Path=ActualWidth}" Background="Transparent" VerticalAlignment="Top" MouseDown="MainWindowTop_MouseDown">
                         <Menu DockPanel.Dock="left" Background="{x:Null}">
                             <MenuItem x:Name="menuLanguage" Foreground="White" Height="{Binding ElementName=MainWindowTop, Path=ActualHeight}" Header="{DynamicResource menuLanguage}" FontWeight="Bold" />
+                            <MenuItem x:Name="menuThemes" Foreground="White" Height="{Binding ElementName=MainWindowTop, Path=ActualHeight}" Header="THEMES" FontWeight="Bold" >
+                                <MenuItem x:Name="menuThemesDefault" Header="Default" Click="MenuThemesDefault_OnClick"/>
+                                <MenuItem x:Name="menuThemesOptimistic"  Header="Optimistic" Click="MenuThemesOptimistic_OnClick"/>
+                            </MenuItem>
                         </Menu>
                         <Button Name="MainWindowClose"  Width="50"  Height="auto" BorderBrush="Transparent" Background="Transparent" Click="MainWindowClose_Click" DockPanel.Dock="Right">
                             <materialDesign:PackIcon Kind="Close" Foreground="White"/>
@@ -57,21 +116,21 @@
             <StackPanel Name="MenuGrid" DockPanel.Dock="Top" Orientation="Horizontal">
                 <Border Background="White" BorderBrush="LightGray" BorderThickness="0,0,0,2">
                     <UniformGrid Columns="4" Height="75" Width="{Binding ElementName=MainWindowMainGrid, Path=ActualWidth}" VerticalAlignment="Bottom">
-                        <DockPanel Name="CandyDockPanel">
+                        <DockPanel Name="CandyDockPanel" Style="{StaticResource CardStyle}">
                             <TextBlock Name="CandyTB" Text="{DynamicResource CandyTB}" DockPanel.Dock="Bottom" FontSize="16" TextAlignment="Center" VerticalAlignment="Center"></TextBlock>
-                            <Image Source="Images\candy.png" DockPanel.Dock="Top" Margin="2"/>
+                            <Image Source="Resources\Images\candy.png" DockPanel.Dock="Top" Margin="2"/>
                         </DockPanel>
-                        <DockPanel Name="ChocolateDockPanel">
+                        <DockPanel Name="ChocolateDockPanel" Style="{StaticResource CardStyle}">
                             <TextBlock Name="ChocolateTB" Text="{DynamicResource ChocolateTB}" FontSize="16" DockPanel.Dock="Bottom" TextAlignment="Center" VerticalAlignment="Center"></TextBlock>
-                            <Image Source="Images\chocolate.png" DockPanel.Dock="Top" Margin="2"/>
+                            <Image Source="Resources\Images\chocolate.png" DockPanel.Dock="Top" Margin="2"/>
                         </DockPanel>
-                        <DockPanel Name="MarmaladeDockPanel">
+                        <DockPanel Name="MarmaladeDockPanel" Style="{StaticResource CardStyle}">
                             <TextBlock Name="MarmaladeTB" Text="{DynamicResource MarmaladeTB}" FontSize="16" DockPanel.Dock="Bottom" TextAlignment="Center" VerticalAlignment="Center"></TextBlock>
-                            <Image Source="Images\gummy-bear.png" DockPanel.Dock="Top" Margin="2"/>
+                            <Image Source="Resources\Images\gummy-bear.png" DockPanel.Dock="Top" Margin="2"/>
                         </DockPanel>
-                        <DockPanel Name="WaffleDockPanel">
+                        <DockPanel Name="WaffleDockPanel" Style="{StaticResource CardStyle}">
                             <TextBlock Name="WaffleTB" Text="{DynamicResource WaffleTB}" FontSize="16" DockPanel.Dock="Bottom" TextAlignment="Center" VerticalAlignment="Center"></TextBlock>
-                            <Image Source="Images\pancakes.png" DockPanel.Dock="Top" Margin="2"/>
+                            <Image Source="Resources\Images\pancakes.png" DockPanel.Dock="Top" Margin="2"/>
                         </DockPanel>
                     </UniformGrid>
                 </Border>
@@ -107,7 +166,7 @@
                                     <materialDesign:PackIcon Kind="Search"/>
                                 </Button>
 
-                                <TextBox Name="SearchTextBox" FontSize="32" materialDesign:HintAssist.Hint="..."></TextBox>
+                                <TextBox Name="SearchTextBox" Style="{StaticResource HeaderStyle}" materialDesign:HintAssist.Hint="..."></TextBox>
                             </DockPanel>
                         </Border>
                         <controls:ProductContainer x:Name = "Test" DockPanel.Dock="Left"/>

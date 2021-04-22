@@ -16,16 +16,10 @@ namespace Shop
     /// </summary>
     public partial class App : Application
     {
-        public ObservableCollection<Sweetness> AuctionItems { get; set; } = new ObservableCollection<Sweetness>();
-
         private static List<CultureInfo> m_Languages = new List<CultureInfo>();
-
         public static List<CultureInfo> Languages
         {
-            get
-            {
-                return m_Languages;
-            }
+            get  {return m_Languages; }
         }
         public void AppStartup(object sender, StartupEventArgs args)
         {
@@ -43,19 +37,16 @@ namespace Shop
         {
             InitializeComponent();
 
-           App.LanguageChanged += App_LanguageChanged;
+            App.LanguageChanged += App_LanguageChanged;
 
             m_Languages.Clear();
             m_Languages.Add(new CultureInfo("en-US")); //Нейтральная культура для этого проекта
             m_Languages.Add(new CultureInfo("ru-RU"));
-
             Language = Shop.Properties.Settings.Default.DefaultLanguage;
-
         }
 
         //Евент для оповещения всех окон приложения
         public static event EventHandler LanguageChanged;
-
         public static CultureInfo Language
         {
             get

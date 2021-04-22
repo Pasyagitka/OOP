@@ -4,8 +4,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Shop"
+        xmlns:controls="clr-namespace:Shop.Controls"
         mc:Ignorable="d"
-        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         Title="Add new product" SizeToContent="Height" ResizeMode="NoResize" Width="400"  WindowStartupLocation="CenterScreen">
     <Grid Margin="10">
 
@@ -15,30 +15,8 @@
                 <Button Name="OK" IsDefault="True" Click="OK_Click"  Width="65" Margin="0,0,10,0">OK</Button>
                 <Button IsCancel="True" Width="65">Deny</Button>
             </StackPanel>
-
-            <StackPanel>
-                <ComboBox Name="typeCB" Height="40" Style="{StaticResource MaterialDesignComboBox}"  materialDesign:HintAssist.Hint="Category"  DockPanel.Dock="Top">
-                    <ComboBoxItem Content="{DynamicResource CandyTB}"/>
-                    <ComboBoxItem Content="{DynamicResource ChocolateTB}"/>
-                    <ComboBoxItem Content="{DynamicResource MarmaladeTB}"/>
-                    <ComboBoxItem Content="{DynamicResource WaffleTB}"/>
-                </ComboBox>
-                <TextBox Name="nameTB"  Style="{StaticResource MaterialDesignFloatingHintTextBox}"  materialDesign:HintAssist.Hint="Name"  
-                     DockPanel.Dock="Top"></TextBox>
-                <TextBox Name="imageTB" Style="{StaticResource MaterialDesignFloatingHintTextBox}"  materialDesign:HintAssist.Hint="Image source..."  
-                     DockPanel.Dock="Top"></TextBox>
-                <TextBox Name="weightTB" Style="{StaticResource MaterialDesignFloatingHintTextBox}"  materialDesign:HintAssist.Hint="Weight"  
-                     DockPanel.Dock="Top"></TextBox>
-                <TextBox Name="caloriesTB" Style="{StaticResource MaterialDesignFloatingHintTextBox}"  materialDesign:HintAssist.Hint="Calories"  
-                     DockPanel.Dock="Top"></TextBox>
-                <TextBox Name="descriptionTB" Style="{StaticResource MaterialDesignFloatingHintTextBox}"  materialDesign:HintAssist.Hint="Description"  
-                     DockPanel.Dock="Top"></TextBox>
-                <TextBox Name="trademarkTB" Style="{StaticResource MaterialDesignFloatingHintTextBox}"  materialDesign:HintAssist.Hint="Trademark"  
-                     DockPanel.Dock="Top"></TextBox>
-                <TextBox Name="priceTB" Style="{StaticResource MaterialDesignFloatingHintTextBox}"  materialDesign:HintAssist.Hint="Price"  
-                     DockPanel.Dock="Top"></TextBox>
-            </StackPanel>
-
+            
+            <controls:AddProduct x:Name="AddProductUserControl"></controls:AddProduct>
         </DockPanel>
     </Grid>
 </Window>

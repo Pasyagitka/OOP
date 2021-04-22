@@ -15,7 +15,6 @@ namespace Shop.Product
     {
         private static Products instance;
         private ObservableCollection<Sweetness> products;
-
         const string filepath = "..//..//Files/Products.json";
         static DataContractJsonSerializer jsonFormatter = new DataContractJsonSerializer(typeof(ObservableCollection<Sweetness>));
 
@@ -36,7 +35,13 @@ namespace Shop.Product
             set => products = value;
         }
 
+        public Sweetness FindByName(string sweetness)
+        {
+            return products.Where(x => x.Name == sweetness).FirstOrDefault();
+        }
+
         #region Commands
+        //HACK Фк-ции Command
         public void Add(Sweetness sweetness)
         {
             products.Add(sweetness);
@@ -45,15 +50,7 @@ namespace Shop.Product
         {
             products.Remove(products.Where(x => x.Name == sweetness).FirstOrDefault());
         }
-        public Sweetness FindByName(string sweetness)
-        {
-            return products.Where(x => x.Name == sweetness).FirstOrDefault();
-        }
 
-        public void Sort()
-        {
-            
-        }
         #endregion
 
         #region Serialization

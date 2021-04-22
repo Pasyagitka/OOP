@@ -10,7 +10,6 @@ namespace Shop.Roles
 {
     public class RoleList
     {
-        //TODO url
         private readonly string filepath = "..\\..\\Files\\roles.json";
         private readonly DataContractJsonSerializer jsonFormatter;
         private static RoleList instance;
