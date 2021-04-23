@@ -15,8 +15,8 @@
                 <Button Name="OK" IsDefault="True" Click="OK_Click"  Width="65" Margin="0,0,10,0">OK</Button>
                 <Button IsCancel="True" Width="65">Deny</Button>
             </StackPanel>
-            
-            <controls:AddProduct x:Name="AddProductUserControl"></controls:AddProduct>
+            <!-- Tap="AddProductUserControl_OnTap" -->
+            <controls:AddProduct x:Name="AddProductUserControl" ></controls:AddProduct>
         </DockPanel>
     </Grid>
 </Window>

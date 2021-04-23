@@ -44,5 +44,10 @@ namespace Shop
             invoker.Run();
             this.Close();
         }
+
+        // private void AddProductUserControl_OnTap(object sender, RoutedEventArgs e)
+        // {
+        //     this.Background = new SolidColorBrush(Colors.Black );
+        // }
     }
 }

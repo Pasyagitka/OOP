@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:Shop"
              xmlns:converter="clr-namespace:Shop.Converter"
-             StartupUri="MainWindow.xaml"
+             StartupUri="Authentication.xaml"
              Startup="AppStartup"
              >
     <Application.Resources>

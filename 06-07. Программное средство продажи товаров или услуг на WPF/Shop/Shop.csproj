@@ -107,6 +107,7 @@
       <DependentUpon>Authentication.xaml</DependentUpon>
     </Compile>
     <Compile Include="Command\Commands.cs" />
+    <Compile Include="Command\CustomCommand.cs" />
     <Compile Include="Controls\AddProductControl.xaml.cs">
       <DependentUpon>AddProductControl.xaml</DependentUpon>
     </Compile>

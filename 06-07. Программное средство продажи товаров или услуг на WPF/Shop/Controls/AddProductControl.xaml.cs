@@ -5,6 +5,32 @@ namespace Shop.Controls
 {
     public partial class AddProduct : UserControl
     {
+        // public static readonly RoutedEvent TapEvent = EventManager.RegisterRoutedEvent(
+        //     "Tap", RoutingStrategy.Bubble, typeof(RoutedEventHandler), typeof(AddProduct));
+        // public event RoutedEventHandler Tap
+        // {
+        //     add { AddHandler(TapEvent, value); }
+        //     remove { RemoveHandler(TapEvent, value); }
+        // }
+        // void RaiseTapEvent()
+        // {
+        //     RoutedEventArgs newEventArgs = new RoutedEventArgs(AddProduct.TapEvent);
+        //     RaiseEvent(newEventArgs);
+        // }
+        // protected void OnClick()
+        // {
+        //     RaiseTapEvent();
+        // }
+        
+        private static readonly ValidateValueCallback validateValueCallback = new ValidateValueCallback(ValidateIntValue);
+        public static readonly DependencyProperty NameTextBlockTextProperty =  DependencyProperty.Register("NameTextBlockText", typeof(string), typeof(AddProduct), new UIPropertyMetadata(""));
+        public static readonly DependencyProperty ImageTextBlockTextProperty = DependencyProperty.Register("ImageTextBlockText", typeof(string), typeof(AddProduct), new UIPropertyMetadata("..\\..\\ProductImages\\nophoto.png"));
+        public static readonly DependencyProperty WeightTextBlockTextProperty = DependencyProperty.Register("WeightTextBlockText", typeof(int), typeof(AddProduct), new UIPropertyMetadata(0),  validateValueCallback);
+        public static readonly DependencyProperty CaloriesTextBlockTextProperty = DependencyProperty.Register("CaloriesTextBlockText", typeof(int), typeof(AddProduct), new UIPropertyMetadata(0), validateValueCallback);
+        public static readonly DependencyProperty DescriptionTextBlockTextProperty = DependencyProperty.Register("DescriptionTextBlockText", typeof(string), typeof(AddProduct), new UIPropertyMetadata(""));
+        public static readonly DependencyProperty TrademarkTextBlockTextProperty = DependencyProperty.Register("TrademarkTextBlockText", typeof(string), typeof(AddProduct), new UIPropertyMetadata(""));
+        public static readonly DependencyProperty PriceTextBlockTextProperty;
+        
         public string NameTextBlockText
         {
             get { return (string)GetValue(NameTextBlockTextProperty); }
@@ -40,18 +66,8 @@ namespace Shop.Controls
             get { return (int)GetValue(PriceTextBlockTextProperty); }
             set { SetValue(PriceTextBlockTextProperty, value); }
         }
-
-        private static readonly ValidateValueCallback validateValueCallback = new ValidateValueCallback(ValidateIntValue);
-        //public static PropertyMetadata metadata;
-        public static readonly DependencyProperty NameTextBlockTextProperty =  DependencyProperty.Register("NameTextBlockText", typeof(string), typeof(AddProduct), new UIPropertyMetadata(""));
-        public static readonly DependencyProperty ImageTextBlockTextProperty = DependencyProperty.Register("ImageTextBlockText", typeof(string), typeof(AddProduct), new UIPropertyMetadata("..\\..\\ProductImages\\nophoto.png"));
-        public static readonly DependencyProperty WeightTextBlockTextProperty = DependencyProperty.Register("WeightTextBlockText", typeof(int), typeof(AddProduct), new UIPropertyMetadata(0),  validateValueCallback);
-        public static readonly DependencyProperty CaloriesTextBlockTextProperty = DependencyProperty.Register("CaloriesTextBlockText", typeof(int), typeof(AddProduct), new UIPropertyMetadata(0), validateValueCallback);
-        public static readonly DependencyProperty DescriptionTextBlockTextProperty = DependencyProperty.Register("DescriptionTextBlockText", typeof(string), typeof(AddProduct), new UIPropertyMetadata(""));
-        public static readonly DependencyProperty TrademarkTextBlockTextProperty = DependencyProperty.Register("TrademarkTextBlockText", typeof(string), typeof(AddProduct), new UIPropertyMetadata(""));
-        public static readonly DependencyProperty PriceTextBlockTextProperty;
         
-
+       
         public AddProduct()
         {
             InitializeComponent();
@@ -80,6 +96,7 @@ namespace Shop.Controls
                 return 10;
             return currentValue;
         }
-
+ 
+        
     }
 }
