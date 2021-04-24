@@ -12,7 +12,7 @@ namespace Shop.Command
             typeof(CustomCommand),
             new InputGestureCollection()
             {
-                new KeyGesture(Key.Escape, ModifierKeys.Alt)
+                new KeyGesture(Key.Escape)
             }
         );
     }

@@ -39,7 +39,7 @@
                     </LinearGradientBrush>
                 </Border.Background>
              
-                <Button Width="40" Height="Auto" Margin="170,10,170,420" Command="commands:CustomCommand.Exit" ToolTip="Exit: Alt + Esc">
+                <Button Width="40" Height="Auto" Margin="170,10,170,420" Command="commands:CustomCommand.Exit" ToolTip="Exit: Esc">
                     <materialDesign:PackIcon Kind="CloseBold" Width="10" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                 </Button>
             </Border>

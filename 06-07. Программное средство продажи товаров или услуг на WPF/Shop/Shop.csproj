@@ -111,6 +111,7 @@
     <Compile Include="Controls\AddProductControl.xaml.cs">
       <DependentUpon>AddProductControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\TapButtons.cs" />
     <Compile Include="CustomButton.cs" />
     <Compile Include="Controls\ProductContainer.xaml.cs">
       <DependentUpon>ProductContainer.xaml</DependentUpon>
@@ -121,6 +122,9 @@
     <Compile Include="Converter\ImageToSourceConverter.cs" />
     <Compile Include="EditProduct.xaml.cs">
       <DependentUpon>EditProduct.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Events\EventsWindow.xaml.cs">
+      <DependentUpon>EventsWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Roles\Admin.cs" />
     <Compile Include="Roles\Client.cs" />
@@ -135,6 +139,7 @@
     <Page Include="Controls\AddProductControl.xaml" />
     <Page Include="Controls\ProductContainer.xaml" />
     <Page Include="Controls\ProductItem.xaml" />
+    <Page Include="Events\EventsWindow.xaml" />
     <Page Include="Themes\Generic.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>

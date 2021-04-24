@@ -81,7 +81,7 @@
                         <Button x:Name="RedoButton" Width="50" Background="Transparent" Click="RedoButton_OnClick" Margin="10,0,0,0">
                             <materialDesign:PackIcon Kind="RedoVariant" Foreground="OrangeRed"/>
                         </Button>
-                        <local:CustomButton>
+                        <local:CustomButton x:Name="CustomCandyButtom" Click="CustomCandyButtom_OnClick" >
                             <materialDesign:PackIcon Kind="Candycane" Foreground="HotPink"/>
                         </local:CustomButton>
                     </StackPanel>
@@ -138,7 +138,7 @@
             <DockPanel LastChildFill="True">
                 <Border DockPanel.Dock="Left" Width="200" Margin="7" CornerRadius="3" Background="#FFF4F4F4" BorderThickness="1">
                     <Grid>
-                        <ComboBox materialDesign:HintAssist.Hint="{DynamicResource CategoryHint}" Name="SelectCategory" Height="30" FontSize ="18"  Width="170" VerticalAlignment="Top" IsEditable="True" Margin="0,20,0,0" BorderThickness="0" SelectionChanged="SelectCategory_SelectionChanged" >
+                        <ComboBox materialDesign:HintAssist.Hint="{DynamicResource CategoryHint}" Name="SelectCategory" Height="30" FontSize ="18"  Width="170" VerticalAlignment="Top" IsEditable="True" Margin="0,20,0,0" BorderThickness="0" SelectionChanged="SelectCategory_SelectionChanged">
                             <ComboBoxItem Content="{DynamicResource CandyTB}"/>
                             <ComboBoxItem Content="{DynamicResource ChocolateTB}"/>
                             <ComboBoxItem Content="{DynamicResource MarmaladeTB}"/>

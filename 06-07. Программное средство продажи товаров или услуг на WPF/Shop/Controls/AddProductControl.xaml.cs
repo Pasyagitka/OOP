@@ -6,18 +6,19 @@ namespace Shop.Controls
     public partial class AddProduct : UserControl
     {
         // public static readonly RoutedEvent TapEvent = EventManager.RegisterRoutedEvent(
-        //     "Tap", RoutingStrategy.Bubble, typeof(RoutedEventHandler), typeof(AddProduct));
+        //      "Tap", RoutingStrategy.Bubble, typeof(RoutedEventHandler), typeof(AddProduct));
+        //
         // public event RoutedEventHandler Tap
-        // {
-        //     add { AddHandler(TapEvent, value); }
-        //     remove { RemoveHandler(TapEvent, value); }
-        // }
+        //  {
+        //      add { AddHandler(TapEvent, value); }
+        //      remove { RemoveHandler(TapEvent, value); }
+        //  }
         // void RaiseTapEvent()
         // {
         //     RoutedEventArgs newEventArgs = new RoutedEventArgs(AddProduct.TapEvent);
         //     RaiseEvent(newEventArgs);
         // }
-        // protected void OnClick()
+        // protected override void OnClick()
         // {
         //     RaiseTapEvent();
         // }

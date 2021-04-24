@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using System.Windows.Media;
 using Shop.Product;
 using Shop.UndoRedo;
 
@@ -24,7 +25,6 @@ namespace Shop
             
             App.LanguageChanged += LanguageChanged;
             CultureInfo currLang = App.Language;
-            //Заполняем меню смены языка:
             menuLanguage.Items.Clear();
             foreach (var lang in App.Languages)
             {
@@ -165,6 +165,12 @@ namespace Shop
             {
                 Source = new Uri(Path.GetFullPath("../../ResourceDictionary/Themes/Optimistic.xaml"))
             });
+        }
+
+        private void CustomCandyButtom_OnClick(object sender, RoutedEventArgs e)
+        {
+            Events.EventsWindow eventswindow = new Events.EventsWindow();
+            eventswindow.Show();
         }
     }
 }
