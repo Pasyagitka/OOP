@@ -1,9 +1,0 @@
-E:\4 семестр\ООП\AttributeValidationForm\obj\Debug\AttributeValidationForm.AttributeValidation.resources
-E:\4 семестр\ООП\AttributeValidationForm\obj\Debug\AttributeValidationForm.Properties.Resources.resources
-E:\4 семестр\ООП\AttributeValidationForm\obj\Debug\AttributeValidationForm.csproj.GenerateResource.cache
-E:\4 семестр\ООП\AttributeValidationForm\obj\Debug\AttributeValidationForm.csproj.CoreCompileInputs.cache
-E:\4 семестр\ООП\AttributeValidationForm\bin\Debug\AttributeValidationForm.exe.config
-E:\4 семестр\ООП\AttributeValidationForm\bin\Debug\AttributeValidationForm.exe
-E:\4 семестр\ООП\AttributeValidationForm\bin\Debug\AttributeValidationForm.pdb
-E:\4 семестр\ООП\AttributeValidationForm\obj\Debug\AttributeValidationForm.exe
-E:\4 семестр\ООП\AttributeValidationForm\obj\Debug\AttributeValidationForm.pdb
