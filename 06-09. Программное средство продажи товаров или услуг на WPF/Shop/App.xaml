@@ -1,0 +1,25 @@
+﻿<Application x:Class="Shop.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Shop"
+             xmlns:converter="clr-namespace:Shop.Converter"
+             StartupUri="Authentication.xaml"
+             Startup="AppStartup"
+             >
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+               <ResourceDictionary Source="ResourceDictionary/lang.xaml" />
+               <ResourceDictionary Source="ResourceDictionary/Themes/Default.xaml" />
+               <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
+               <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+               <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.Pink.xaml" />
+               <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Orange.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <converter:ImageToSourceConverter x:Key="ImageSourceConverter" />
+
+            <!--Тут-->
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
+    
