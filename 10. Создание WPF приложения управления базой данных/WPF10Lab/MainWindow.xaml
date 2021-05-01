@@ -1,0 +1,41 @@
+﻿<Window x:Class="WPF10Lab.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="620" Width="900" Loaded="MainWindow_OnLoaded" ResizeMode="NoResize">
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="300"  />
+            <RowDefinition Height="200" />
+            <RowDefinition Height="100" />
+        </Grid.RowDefinitions>
+        <DataGrid Name="ClientsGrid" AutoGenerateColumns="False" Background="Bisque">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding clientID}" Header="ID" Width="50" IsReadOnly="True"/>
+                <DataGridTextColumn Binding="{Binding firstname}" Header="Имя" Width="120"/>
+                <DataGridTextColumn Binding="{Binding patronymic}" Header="Отчество" Width="120"/>
+                <DataGridTextColumn Binding="{Binding surname}" Header="Фамилия" Width="120"/>
+                <DataGridTextColumn Binding="{Binding email}" Header="Почта" Width="120"/>
+                <DataGridTextColumn Binding="{Binding adressid}" Header="ID адреса" Width="120"/>
+                <DataGridTextColumn Binding="{Binding photo}" Header="Фото" Width="120"/>
+                <DataGridTextColumn Binding="{Binding contactnumber}" Header="Телефон" Width="120"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <DataGrid Grid.Row="1" Name="AddressesGrid" AutoGenerateColumns="False" Background="Beige">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding adressid}" Header="ID" Width="50" IsReadOnly="True"/>
+                <DataGridTextColumn Binding="{Binding country}" Header="Страна" Width="120"/>
+                <DataGridTextColumn Binding="{Binding city}" Header="Город" Width="120"/>
+                <DataGridTextColumn Binding="{Binding street}" Header="Улица" Width="120"/>
+                <DataGridTextColumn Binding="{Binding house}" Header="Дом" Width="120"/>
+                <DataGridTextColumn Binding="{Binding postalcode}" Header="Индекс" Width="120"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Grid.Row="1" Name="UpdateButton" Content="Update" Click="UpdateButton_OnClick"></Button>
+        </StackPanel>
+    </Grid>
+</Window>

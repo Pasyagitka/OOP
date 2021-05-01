@@ -19,7 +19,6 @@ namespace Shop
         public MainWindow()
         {
             InitializeComponent();
-            //HACK Cursor
             //this.Cursor = new Cursor("E:\\4 семестр\\ООП\\06-07. Программное средство продажи товаров или услуг на WPF\\Shop\\Resources\\Cursors\\donut.ani");
 
             
@@ -64,7 +63,6 @@ namespace Shop
         #endregion
 
         #region WindowButtons
-        //HACK Кнопки окна (закрыть, свернуть, уменьшить...)
         private void MainWindowClose_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
@@ -96,7 +94,6 @@ namespace Shop
         }
         #endregion
 
-        //HACK Вызвать новое окно
         private void AddProductButton_Click(object sender, RoutedEventArgs e)
         {
             AddProduct addnewproductwindow = new AddProduct();
@@ -104,7 +101,6 @@ namespace Shop
         }
 
         #region FilterSortSearch
-        //HACK Вызов поиска, сортировки, фильтра
         private void SelectCategory_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
              Test.CategoryUpdate(SelectCategory.SelectedIndex);
@@ -130,25 +126,27 @@ namespace Shop
         #region UndoRedo
         private void UndoButton_OnClick(object sender, RoutedEventArgs e)
         {
-            object nullCheck = history.Undo();
-            if (nullCheck != null)
+            object undo = history.Undo();
+            if (undo != null)
             {
-                Products.GetInstance().SweetnessesList = ((Memento) nullCheck).sweetnessState;
+                Products.GetInstance().SweetnessesList = ((Memento) undo).sweetnessState;
                 Test.Update();
             }
         }
 
         private void RedoButton_OnClick(object sender, RoutedEventArgs e)
         {
-            object nullCheck = history.Redo();
-            if (nullCheck != null)
+            object redo = history.Redo();
+            if (redo != null)
             {
-                Products.GetInstance().SweetnessesList = ((Memento) nullCheck).sweetnessState;
+                Products.GetInstance().SweetnessesList = ((Memento) redo).sweetnessState;
                 Test.Update();
             }
         }
         #endregion
+        //hack themes
 
+        #region Themes
         private void MenuThemesDefault_OnClick(object sender, RoutedEventArgs e)
         {
             Resources.MergedDictionaries.Clear();
@@ -166,6 +164,7 @@ namespace Shop
                 Source = new Uri(Path.GetFullPath("../../ResourceDictionary/Themes/Optimistic.xaml"))
             });
         }
+        #endregion
 
         private void CustomCandyButtom_OnClick(object sender, RoutedEventArgs e)
         {

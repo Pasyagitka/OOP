@@ -15,7 +15,7 @@ namespace Shop.UndoRedo
     }
 
    public class AppHistory
-    {
+   {
         ObservableCollection<Memento> states;
         int currentstateID;
         public AppHistory(ObservableCollection<Sweetness> sweetness)

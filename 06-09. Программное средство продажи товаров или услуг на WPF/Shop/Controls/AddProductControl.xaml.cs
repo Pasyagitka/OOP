@@ -4,25 +4,7 @@ using System.Windows.Controls;
 namespace Shop.Controls
 {
     public partial class AddProduct : UserControl
-    {
-        // public static readonly RoutedEvent TapEvent = EventManager.RegisterRoutedEvent(
-        //      "Tap", RoutingStrategy.Bubble, typeof(RoutedEventHandler), typeof(AddProduct));
-        //
-        // public event RoutedEventHandler Tap
-        //  {
-        //      add { AddHandler(TapEvent, value); }
-        //      remove { RemoveHandler(TapEvent, value); }
-        //  }
-        // void RaiseTapEvent()
-        // {
-        //     RoutedEventArgs newEventArgs = new RoutedEventArgs(AddProduct.TapEvent);
-        //     RaiseEvent(newEventArgs);
-        // }
-        // protected override void OnClick()
-        // {
-        //     RaiseTapEvent();
-        // }
-        
+    {  
         private static readonly ValidateValueCallback validateValueCallback = new ValidateValueCallback(ValidateIntValue);
         public static readonly DependencyProperty NameTextBlockTextProperty =  DependencyProperty.Register("NameTextBlockText", typeof(string), typeof(AddProduct), new UIPropertyMetadata(""));
         public static readonly DependencyProperty ImageTextBlockTextProperty = DependencyProperty.Register("ImageTextBlockText", typeof(string), typeof(AddProduct), new UIPropertyMetadata("..\\..\\ProductImages\\nophoto.png"));

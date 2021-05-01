@@ -41,7 +41,6 @@ namespace Shop.Product
         }
 
         #region Commands
-        //HACK Фк-ции Command
         public void Add(Sweetness sweetness)
         {
             products.Add(sweetness);

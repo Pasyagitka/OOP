@@ -12,7 +12,7 @@ namespace Shop.Product
     [KnownType(typeof(Chocolate))]
     [KnownType(typeof(Marmalade))]
     [KnownType(typeof(Waffles))]
-    public abstract class Sweetness : INotifyPropertyChanged //Hack Для отображения изменений свойств Edit
+    public abstract class Sweetness : INotifyPropertyChanged
     {
         [DataMember]
         public string name;

@@ -41,8 +41,7 @@
                 <Setter Property="FontSize" Value="32"></Setter>
             </Style.Setters>
             <Style.Triggers>
-                <DataTrigger Binding="{Binding ElementName=SearchTextBox, Path=IsFocused}"
-                             Value="True">
+                <DataTrigger Binding="{Binding ElementName=SearchTextBox, Path=IsFocused}" Value="True">
                     <Setter Property="Background" Value="#FFD5B9"/>
                 </DataTrigger>
             </Style.Triggers>
@@ -71,8 +70,9 @@
         <DockPanel  Height="{Binding ElementName=MainWindowMainGrid, Path=ActualHeight}" LastChildFill="True">
             <Grid Name="FooterGrid" DockPanel.Dock="Bottom">
                 <Border Background="White" BorderBrush="LightGray" BorderThickness="0,2,0,0">
+                    <!--шаблон-->
                     <StackPanel Style="{StaticResource Footer}" Orientation="Horizontal" Height="50" Width="{Binding ElementName=MainWindowMainGrid, Path=ActualWidth}" VerticalAlignment="Bottom" Background="White">
-                        <Button x:Name="AddProductButton" Width="50" Background="Transparent" Click="AddProductButton_Click" Margin="10,0,0,0" Template="{StaticResource ButtonsTemplate}">
+                        <Button x:Name="AddProductButton"  Click="AddProductButton_Click" Margin="10,0,0,0" Template="{StaticResource ButtonsTemplate}">
                             <materialDesign:PackIcon Kind="AddBox" Foreground="OrangeRed"/>
                         </Button>
                         <Button x:Name="UndoButton" Width="50" Background="Transparent" Click="UndoButton_OnClick" Margin="10,0,0,0">
