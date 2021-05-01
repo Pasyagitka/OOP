@@ -93,8 +93,7 @@ namespace WPF10Lab
         }
         private void UpdateDB()
         {
-            //TODO транзакция???
-            //TODO ну почти работает же....
+            //TODO проверяются поля заранее, отключить??
             trans = _connection.BeginTransaction();
             _adapterAddresses.InsertCommand.Transaction = trans;
             _adapterAddresses.UpdateCommand.Transaction = trans;
