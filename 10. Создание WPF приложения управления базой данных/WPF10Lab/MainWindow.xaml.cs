@@ -9,7 +9,7 @@ using Microsoft.Data.SqlClient;
 using Microsoft.SqlServer.Management.SqlParser.SqlCodeDom;
 
 namespace WPF10Lab
-{
+{ 
     public partial class MainWindow : Window
     {
         static SqlTransaction trans;
@@ -18,7 +18,8 @@ namespace WPF10Lab
         private SqlDataAdapter _adapterAddresses;
         private const string dbscriptpath = "../../Resources/10.sql";
         DataTable dtClients = null; 
-        DataTable dtAddresses = null; 
+        DataTable dtAddresses = null;
+        
 
         public MainWindow()
         {
@@ -54,7 +55,6 @@ namespace WPF10Lab
             Server server = new Server(new ServerConnection(_connection));
             server.ConnectionContext.ExecuteNonQuery(script);
         }
-
         private void MainWindow_OnLoaded(object sender, RoutedEventArgs re)
         {
             try
@@ -93,36 +93,31 @@ namespace WPF10Lab
         }
         private void UpdateDB()
         {
-            //TODO проверяются поля заранее, отключить??
             trans = _connection.BeginTransaction();
             _adapterAddresses.InsertCommand.Transaction = trans;
             _adapterAddresses.UpdateCommand.Transaction = trans;
             _adapterClients.InsertCommand.Transaction = trans;
             _adapterClients.UpdateCommand.Transaction = trans;
-            try //todo почему так коряво????
+            try
             {
-                if (_adapterAddresses.Update(dtAddresses) == 0)
-                {
-                    trans.Rollback();
-                }
-                else
-                {
-                    _adapterClients.Update(dtClients);
-                    trans.Commit();
-                }
+                _adapterAddresses.Update(dtAddresses);
+                _adapterClients.Update(dtClients);
+                trans.Commit();
+                MessageBox.Show("Изменения сохранены");
             }
             catch (Exception e){
                 trans.Rollback();
+                dtClients.RejectChanges();  //TODO УРААА ОТМЕНАА
+                dtAddresses.RejectChanges();
+                MessageBox.Show("Отмена");
             }
         }
 
         public static SqlDataAdapter CreateClientAdapter(String command, SqlConnection connection)
         {
             SqlDataAdapter adapter = new SqlDataAdapter(command, connection);
-            //adapter.InsertCommand.Transaction = new SqlTransaction();
-            // SqlTransaction transaction = connection.BeginTransaction();
+            
             adapter.InsertCommand = new SqlCommand("spAddClient", connection);
-            // adapter.InsertCommand.Transaction = transaction;
             adapter.InsertCommand.CommandType = CommandType.StoredProcedure;
             adapter.InsertCommand.Parameters.Add(new SqlParameter("@firstname", SqlDbType.NVarChar, 20, "firstname"));
             adapter.InsertCommand.Parameters.Add(new SqlParameter("@patronymic", SqlDbType.NVarChar, 20, "patronymic"));
@@ -131,7 +126,6 @@ namespace WPF10Lab
             adapter.InsertCommand.Parameters.Add(new SqlParameter("@adressid", SqlDbType.Int, 0, "adressid"));
             adapter.InsertCommand.Parameters.Add(new SqlParameter("@photo", SqlDbType.Image, 0, "photo"));
             adapter.InsertCommand.Parameters.Add(new SqlParameter("@contactnumber", SqlDbType.Decimal, 0, "contactnumber"));
-            
             
             adapter.UpdateCommand = new SqlCommand("spUpdateClient", connection);
             adapter.UpdateCommand.CommandType = CommandType.StoredProcedure;
@@ -144,13 +138,9 @@ namespace WPF10Lab
             adapter.UpdateCommand.Parameters.Add(new SqlParameter("@photo", SqlDbType.Image, 0, "photo"));
             adapter.UpdateCommand.Parameters.Add(new SqlParameter("@contactnumber", SqlDbType.Decimal, 0, "contactnumber"));
             
-            
             adapter.DeleteCommand = new SqlCommand("spDeleteClient", connection);
-            //TODO tran??
             adapter.DeleteCommand.CommandType = CommandType.StoredProcedure;
             adapter.DeleteCommand.Parameters.Add(new SqlParameter("@clientid", SqlDbType.Int, 0, "clientID"));
-            
-            
             
             // SqlTransaction tran = null;
             // tran = connection.BeginTransaction();
@@ -192,7 +182,6 @@ namespace WPF10Lab
             adapter.InsertCommand.Parameters.Add(new SqlParameter("@house", SqlDbType.Int, 0, "house"));
             adapter.InsertCommand.Parameters.Add(new SqlParameter("@postalcode", SqlDbType.Int, 0, "postalcode"));
             
-            //TODO обновляет всё
             adapter.UpdateCommand = new SqlCommand("spUpdateAddress", connection);
             adapter.UpdateCommand.CommandType = CommandType.StoredProcedure;
             adapter.UpdateCommand.Parameters.Add(new SqlParameter("@adressid", SqlDbType.Int, 0, "adressid"));
@@ -202,7 +191,6 @@ namespace WPF10Lab
             adapter.UpdateCommand.Parameters.Add(new SqlParameter("@house", SqlDbType.Int, 0, "house"));
             adapter.UpdateCommand.Parameters.Add(new SqlParameter("@postalcode", SqlDbType.Int, 0, "postalcode"));
             
-            //TODO tran??
             adapter.DeleteCommand = new SqlCommand("spDeleteClient", connection);
             adapter.DeleteCommand.CommandType = CommandType.StoredProcedure;
             adapter.DeleteCommand.Parameters.Add(new SqlParameter("@adressid", SqlDbType.Int, 0, "adressid"));

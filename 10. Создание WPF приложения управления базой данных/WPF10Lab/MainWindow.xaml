@@ -12,6 +12,7 @@
             <RowDefinition Height="200" />
             <RowDefinition Height="100" />
         </Grid.RowDefinitions>
+        
         <DataGrid Name="ClientsGrid" AutoGenerateColumns="False" Background="Bisque">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding clientID}" Header="ID" Width="50" IsReadOnly="True"/>
@@ -19,7 +20,7 @@
                 <DataGridTextColumn Binding="{Binding patronymic}" Header="Отчество" Width="120"/>
                 <DataGridTextColumn Binding="{Binding surname}" Header="Фамилия" Width="120"/>
                 <DataGridTextColumn Binding="{Binding email}" Header="Почта" Width="120"/>
-                <DataGridTextColumn Binding="{Binding adressid}" Header="ID адреса" Width="120"/>
+                <DataGridTextColumn Binding="{Binding adressid, ValidatesOnExceptions=True}" Header="ID адреса" Width="120"/>
                 <DataGridTemplateColumn Header="Фото" Width="120" IsReadOnly="True">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
@@ -30,6 +31,7 @@
                 <DataGridTextColumn Binding="{Binding contactnumber}" Header="Телефон" Width="120"/>
             </DataGrid.Columns>
         </DataGrid>
+        
         <DataGrid Grid.Row="1" Name="AddressesGrid" AutoGenerateColumns="False" Background="Beige">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding adressid}" Header="ID" Width="50" IsReadOnly="True"/>
@@ -40,6 +42,7 @@
                 <DataGridTextColumn Binding="{Binding postalcode,  ValidatesOnExceptions=True}" Header="Индекс" Width="120"/>
             </DataGrid.Columns>
         </DataGrid>
+        
         <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center">
             <Button Grid.Row="1" Name="UpdateButton" Content="Update" Click="UpdateButton_OnClick"></Button>
         </StackPanel>
