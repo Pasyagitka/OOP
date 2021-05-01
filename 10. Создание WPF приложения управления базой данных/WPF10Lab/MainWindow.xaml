@@ -6,15 +6,18 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:wpf10Lab="clr-namespace:WPF10Lab"
         mc:Ignorable="d"
-        Title="MainWindow" Height="620" Width="930" Loaded="MainWindow_OnLoaded" ResizeMode="NoResize">
+        Title="MainWindow" Height="650" Width="950" Loaded="MainWindow_OnLoaded" ResizeMode="NoResize">
     <Grid >
-        <Grid.RowDefinitions>
-            <RowDefinition Height="300"/>
-            <RowDefinition Height="200"/>
-            <RowDefinition Height="100"/>
-        </Grid.RowDefinitions>
+        <DockPanel LastChildFill="True">
+            
         
-        <DataGrid Name="ClientsGrid" AutoGenerateColumns="False" Background="Bisque">
+        <!-- <Grid.RowDefinitions> -->
+        <!--     <RowDefinition Height="300"/> -->
+        <!--     <RowDefinition Height="200"/> -->
+        <!--     <RowDefinition Height="100"/> -->
+        <!-- </Grid.RowDefinitions> -->
+        
+        <DataGrid Name="ClientsGrid" AutoGenerateColumns="False" Background="Bisque" DockPanel.Dock="Top" Height="290" Margin="10">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding clientID}" Header="ID" Width="50" IsReadOnly="True"/>
                 <DataGridTextColumn Binding="{Binding firstname}" Header="Имя" Width="120"/>
@@ -33,7 +36,7 @@
             </DataGrid.Columns>
         </DataGrid>
         
-        <DataGrid Grid.Row="1" Name="AddressesGrid" AutoGenerateColumns="False" Background="Beige">
+        <DataGrid  Name="AddressesGrid" AutoGenerateColumns="False" Background="Beige" DockPanel.Dock="Top" Height="210"  Margin="10">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding adressid}" Header="ID" Width="50" IsReadOnly="True"/>
                 <DataGridTextColumn Binding="{Binding country}" Header="Страна" Width="120"/>
@@ -44,8 +47,12 @@
             </DataGrid.Columns>
         </DataGrid>
         
-        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center">
-            <Button Name="UpdateButton" Content="Update" Click="UpdateButton_OnClick"></Button>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Name="UpdateButton" Click="UpdateButton_OnClick">
+                <materialDesign:PackIcon Kind="ArrowUpThick"></materialDesign:PackIcon>
+            </Button>
         </StackPanel>
+        
+        </DockPanel>
     </Grid>
 </Window>
