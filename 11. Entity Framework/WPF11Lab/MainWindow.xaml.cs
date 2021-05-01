@@ -6,7 +6,7 @@ using Microsoft.SqlServer.Management.Common;
 using Microsoft.SqlServer.Management.Smo;
 using Microsoft.Data.SqlClient;
 
-namespace WPF10Lab
+namespace WPF11Lab
 { 
     public partial class MainWindow : Window
     {

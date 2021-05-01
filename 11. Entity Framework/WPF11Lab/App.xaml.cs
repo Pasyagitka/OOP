@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace WPF10Lab
+namespace WPF11Lab
 {
     /// <summary>
     /// Логика взаимодействия для App.xaml

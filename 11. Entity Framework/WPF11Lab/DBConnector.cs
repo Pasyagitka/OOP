@@ -14,7 +14,7 @@ using Microsoft.SqlServer.Management.Smo;
 using Microsoft.Data.SqlClient;
 using Microsoft.SqlServer.Management.SqlParser.SqlCodeDom;
 
-namespace WPF10Lab
+namespace WPF11Lab
 {
     public class DBConnector 
     {
