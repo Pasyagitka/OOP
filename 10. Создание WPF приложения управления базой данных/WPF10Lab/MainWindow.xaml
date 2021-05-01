@@ -4,13 +4,14 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:wpf10Lab="clr-namespace:WPF10Lab"
         mc:Ignorable="d"
-        Title="MainWindow" Height="620" Width="900" Loaded="MainWindow_OnLoaded" ResizeMode="NoResize">
+        Title="MainWindow" Height="620" Width="930" Loaded="MainWindow_OnLoaded" ResizeMode="NoResize">
     <Grid >
         <Grid.RowDefinitions>
-            <RowDefinition Height="300"  />
-            <RowDefinition Height="200" />
-            <RowDefinition Height="100" />
+            <RowDefinition Height="300"/>
+            <RowDefinition Height="200"/>
+            <RowDefinition Height="100"/>
         </Grid.RowDefinitions>
         
         <DataGrid Name="ClientsGrid" AutoGenerateColumns="False" Background="Bisque">
@@ -20,7 +21,7 @@
                 <DataGridTextColumn Binding="{Binding patronymic}" Header="Отчество" Width="120"/>
                 <DataGridTextColumn Binding="{Binding surname}" Header="Фамилия" Width="120"/>
                 <DataGridTextColumn Binding="{Binding email}" Header="Почта" Width="120"/>
-                <DataGridTextColumn Binding="{Binding adressid, ValidatesOnExceptions=True}" Header="ID адреса" Width="120"/>
+                <DataGridTextColumn Binding="{Binding adressid}" Header="ID адреса" Width="120"/>
                 <DataGridTemplateColumn Header="Фото" Width="120" IsReadOnly="True">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
@@ -44,7 +45,7 @@
         </DataGrid>
         
         <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center">
-            <Button Grid.Row="1" Name="UpdateButton" Content="Update" Click="UpdateButton_OnClick"></Button>
+            <Button Name="UpdateButton" Content="Update" Click="UpdateButton_OnClick"></Button>
         </StackPanel>
     </Grid>
 </Window>

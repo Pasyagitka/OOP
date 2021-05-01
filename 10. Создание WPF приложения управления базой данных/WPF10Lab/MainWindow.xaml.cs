@@ -2,24 +2,21 @@
 using System.Data;
 using System.IO;
 using System.Windows;
-using Microsoft.SqlServer.Management;
 using Microsoft.SqlServer.Management.Common;
 using Microsoft.SqlServer.Management.Smo;
 using Microsoft.Data.SqlClient;
-using Microsoft.SqlServer.Management.SqlParser.SqlCodeDom;
 
 namespace WPF10Lab
 { 
     public partial class MainWindow : Window
     {
-        static SqlTransaction trans;
-        static SqlConnection _connection;
+        private static SqlTransaction trans;
+        private static SqlConnection _connection;
         private SqlDataAdapter _adapterClients;
         private SqlDataAdapter _adapterAddresses;
-        private const string dbscriptpath = "../../Resources/10.sql";
+        private const string DataBaseScriptPath = "../../Resources/10.sql";
         DataTable dtClients = null; 
         DataTable dtAddresses = null;
-        
 
         public MainWindow()
         {
@@ -27,6 +24,10 @@ namespace WPF10Lab
             try
             {
                 CreateConnection();
+            }
+            catch (ExecutionFailureException e)
+            {
+                MessageBox.Show("БД создана с ошибками");
             }
             catch (Exception e)
             {
@@ -39,13 +40,15 @@ namespace WPF10Lab
             try
             {
                 _connection = DBConnector.GetConnection("connectASUS");
-                //connection.Open();
+                _connection.Open();
+                MessageBox.Show("Существующая БД");
             }
             catch (SqlException)
             {
                 _connection = DBConnector.GetConnection("connectASUSmaster");
-                //connection.Open();
-                ExecuteScriptFile(dbscriptpath);
+                _connection.Open();
+                ExecuteScriptFile(DataBaseScriptPath);
+                MessageBox.Show("Создана новая БД");
             }
         }
 
@@ -59,13 +62,9 @@ namespace WPF10Lab
         {
             try
             {
-                _connection.Open();
-                //trans = _connection.BeginTransaction();
-                
                 var selectFromClient = "select * from client";
                 var selectFromAddress = "select * from clientsaddress";
-                //var command = new SqlCommand("", connection);
-                // command = new SqlCommand("select * from client left outer join clientsaddress on client.adressid = clientsaddress.adressid", connection);
+                
                 _adapterClients = CreateClientAdapter(selectFromClient, _connection);
                 _adapterAddresses = CreateAddressAdapter(selectFromAddress, _connection);
                 
@@ -81,10 +80,6 @@ namespace WPF10Lab
             {
                 Console.WriteLine("Db connection error" + e.Message);
             }
-            finally
-            {
-                //if (_connection != null) _connection.Close();
-            }
         }
 
         private void UpdateButton_OnClick(object sender, RoutedEventArgs e)
@@ -96,18 +91,22 @@ namespace WPF10Lab
             trans = _connection.BeginTransaction();
             _adapterAddresses.InsertCommand.Transaction = trans;
             _adapterAddresses.UpdateCommand.Transaction = trans;
+            _adapterAddresses.DeleteCommand.Transaction = trans;
+            
             _adapterClients.InsertCommand.Transaction = trans;
             _adapterClients.UpdateCommand.Transaction = trans;
+            _adapterClients.DeleteCommand.Transaction = trans;
             try
             {
                 _adapterAddresses.Update(dtAddresses);
                 _adapterClients.Update(dtClients);
                 trans.Commit();
+                //todo если валидация то не сохранены
                 MessageBox.Show("Изменения сохранены");
             }
             catch (Exception e){
                 trans.Rollback();
-                dtClients.RejectChanges();  //TODO УРААА ОТМЕНАА
+                dtClients.RejectChanges();
                 dtAddresses.RejectChanges();
                 MessageBox.Show("Отмена");
             }
@@ -119,6 +118,7 @@ namespace WPF10Lab
             
             adapter.InsertCommand = new SqlCommand("spAddClient", connection);
             adapter.InsertCommand.CommandType = CommandType.StoredProcedure;
+            adapter.InsertCommand.UpdatedRowSource = UpdateRowSource.Both;
             adapter.InsertCommand.Parameters.Add(new SqlParameter("@firstname", SqlDbType.NVarChar, 20, "firstname"));
             adapter.InsertCommand.Parameters.Add(new SqlParameter("@patronymic", SqlDbType.NVarChar, 20, "patronymic"));
             adapter.InsertCommand.Parameters.Add(new SqlParameter("@surname", SqlDbType.NVarChar, 20, "surname"));
@@ -126,6 +126,9 @@ namespace WPF10Lab
             adapter.InsertCommand.Parameters.Add(new SqlParameter("@adressid", SqlDbType.Int, 0, "adressid"));
             adapter.InsertCommand.Parameters.Add(new SqlParameter("@photo", SqlDbType.Image, 0, "photo"));
             adapter.InsertCommand.Parameters.Add(new SqlParameter("@contactnumber", SqlDbType.Decimal, 0, "contactnumber"));
+            SqlParameter parameter = adapter.InsertCommand.Parameters.Add("@clientID", SqlDbType.Int, 0, "clientID");
+            parameter.Direction = ParameterDirection.Output;
+            adapter.InsertCommand.UpdatedRowSource = UpdateRowSource.Both;
             
             adapter.UpdateCommand = new SqlCommand("spUpdateClient", connection);
             adapter.UpdateCommand.CommandType = CommandType.StoredProcedure;
@@ -142,31 +145,6 @@ namespace WPF10Lab
             adapter.DeleteCommand.CommandType = CommandType.StoredProcedure;
             adapter.DeleteCommand.Parameters.Add(new SqlParameter("@clientid", SqlDbType.Int, 0, "clientID"));
             
-            // SqlTransaction tran = null;
-            // tran = connection.BeginTransaction();
-            // adapter.SelectCommand.Transaction = tran;
-            //
-            // // Update the data source.
-            // try
-            // {
-            //     // Submit the changes.
-            //     adapter.Update(dt);
-            //
-            //     // Success. Commit.
-            //     tran.Commit( );
-            // }
-            // catch (Exception ex)
-            // {
-            //     // Exception. Roll back.
-            //     tran.Rollback( );
-            //
-            //     MessageBox.Show(ex.Message + Environment.NewLine +
-            //                     "Transaction rolled back.");
-            // }
-            // finally
-            // {
-            //     connection.Close( );
-            // }
             return adapter;
         }
         
@@ -181,6 +159,9 @@ namespace WPF10Lab
             adapter.InsertCommand.Parameters.Add(new SqlParameter("@street", SqlDbType.NVarChar, 30, "street"));
             adapter.InsertCommand.Parameters.Add(new SqlParameter("@house", SqlDbType.Int, 0, "house"));
             adapter.InsertCommand.Parameters.Add(new SqlParameter("@postalcode", SqlDbType.Int, 0, "postalcode"));
+            SqlParameter parameter = adapter.InsertCommand.Parameters.Add("@adressid", SqlDbType.Int, 0, "adressid");
+            parameter.Direction = ParameterDirection.Output;
+            adapter.InsertCommand.UpdatedRowSource = UpdateRowSource.Both;
             
             adapter.UpdateCommand = new SqlCommand("spUpdateAddress", connection);
             adapter.UpdateCommand.CommandType = CommandType.StoredProcedure;
@@ -191,7 +172,7 @@ namespace WPF10Lab
             adapter.UpdateCommand.Parameters.Add(new SqlParameter("@house", SqlDbType.Int, 0, "house"));
             adapter.UpdateCommand.Parameters.Add(new SqlParameter("@postalcode", SqlDbType.Int, 0, "postalcode"));
             
-            adapter.DeleteCommand = new SqlCommand("spDeleteClient", connection);
+            adapter.DeleteCommand = new SqlCommand("spDeleteAddress", connection);
             adapter.DeleteCommand.CommandType = CommandType.StoredProcedure;
             adapter.DeleteCommand.Parameters.Add(new SqlParameter("@adressid", SqlDbType.Int, 0, "adressid"));
             
