@@ -3,32 +3,34 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:WPF11Lab"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-   <Grid>
-        <!--<DockPanel LastChildFill="True">
-        <DataGrid Name="ClientsGrid" AutoGenerateColumns="False" Background="Bisque" DockPanel.Dock="Top" Height="290" Margin="10">
+        WindowStartupLocation="CenterScreen"
+        Title="11" Height="450" Width="850">
+    <Grid>
+        <DockPanel LastChildFill="True">
+            <DataGrid Name="ClientsGrid" AutoGenerateColumns="False" Background="Beige" DockPanel.Dock="Top" Margin="10" HorizontalAlignment="Stretch">
              <DataGrid.Columns> 
-                 <DataGridTextColumn Binding="{Binding ClientID}" Header="ID" Width="50" IsReadOnly="True"/> 
-                 <DataGridTextColumn Binding="{Binding Firstname}" Header="Имя" Width="120"/> 
+                 <DataGridTextColumn Binding="{Binding Id}" Header="ID" Width="50" IsReadOnly="True"/> 
+                 <DataGridTextColumn Binding="{Binding FirstName}" Header="Имя" Width="120"/> 
                  <DataGridTextColumn Binding="{Binding Patronymic}" Header="Отчество" Width="120"/> 
                  <DataGridTextColumn Binding="{Binding Surname}" Header="Фамилия" Width="120"/> 
                  <DataGridTextColumn Binding="{Binding Email}" Header="Почта" Width="120"/> 
                  <DataGridTextColumn Binding="{Binding AdressID}" Header="ID адреса" Width="120"/> 
-                 <DataGridTextColumn Binding="{Binding contactnumber}" Header="Телефон" Width="120"/> 
+                 <DataGridTextColumn Binding="{Binding ContactNumber}" Header="Телефон" Width="120"/> 
              </DataGrid.Columns> 
         </DataGrid>
-        <DataGrid  Name="AddressesGrid" AutoGenerateColumns="False" Background="Beige" DockPanel.Dock="Top" Height="210"  Margin="10">
-             <DataGrid.Columns> 
-                 <DataGridTextColumn Binding="{Binding AdressID}" Header="ID" Width="50" IsReadOnly="True"/> 
+            <DataGrid  Name="AddressesGrid" AutoGenerateColumns="False" Background="Beige" DockPanel.Dock="Top" Height="210"  Margin="10" HorizontalAlignment="Stretch">
+                <DataGrid.Columns> 
+                 <DataGridTextColumn Binding="{Binding Id}" Header="ID" Width="50" IsReadOnly="True"/> 
                  <DataGridTextColumn Binding="{Binding Country}" Header="Страна" Width="120"/> 
                  <DataGridTextColumn Binding="{Binding City}" Header="Город" Width="120"/> 
                  <DataGridTextColumn Binding="{Binding Street}" Header="Улица" Width="120"/> 
                  <DataGridTextColumn Binding="{Binding House}" Header="Дом" Width="120"/> 
-                 <DataGridTextColumn Binding="{Binding Postalcode,  ValidatesOnExceptions=True}" Header="Индекс" Width="120"/> 
+                 <DataGridTextColumn Binding="{Binding PostalCode}" Header="Индекс" Width="120"/> 
              </DataGrid.Columns> 
         </DataGrid>
-        </DockPanel>-->
+        </DockPanel>
     </Grid>
 </Window>

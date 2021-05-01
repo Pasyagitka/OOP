@@ -18,3 +18,9 @@ D:\4 семестр\ООП\11. Entity Framework\WPF11Lab\obj\Debug\WPF11Lab.cspr
 D:\4 семестр\ООП\11. Entity Framework\WPF11Lab\obj\Debug\WPF11Lab.csproj.CopyComplete
 D:\4 семестр\ООП\11. Entity Framework\WPF11Lab\obj\Debug\WPF11Lab.exe
 D:\4 семестр\ООП\11. Entity Framework\WPF11Lab\obj\Debug\WPF11Lab.pdb
+D:\4 семестр\ООП\11. Entity Framework\WPF11Lab\obj\Debug\App.baml
+D:\4 семестр\ООП\11. Entity Framework\WPF11Lab\bin\Debug\MaterialDesignColors.dll
+D:\4 семестр\ООП\11. Entity Framework\WPF11Lab\bin\Debug\MaterialDesignThemes.Wpf.dll
+D:\4 семестр\ООП\11. Entity Framework\WPF11Lab\bin\Debug\MaterialDesignColors.pdb
+D:\4 семестр\ООП\11. Entity Framework\WPF11Lab\bin\Debug\MaterialDesignThemes.Wpf.pdb
+D:\4 семестр\ООП\11. Entity Framework\WPF11Lab\bin\Debug\MaterialDesignThemes.Wpf.xml
