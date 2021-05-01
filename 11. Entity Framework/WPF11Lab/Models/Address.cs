@@ -1,6 +1,6 @@
-﻿namespace WPF11Lab.Models
+﻿namespace WPF11Lab
 {
-    public class ClientsAddress
+    public class Address
     {
         public int Id { get; set; }
         public string Country{ get; set; }
@@ -9,6 +9,5 @@
         public int House{ get; set; }
         public int PostalCode { get; set; }
         
-        public Client Client { get; set; }
     }
 }
