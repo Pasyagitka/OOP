@@ -22,26 +22,37 @@ namespace WPF11Lab
         {
             InitializeComponent();
 
-            //using (ClientContext db = new ClientContext())
-            //{
-            //    Address ad1 = new Address { Country = "Беларусь", City = "Минск", Street = "Свердлова", House = 11, PostalCode = 220044 };
-            //    Address ad2 = new Address { Country = "Беларусь", City = "Минск", Street = "Серова", House = 23, PostalCode = 220066 };
-
-
-            //    // добавляем объекты Book в контекст данных
-            //    db.Addresses.Add(ad1);
-            //    db.Addresses.Add(ad2);
-
-            //    // сохраняем контекст данных в базу данных
-            //    db.SaveChanges();
-            //}
-            using (ClientContext db = new ClientContext())
+            using (UnitOfWork db = new UnitOfWork())
             {
-                db.Addresses.Load();
-                db.Clients.Load();
-                AddressesGrid.ItemsSource = db.Addresses.Local.ToBindingList();
-                ClientsGrid.ItemsSource = db.Clients.Local.ToBindingList();
+                //todo асинхронная работа
+                //todo транзакции
+                
+                //Insert
+                // db.Clients.Create(new Client {FirstName = "Ihar", Patronymic = "Ivanovich", Surname = "Ihorev", Email = "i@r.ru", ContactNumber = 123124, AddressId = 2});
+                // db.Address.Create(new Address {City = "Minsk", Country = "Belarus", Street = "Kirova", House = 22, PostalCode = 193843});
+                // db.Address.Create(new Address {Country = "Беларусь", City = "Минск", Street = "Свердлова", House = 11, PostalCode = 220044 });
+                // db.Address.Create(new Address { Country = "Беларусь", City = "Минск", Street = "Серова", House = 23, PostalCode = 220066 });
+                //
+                // db.Save();
+                
+                //Update
+                // var addr1 = db.Address.Get(1);
+                // db.Address.Update(addr1);
+                // addr1.City = "Brest";
+                // db.Save();
+                
+                var cl1 = db.Clients.Get(1);
+                db.Clients.Update(cl1);
+                cl1.Surname = "Andreev";
+                db.Save();
+                
+                //todo output
+                AddressesGrid.ItemsSource = db.Address.OrderById().ToList();
+                //ClientsGrid.ItemsSource = db.Clients.OrderByString().ToList();
+                ClientsGrid.ItemsSource = db.Clients.SearchBy("Ih").ToList(); //123
             }
         }
+        
+        
     }
 }

@@ -178,5 +178,21 @@ namespace WPF10Lab
             
             return adapter;
         }
+        
+        private void SelectNext_Click(object sender, RoutedEventArgs e)
+        {
+            if (ClientsGrid.Items.Count - 1 > ClientsGrid.SelectedIndex)
+            {
+                ClientsGrid.SelectedIndex++;
+            }
+        }
+
+        private void SelectPrevious_Click(object sender, RoutedEventArgs e)
+        {
+            if (ClientsGrid.SelectedIndex > 0)
+            {
+                ClientsGrid.SelectedIndex--;
+            }
+        }
     }
 }

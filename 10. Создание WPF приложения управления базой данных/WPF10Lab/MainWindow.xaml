@@ -9,44 +9,46 @@
         Title="MainWindow" Height="650" Width="950" Loaded="MainWindow_OnLoaded" ResizeMode="NoResize">
     <Grid >
         <DockPanel LastChildFill="True">
-            
-        
-        <!-- <Grid.RowDefinitions> -->
-        <!--     <RowDefinition Height="300"/> -->
-        <!--     <RowDefinition Height="200"/> -->
-        <!--     <RowDefinition Height="100"/> -->
-        <!-- </Grid.RowDefinitions> -->
-        
-        <DataGrid Name="ClientsGrid" AutoGenerateColumns="False" Background="Bisque" DockPanel.Dock="Top" Height="290" Margin="10">
-            <DataGrid.Columns>
-                <DataGridTextColumn Binding="{Binding clientID}" Header="ID" Width="50" IsReadOnly="True"/>
-                <DataGridTextColumn Binding="{Binding firstname}" Header="Имя" Width="120"/>
-                <DataGridTextColumn Binding="{Binding patronymic}" Header="Отчество" Width="120"/>
-                <DataGridTextColumn Binding="{Binding surname}" Header="Фамилия" Width="120"/>
-                <DataGridTextColumn Binding="{Binding email}" Header="Почта" Width="120"/>
-                <DataGridTextColumn Binding="{Binding adressid}" Header="ID адреса" Width="120"/>
-                <DataGridTemplateColumn Header="Фото" Width="120" IsReadOnly="True">
-                    <DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate>
-                            <Image Source="{Binding photo}" />
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn>
-                <DataGridTextColumn Binding="{Binding contactnumber}" Header="Телефон" Width="120"/>
-            </DataGrid.Columns>
-        </DataGrid>
-        
-        <DataGrid  Name="AddressesGrid" AutoGenerateColumns="False" Background="Beige" DockPanel.Dock="Top" Height="210"  Margin="10">
-            <DataGrid.Columns>
-                <DataGridTextColumn Binding="{Binding adressid}" Header="ID" Width="50" IsReadOnly="True"/>
-                <DataGridTextColumn Binding="{Binding country}" Header="Страна" Width="120"/>
-                <DataGridTextColumn Binding="{Binding city}" Header="Город" Width="120"/>
-                <DataGridTextColumn Binding="{Binding street}" Header="Улица" Width="120"/>
-                <DataGridTextColumn Binding="{Binding house}" Header="Дом" Width="120"/>
-                <DataGridTextColumn Binding="{Binding postalcode,  ValidatesOnExceptions=True}" Header="Индекс" Width="120"/>
-            </DataGrid.Columns>
-        </DataGrid>
-        
+            <StackPanel Height="290" Orientation="Vertical" DockPanel.Dock="Top">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Button Width="100" Click="SelectPrevious_Click">
+                        <materialDesign:PackIcon Kind="PreviousTitle"/>
+                    </Button>
+                    <Button Width="100" Click="SelectNext_Click">
+                        <materialDesign:PackIcon Kind="NextTitle"/>
+                    </Button>
+                </StackPanel>
+                <DataGrid Name="ClientsGrid" AutoGenerateColumns="False" Background="Bisque" Margin="10">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding clientID}" Header="ID" Width="50" IsReadOnly="True"/>
+                    <DataGridTextColumn Binding="{Binding firstname}" Header="Имя" Width="120"/>
+                    <DataGridTextColumn Binding="{Binding patronymic}" Header="Отчество" Width="120"/>
+                    <DataGridTextColumn Binding="{Binding surname}" Header="Фамилия" Width="120"/>
+                    <DataGridTextColumn Binding="{Binding email}" Header="Почта" Width="120"/>
+                    <DataGridTextColumn Binding="{Binding adressid}" Header="ID адреса" Width="120"/>
+                    <DataGridTemplateColumn Header="Фото" Width="120" IsReadOnly="True">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Image Source="{Binding photo}" />
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTextColumn Binding="{Binding contactnumber}" Header="Телефон" Width="120"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            </StackPanel>
+            <StackPanel Height="210" Orientation="Horizontal"  DockPanel.Dock="Top">
+                <DataGrid  Name="AddressesGrid" AutoGenerateColumns="False" Background="Beige"  Margin="10">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Binding="{Binding adressid}" Header="ID" Width="50" IsReadOnly="True"/>
+                        <DataGridTextColumn Binding="{Binding country}" Header="Страна" Width="120"/>
+                        <DataGridTextColumn Binding="{Binding city}" Header="Город" Width="120"/>
+                        <DataGridTextColumn Binding="{Binding street}" Header="Улица" Width="120"/>
+                        <DataGridTextColumn Binding="{Binding house}" Header="Дом" Width="120"/>
+                        <DataGridTextColumn Binding="{Binding postalcode,  ValidatesOnExceptions=True}" Header="Индекс" Width="120"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </StackPanel>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
             <Button Name="UpdateButton" Click="UpdateButton_OnClick">
                 <materialDesign:PackIcon Kind="ArrowUpThick"></materialDesign:PackIcon>
